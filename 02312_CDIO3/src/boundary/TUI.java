@@ -1,8 +1,9 @@
-package Boundary;
+package boundary;
 
 import java.util.Scanner;
 
-import Entity.Player;
+import entity.Player;
+
 
 /**
  * Class to handle input/output to/from the console.

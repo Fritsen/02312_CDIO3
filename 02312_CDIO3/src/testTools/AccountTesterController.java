@@ -1,6 +1,6 @@
-package TestTools;
+package testTools;
 
-import Entity.Account;
+import entity.Account;
 
 /**
  * Class to test the Account class.

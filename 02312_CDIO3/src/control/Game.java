@@ -1,12 +1,14 @@
-package Control;
+package control;
 
 import java.util.Scanner;
 
-import Boundary.Graphic;
-import Boundary.TUI;
-import Entity.DieCup;
-import Entity.GameBoard;
-import Entity.Player;
+import entity.DieCup;
+import entity.GameBoard;
+import entity.Player;
+
+import boundary.Graphic;
+import boundary.TUI;
+
 
 /**
  * This is controller class in the dice game.

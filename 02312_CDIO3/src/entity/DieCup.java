@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 /**
  * Class to create a diecup. This class will take in 2 dice.

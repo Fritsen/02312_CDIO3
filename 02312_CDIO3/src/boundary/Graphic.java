@@ -1,6 +1,6 @@
-package Boundary;
+package boundary;
 
-import Entity.Player;
+import entity.Player;
 import boundaryToMatador.GUI;
 
 /**

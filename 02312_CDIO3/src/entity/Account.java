@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 /**
  * Class to create an Account. This class can be used to store a number representing an account value.

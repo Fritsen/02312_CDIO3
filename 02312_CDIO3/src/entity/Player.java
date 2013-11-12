@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 /**
  * Class to create a player. This class can be used for storing a name and account for a player.

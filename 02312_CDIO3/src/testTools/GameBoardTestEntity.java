@@ -1,6 +1,6 @@
-package TestTools;
+package testTools;
 
-import Entity.Field;
+import entity.Field;
 
 /**
  * Class to create a "testing" game board. This will work exactly like the "real" gameboard,
