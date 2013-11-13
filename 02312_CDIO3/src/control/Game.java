@@ -17,30 +17,22 @@ import boundary.TUI;
  * 
  */
 public class Game {
-	private final int POINTS_TO_START_WITH = 1000;
-	private final int POINTS_TO_WIN = 3000;
-	private final int NUMBER_OF_PLAYERS = 2;
+	private final int POINTS_TO_START_WITH = 30000;
 
 	private DieCup dieCup;
 	private Scanner scanner;
 	private GameBoard gameBoard;
 	private Player[] players;
+	
+	private int numberOfPlayers;
 
 	/**
 	 * Game constructor. Creates new instances of the required classes.
 	 */
 	public Game() {
-		int i;
-
 		dieCup = new DieCup();
 		scanner = new Scanner(System.in);
 		gameBoard = new GameBoard();
-		players = new Player[NUMBER_OF_PLAYERS];
-
-		// Make all player-objekts in loop
-		for (i = 0; i < NUMBER_OF_PLAYERS; i++) {
-			players[i] = new Player(POINTS_TO_START_WITH);
-		}
 
 		Graphic.setupFields();
 	}
@@ -49,22 +41,43 @@ public class Game {
 	 * Start the game.
 	 */
 	public void startGame() {
-		int activePlayer, i, scoreToAdd;
+		int activePlayer, i;
 		String userInput;
-
+		numberOfPlayers = 0;
+		
 		TUI.printRules();
+		
+		// Get the number of players from console. Keep trying until input is valid
+		while(numberOfPlayers == 0) {
+			TUI.printNumberRequest();
+			try {
+				numberOfPlayers = new Integer(TUI.getUserInput(scanner));
+				if(numberOfPlayers < 0 || numberOfPlayers > 6) {
+					numberOfPlayers = 0;
+				}
+			}
+			catch(Exception e) {
+				numberOfPlayers = 0;
+			}
+		}
+		
+		//Make array of players according to number of players
+		players = new Player[numberOfPlayers];
+
+		// Make all player-objekts in loop
+		for (i = 0; i < numberOfPlayers; i++) {
+			players[i] = new Player(POINTS_TO_START_WITH);
+		}
 
 		// Ask for all player names and save them in the player objects. Also
 		// adds the players to the GUI.
-		for (i = 0; i < NUMBER_OF_PLAYERS; i++) {
+		for (i = 0; i < numberOfPlayers; i++) {
 			TUI.printNameRequest(i);
 			players[i].setName(TUI.getUserInput(scanner));
 			Graphic.addPlayer(players[i].getName(), players[i].getAccount()
 					.getAccountValue());
 		}
 
-		// Player 1 always starts. However this would work with Player 2, or
-		// even random.
 		activePlayer = 0;
 
 		// Start of the actual game. Infinite loop is broken only when someone
@@ -83,24 +96,16 @@ public class Game {
 			dieCup.shakeDieCup();
 
 			// Add points from field
-			scoreToAdd = gameBoard.getField(dieCup.getSum()).getFieldScore();
-			if(!players[activePlayer].getAccount().addToAccount(scoreToAdd)) {
+			gameBoard.getField(1).landOnField(players[activePlayer]);
+			if(players[activePlayer].isBankrupt()) {
 				loseTasks(activePlayer);
 			}
 
 			// Write status/score to both TUI and GUI
 			statusTasks(activePlayer);
 
-			// Check if player have won
-			if (players[activePlayer].getAccount().getAccountValue() >= POINTS_TO_WIN) {
-				winTasks(activePlayer);
-			}
-
-			// Switch turn to the next player, unless the current player gets an
-			// extra turn
-			if (!gameBoard.getField(dieCup.getSum()).getGivesExtraTurn()) {
-				activePlayer = getNextPlayer(activePlayer);
-			}
+			// Switch turn to the next player
+			activePlayer = getNextPlayer(activePlayer);
 		}
 	}
 
@@ -111,12 +116,13 @@ public class Game {
 	 * @return 2 if 1 is given etc., but gives 1 if the value for number of players is reached.
 	 */
 	private int getNextPlayer(int input) {
-		if (input + 1 >= NUMBER_OF_PLAYERS) {
+		if (input + 1 >= numberOfPlayers) {
 			return 0;
 		}
 
 		return input + 1;
 	}
+	
 
 	/**
 	 * Writes score and dice values to both GUI and TUI
@@ -127,6 +133,7 @@ public class Game {
 		Graphic.updatePlayers(players);
 		Graphic.moveCar(players[activePlayer].getName(), dieCup.getSum());
 	}
+	
 
 	/**
 	 * Prints the name of the given player, along with a message telling that
@@ -136,11 +143,11 @@ public class Game {
 	 * @param activePlayer The number of the player who should be declared the winner.
 	 */
 	private void winTasks(int activePlayer) {
-		TUI.printWinner(players[activePlayer].getName(), players[activePlayer]
-				.getAccount().getAccountValue());
+		TUI.printWinner(players[activePlayer].getName(), players[activePlayer].getAccount().getAccountValue());
 		TUI.getUserInput(scanner);
 		cleanUp();
 	}
+
 
 	/**
 	 * Prints the name of the given player, along with a message telling that
@@ -150,12 +157,39 @@ public class Game {
 	 * @param activePlayer The number of the player who should be declared the loser.
 	 */
 	private void loseTasks(int activePlayer) {
-		TUI.printLoser(players[activePlayer].getName(), players[activePlayer]
-				.getAccount().getAccountValue());
-		TUI.getUserInput(scanner);
-		cleanUp();
-	}
+		TUI.printLoser(players[activePlayer].getName(), players[activePlayer].getAccount().getAccountValue());
 
+		if(countPlayersLeft() == 1) {
+			winTasks(getLastPlayerLeft());
+		}
+		
+		TUI.getUserInput(scanner);
+	}
+	
+	private int countPlayersLeft() {
+		int i, playersLeft = 0;
+		
+		for(i = 0; i < numberOfPlayers; i++) {
+			if(!players[i].isBankrupt()) {
+				playersLeft++;
+			}
+		}
+		
+		return playersLeft;
+	}
+	
+	private int getLastPlayerLeft() {
+		int i;
+		
+		for(i = 0; i < numberOfPlayers; i++) {
+			if(!players[i].isBankrupt()) {
+				return i;
+			}
+		}
+		
+		return 0;
+	}
+	
 	/**
 	 * Closes the program and cleans up properly.
 	 */

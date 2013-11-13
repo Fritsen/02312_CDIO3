@@ -114,10 +114,13 @@ public class TUI {
 	 * @param playerNo The player number to print as part of the message.
 	 */
 	public static void printNameRequest(int playerNumber) {
-		System.out
-				.println("Insert name for player " + (playerNumber + 1) + ".");
+		System.out.println("Insert name for player " + (playerNumber + 1) + ".");
 	}
 
+	public static void printNumberRequest() {
+		System.out.println("Select the number of players 1-6:");
+	}
+	
 	/**
 	 * Prints a short text, telling the player who's turn it is, and asking him to
 	 * roll.

@@ -9,6 +9,8 @@ package entity;
 public class Player {
     private String name;
     private Account account;
+    private boolean isBankrupt;
+    private int location;
     
     /**
      * Constructor that initiates name to empty and account to an initial score.
@@ -16,6 +18,7 @@ public class Player {
     public Player(int initialScore) {
         name = "";
         account = new Account(initialScore);
+        isBankrupt = false;
     }
     
     /**
@@ -34,6 +37,22 @@ public class Player {
      */
     public String getName() {
         return name;
+    }
+    
+    public void setBankrupt() {
+    	isBankrupt = true;
+    }
+    
+    public boolean isBankrupt() {
+    	return isBankrupt;
+    }
+    
+    public void setLocation(int location) {
+    	this.location = location;
+    }
+    
+    public int getLocation() {
+    	return location;
     }
     
     /**
