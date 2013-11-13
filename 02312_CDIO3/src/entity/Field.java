@@ -7,9 +7,6 @@ package entity;
  *
  */
 public abstract class Field {
-	protected int number;
-	protected String name; 
-	
 	public abstract void landOnField(Player player);
 	
 	//TODO: Lav brugbar toString, eller måske flyt til underklasserne...?

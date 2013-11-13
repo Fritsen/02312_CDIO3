@@ -16,26 +16,39 @@ public class TUI {
 	 * Prints game rules.
 	 */
 	public static void printRules() {
+		//TODO: Lav nye regler
 		System.out.println("");
-		System.out
-				.println("--------------------------------------------------------------");
-		System.out
-				.println("| Rules:                                                     |");
-		System.out
-				.println("| You roll two dice. The sum determines which field you hit. |");
-		System.out
-				.println("| Each field have it's own value.                            |");
-		System.out
-				.println("| You get points on some, and loses points on others.        |");
-		System.out
-				.println("| The first player to hit 3000 points win.                   |");
-		System.out
-				.println("| Press \"Enter\" to roll, press \"q\" to exit.                  |");
-		System.out
-				.println("--------------------------------------------------------------");
+		System.out.println("--------------------------------------------------------------");
+		System.out.println("| Rules:                                                     |");
+		System.out.println("| You roll two dice. The sum determines which field you hit. |");
+		System.out.println("| Each field have it's own value.                            |");
+		System.out.println("| You get points on some, and loses points on others.        |");
+		System.out.println("| The first player to hit 3000 points win.                   |");
+		System.out.println("| Press \"Enter\" to roll, press \"q\" to exit.                  |");
+		System.out.println("--------------------------------------------------------------");
 		System.out.println("");
 	}
 
+	public static int getNumberOfPlayers(Scanner scanner) {
+		int numberOfPlayers = 0;
+		
+		// Get the number of players from console. Keep trying until input is valid
+		while(numberOfPlayers == 0) {
+			printNumberRequest();
+			try {
+				numberOfPlayers = new Integer(TUI.getUserInput(scanner));
+				if(numberOfPlayers < 0 || numberOfPlayers > 6) {
+					numberOfPlayers = 0;
+				}
+			}
+			catch(Exception e) {
+				numberOfPlayers = 0;
+			}
+		}
+		
+		return numberOfPlayers;
+	}
+	
 	/**
 	 * Method to get the name of a field from the field number.
 	 * The names are given according to the game rules, but could be translated.
@@ -44,6 +57,7 @@ public class TUI {
 	 * @return The name of the field with the given number. Null if the field doesn't exist.
 	 */
 	public static String getFieldName(int fieldNumber) {
+		//TODO: Ret navne på felter og tilføj de nye...
 		switch (fieldNumber) {
 		case 2:
 			return "Tower";
@@ -80,6 +94,7 @@ public class TUI {
 	 * @return The description for the field with the given number. Null if the field doesn't exist.
 	 */
 	public static String getFieldDescription(int fieldNumber) {
+		//TODO: Ret beskrivelser på felter og tilføj de nye...
 		switch (fieldNumber) {
 		case 2:
 			return "You entered the tower. Gain 250 credits for climbing it.";
@@ -138,15 +153,14 @@ public class TUI {
 	 * @param players An array of players to get the information from.
 	 * @param sum The value that was hit with the dice.
 	 */
-	public static void printStatus(Player[] players, int sum) {
-		System.out.println("You hit field number " + sum + ", "
-				+ getFieldName(sum) + "\n" + getFieldDescription(sum));
+	public static void printStatus(Player[] players, int activePlayer) {
+		int i, loc;
+		loc = players[activePlayer].getLocation();
+		System.out.println("You hit field number " + loc + ", " + getFieldName(loc) + "\n" + getFieldDescription(loc));
 		System.out.println("The score is now:");
 
-		int i;
 		for (i = 0; i < players.length; i++) {
-			System.out.print(players[i].getName() + " = "
-					+ players[i].getAccount().getAccountValue() + "\t");
+			System.out.print(players[i].getName() + " = " + players[i].getAccount().getAccountValue() + "\t");
 		}
 
 		System.out.println();
@@ -159,8 +173,7 @@ public class TUI {
 	 * @param score The score for the winning player.
 	 */
 	public static void printWinner(String name, int score) {
-		System.out.println("Congratulations! " + name + " has won with "
-				+ score + " points!\nPress Enter to exit.");
+		System.out.println("Congratulations! " + name + " has won with " + score + " points!\nPress Enter to exit.");
 	}
 
 	/**
@@ -170,8 +183,7 @@ public class TUI {
 	 * @param score The score for the losing player.
 	 */
 	public static void printLoser(String name, int score) {
-		System.out.println("Sorry! " + name + " you have lost with " + score
-				+ " points!\nPress Enter to exit.");
+		System.out.println("Sorry! " + name + " you are bankerupt.");
 	}
 
 	/**

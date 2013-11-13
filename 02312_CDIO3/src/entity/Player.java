@@ -19,6 +19,7 @@ public class Player {
         name = "";
         account = new Account(initialScore);
         isBankrupt = false;
+        location = 1;
     }
     
     /**
@@ -53,6 +54,13 @@ public class Player {
     
     public int getLocation() {
     	return location;
+    }
+    
+    public void moveFieldsForward(int fields) {
+    	location = location + fields;
+    	if(location > 21) {
+    		location = location - 21;
+    	}
     }
     
     /**
