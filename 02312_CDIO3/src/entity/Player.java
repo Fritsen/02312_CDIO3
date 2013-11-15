@@ -63,13 +63,22 @@ public class Player {
     	}
     }
     
-    /**
-     * Gets the account object.
-     * 
-     * @return The players account.
-     */
-    public Account getAccount() {
-        return account;
+    public int getAccountValue() {
+    	return account.getAccountValue();
+    }
+    
+    public void addToAccount(int amount) {
+    	boolean succes;
+    	succes = account.addToAccount(amount);
+    	
+    	if(!succes) {
+    		isBankrupt = true;
+    	}
+    }
+    
+    public void transferTo(Player player, int amount) {
+    	this.addToAccount(-1*amount);
+    	player.addToAccount(amount);
     }
     
     /**

@@ -4,8 +4,8 @@ public class LaborCamp extends Ownable {
 	private int baseRent;
 	
 	public LaborCamp(int baseRent, int price) {
+		super(price);
 		this.baseRent = baseRent;
-		this.price = price;
 	}
 	
 	public void landOnField(Player player) {

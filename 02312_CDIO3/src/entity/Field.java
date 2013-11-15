@@ -8,14 +8,4 @@ package entity;
  */
 public abstract class Field {
 	public abstract void landOnField(Player player);
-	
-	//TODO: Lav brugbar toString, eller måske flyt til underklasserne...?
-	/**
-	 * Prints a nice string with field score and the value for extra turn.
-	 * 
-	 * @return The field score and extra turn value as a string.
-	 */
-	public String toString() {
-		return "SomeInfo...";
-	}
 }

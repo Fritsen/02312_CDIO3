@@ -57,7 +57,7 @@ public class Game {
 		for (i = 0; i < numberOfPlayers; i++) {
 			TUI.printNameRequest(i);
 			players[i].setName(TUI.getUserInput(scanner));
-			Graphic.addPlayer(players[i].getName(), players[i].getAccount().getAccountValue());
+			Graphic.addPlayer(players[i].getName(), players[i].getAccountValue());
 		}
 
 		// Start of the actual game-turns
@@ -152,7 +152,7 @@ public class Game {
 	 * @param activePlayer The number of the player who should be declared the winner.
 	 */
 	private void winTasks(int activePlayer) {
-		TUI.printWinner(players[activePlayer].getName(), players[activePlayer].getAccount().getAccountValue());
+		TUI.printWinner(players[activePlayer].getName(), players[activePlayer].getAccountValue());
 		TUI.getUserInput(scanner);
 		cleanUp();
 	}
@@ -165,7 +165,7 @@ public class Game {
 	 * @param activePlayer The number of the player who should be declared the loser.
 	 */
 	private void loseTasks(int activePlayer) {
-		TUI.printLoser(players[activePlayer].getName(), players[activePlayer].getAccount().getAccountValue());
+		TUI.printLoser(players[activePlayer].getName(), players[activePlayer].getAccountValue());
 
 		if(countPlayersLeft() == 1) {
 			winTasks(getLastPlayerLeft());

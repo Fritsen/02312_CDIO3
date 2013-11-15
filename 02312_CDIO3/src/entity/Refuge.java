@@ -8,6 +8,6 @@ public class Refuge extends Field {
 	}
 	
 	public void landOnField(Player player) {
-		//TODO: Skriv hvad der skal ske...
+		player.addToAccount(bonus);
 	}
 }

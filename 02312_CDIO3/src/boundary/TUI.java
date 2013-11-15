@@ -160,7 +160,7 @@ public class TUI {
 		System.out.println("The score is now:");
 
 		for (i = 0; i < players.length; i++) {
-			System.out.print(players[i].getName() + " = " + players[i].getAccount().getAccountValue() + "\t");
+			System.out.print(players[i].getName() + " = " + players[i].getAccountValue() + "\t");
 		}
 
 		System.out.println();

@@ -4,8 +4,8 @@ public class Territory extends Ownable {
 	private int rent;
 	
 	public Territory(int rent, int price) {
+		super(price);
 		this.rent = rent;
-		this.price = price;
 	}
 	
 	public void landOnField(Player player) {

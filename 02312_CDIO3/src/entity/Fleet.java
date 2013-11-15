@@ -1,20 +1,54 @@
 package entity;
 
 public class Fleet extends Ownable {
-	private int RENT_1 = 500;
-	private int RENT_2 = 1000;
-	private int RENT_3 = 2000;
-	private int RENT_4 = 4000;
+	private final int[] FLEET_FIELDS = {18, 19, 20, 21};
 	
-	public Fleet() {
-		
+	private final int RENT_1 = 500;
+	private final int RENT_2 = 1000;
+	private final int RENT_3 = 2000;
+	private final int RENT_4 = 4000;
+	
+	private GameBoard gameBoard;
+	
+	public Fleet(int price, GameBoard gameBoard) {
+		super(price);
+		this.gameBoard = gameBoard;
 	}
 	
 	public void landOnField(Player player) {
-		//TODO: Skriv hvad der skal ske...
+		if(owner == null) {
+			buyFieldOption(player);
+		}
+		else {
+			int rent = getRent();
+			player.transferTo(owner, rent);
+		}
 	}
 	
 	public int getRent() {
-		return 0;
+		int i, numberOfFleetsOwned = 0;
+		
+		for(i=0; i<4; i++) {
+			if(owner == gameBoard.getOwner(FLEET_FIELDS[i])) {
+				numberOfFleetsOwned++;
+			}
+		}
+		
+		switch(numberOfFleetsOwned) {
+			case 1:
+				return RENT_1;
+			case 2:
+				return RENT_2;
+			case 3:
+				return RENT_3;
+			case 4:
+				return RENT_4;
+			default:
+				return 0;
+		}
+	}
+	
+	public Player getOwner() {
+		return owner;
 	}
 }

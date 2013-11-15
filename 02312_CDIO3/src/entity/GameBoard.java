@@ -37,14 +37,19 @@ public class GameBoard {
 		fields[16] = new Tax(2000, -1);
 		fields[17] = new Tax(4000, 10);
 		
-		fields[18] = new Fleet();
-		fields[19] = new Fleet();
-		fields[20] = new Fleet();
-		fields[21] = new Fleet();
+		fields[18] = new Fleet(4000, this);
+		fields[19] = new Fleet(4000, this);
+		fields[20] = new Fleet(4000, this);
+		fields[21] = new Fleet(4000, this);
 	}
 
 	public void landOnField(Player player) {
 		fields[player.getLocation()].landOnField(player);
+	}
+	
+	public Player getOwner(int fieldNumber) {
+		Fleet fleet = (Fleet)fields[fieldNumber];
+		return fleet.getOwner();
 	}
 	
 	/**

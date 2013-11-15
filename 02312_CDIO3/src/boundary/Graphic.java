@@ -39,7 +39,7 @@ public class Graphic {
 		int i;
 		
 		for(i = 0; i<players.length; i++) {
-			GUI.setBalance(players[i].getName(), players[i].getAccount().getAccountValue());
+			GUI.setBalance(players[i].getName(), players[i].getAccountValue());
 		}
 	}
 	
