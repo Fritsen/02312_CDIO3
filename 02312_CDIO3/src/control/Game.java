@@ -73,6 +73,7 @@ public class Game {
 
 			dieCup.shakeDieCup();
 			players[activePlayer].moveFieldsForward(dieCup.getSum());
+			players[activePlayer].setLastDieSum(dieCup.getSum());
 			gameBoard.landOnField(players[activePlayer]);
 			
 			statusTasks(activePlayer);
