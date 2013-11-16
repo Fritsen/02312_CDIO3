@@ -1,0 +1,136 @@
+\section{Kode}
+\subsection{Struktur og pakker}
+Ligesom i CDIO del1 projektet, er programmet skrevet med fokus på at overholde BCE-modellen så meget som overhovedet muligt. Derfor er programmet også i dette projekt opdelt i pakker med navne svarende til BCE modellen, dvs. TUI og Graphic i ”Boundary”, Game og Main i ”Controller” og Account, Die, DieCup, Field, GameBoard og Player i ”Entity”. Med andre ord er klasserne opdelt i pakker efter hvilken type de er.
+\\
+
+Undtagelsen her er de forskellige test-klasser, som er lagt ned i en pakke, ”TestTools”, for sig selv. Dette er gjort ud fra en ide om at det vil være udviklere der benytter dem, og at de typisk nemmest vil kunne benyttes ved at omdøbe og indsætte dem direkte på andre klassers pladser. Således er der ikke nogen direkte henvisninger til dem i koden til det egentlige program, som almindelige brugere vil opleve.
+\\
+
+
+Herunder en gennemgang af de forskellige klasser og deres funktion.
+\\
+\subsection{TUI}
+Denne klasse håndterer alt hvad der kommer ind og ud af konsollen. For en grundigere beskrivelse af denne klasses funktionalitet henvises til det tilsvarende afsnit i CDIO del1 rapporten (7.0.4, side 12).
+Nogle metoder har andre navne og udskriver selvfølelig noget andet tekst, men den overordnede virkemåde er fuldstændigt identisk.
+\subsection{Graphic}
+Denne klasse styrer alt hvad der skal ændres på den grafiske brugerflade. Der kan argumenteres for, at denne klasse burde navngives ”GUI” for at overholde mønsteret fra tekst brugerfladen, men dette ville besværliggøre udviklingen, fordi det bibliotek der bliver stillet til rådighed til brugerfladen også bruger denne navngivning. Således vælger vi blot at kalde klassen ”Graphic”, med henvisning til at den styrer den grafiske del af programmet.
+\\
+Nogle metoder kalder blot de tilsvarende metoder i biblioteket direkte (setDice, addPlayer, close), men vi vælger at kalde dem gennem Graphic for at have henvisningerne til GUI-biblioteket samlet det samme sted. Denne fremgangsmåde gør det langt nemmere at vedligeholde programmet i tilfælde af ændringer/opdateringer af det bibliotek der benyttes.
+\\
+Graphic indeholder desuden en ”moveCar”-metode, som blot kalder to metoder i GUI-biblioteket – en til at fjerne brugerens bil(er) fra spillepladen, og en til at sætte bilen på et nyt felt.
+\\
+
+
+Den interessante del af Graphic-klassen er imidlertid ”setupFields”-metoden. Her udføres en række kald til hjælpemetoden ”createField”, der igen kalder metoder i GUI-biblioteket til at ændre titel, undertitel og beskrivelse af et felt.
+De felter, som benyttes til dette spil (2 til 12) opsættes med en liste af kald, som indeholder informationer om navn og score for hvert felt. Der kan argumenteres for, at opsætningen af felter på GUI’en kunne genbruge navne fra TUI’en og felt scoreværdier fra GameBoard, men vi vælger undlade at gøre dette, simpelthen for at holde koblingen så lav som muligt, og for at gøre programmet mere fleksibelt ift. ændringer.
+F.eks. kunne man måske forestille sig at en kunde kun ville betale for at få oversat enten TUI eller GUI i programmet, hvilket ikke ville være muligt hvis de hænger sammen, eller måske mere sandsynligt, at kunden var interesseret i at modificere programmet til kun at have en GUI, og derved fjerne TUI-klasse. Uanset hvad vil det i sådanne tilfælde være en fordel, at de forskellige klasser ikke er koblet for meget sammen, og det vurderer vi er vigtigere, end at spare et par linjers kode ved at kunne nøjes med at skrive felternes navne et enkelt sted.
+\subsection{Account}
+Denne klasse repræsenterer en konto, med en mængde penge/score. Klassen er ganske simpel, i den forstand at den kun indeholder en enkelt attribut med tilhørende get og set metoder, samt en metode der kan tilføje til den eksisterende score.
+\\
+
+Det specielle ved Account-klassen er, at den sikrer at en Account-balance ikke kan blive negativ, og giver en tilbagemelding på om en transaktion er gennemført eller ej.
+\\
+Klassen indeholder både en konstruktør som tager en ”oprettelses-balance” (initialAccountValue), samt en konstruktør som ikke tager nogen argumenter, og så blot opretter kontoen med en værdi på 0.
+\\
+\subsection{Die}
+Denne klasse er identisk med den Die-klasse der blev benyttet i CDIO del1. For en beskrivelse af klassen henvises til det tilsvarende afsnit i CDIO del1 rapporten (7.0.6, side 13).
+\subsection{DieCup:}
+Denne klasse læner sig kraftigt op ad den DieCup-klasse der blev benyttet i CDIO del1, der er blot fjernet noget overflødig funktionalitet i den udgave der er benyttet i dette projekt. For en beskrivelse af funktionaliteten i denne klasse henvises derfor til det tilsvarende afsnit i CDIO del1 rapporten (7.0.7, side 13).
+\subsection{Field}
+Denne klasse er skrevet til at bære de relevante informationer om et felt på spillepladen. Navn og beskrivelse er lagt i brugerfladeklasserne, for at gøre det nemmere at oversætte, så det eneste Field-klassen skal indeholde, er den effekt feltet skal have på en spiller – dvs. hvilken score feltet giver, og om feltet skal give en ekstra tur.
+\\
+
+Hvad et felt skal gøre, kan ikke ændre sig i løbet af et spil, så der er ingen set-metoder til attributterne – de sættes med konstruktøren, og ændrer sig ikke efterfølgende. Dvs. klassen har en konstruktør som tager et heltal for hvilken score feltet giver, samt en boolsk værdi for om feltet giver en ekstra tur.
+De fleste felter giver ikke en ekstra tur, så klassen indeholder også en konstruktør som kun tager et heltal for score, og så blot sætter værdien for ekstra tur til falsk. På den måde kan der spares lidt kode ved oprettelsen af alle felterne.
+\subsection{GameBoard}
+Denne klasse repræsenterer en spilleplade i spillet. Den indeholder blot et array med alle de felter som skal bruges, samt en get-metode til at få fat i et felt på listen. Felterne oprettes og tildeles deres værdier i konstruktøren, og ændres ikke efterfølgende.
+\\
+
+Der kan argumenteres for, at listen med felter fint kunne ligge i Game-controlleren, men for at få højst mulig sporbarhed ift. et ”rigtigt” spil, hvor der naturligvis vil være en spilleplade, vælger vi at lave en klasse til at indeholde felterne. Som en bonus fjerner denne løsning også noget kompleksitet fra controlleren i forhold til oprettelse af felterne.
+\subsection{Player}
+Denne klasse indeholder data om en spiller. I dette spil er der kun behov for at lagre en score og et navn, men ved at benytte en struktur med en decideret klasse til at indeholde spillerdata, er programmet forberedt til at gemme andre informationer om en spiller – f.eks. spillerens position på spillepladen, eller hvad der blev slået sidst osv..
+\\
+
+Scoren for en spiller gemmes i dette program i en klasse til formålet – Account. Når et nyt objekt af Player-klassen oprettes, laves der således også blot en ny Account, som så holder styr på spillerens score. Se evt. beskrivelse af Account-klassen tidligere i denne rapport.
+\subsection{Main}
+Main-klassen benyttes kun til at oprette og starte Game-kontrolleren, og indeholder således hverken logik, metoder eller data.
+\subsection{Game}
+Dette er klassen som indeholder selve logikken i spillet, og her vil derfor være en del ting der er interessante at nævne omkring beslutninger ift. implementeringen.
+\\
+
+Først og fremmest er det værd at bemærke, at spillerne i programmet lagres i et array af spillere. Det betyder dels at det bliver nemmere at lave en generisk løsning på logikken for en spillers tur, men dels også at det er nemt at udvide spillet til flere spillere. Faktisk er antallet af spillere angivet som en konstant i begyndelsen af klassen, og hele programmet er skrevet med tanke på, at det skal kunne virke med mere end 2 spillere – på den måde er programmet godt forberedt til udvidelse.
+\\
+
+
+Et eksempel på dette er oprettelsen af nye player-objekter, som bliver kørt i Game-konstruktøren.
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.4]{Game-illustration1.jpg}
+\caption[<Text for the list of figures>]{Spillere oprettes i en løkke}
+\label{fig:figure 2} 
+\end{figure}
+Objekterne oprettes i en løkke, som stoppes når antallet af oprettede spillere nå op på det antal, som er angivet i konstanten i starten af programmet.
+\\
+
+Foruden player-objekterne oprettes i konstruktøren også diverse andre objekter af klasser, som bruges i kontrolleren – dieCup, GameBoard samt en scanner. Desuden åbnes GUI’en fra konstruktøren, og felterne på GUI’en indstilles til noget der er passende for spillet.
+\\
+
+Den øvrige logik ligger i ”startGame”-metoden, som også kaldes direkte fra main.
+TUI’en kaldes for at udskrive spillets regler, og herefter bedes alle spillere indtaste deres navn. Igen er der tale om en fleksibel løsning, som vil virke med flere end 2 spillere.
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.4]{Game-illustration2.jpg}
+\caption[<Text for the list of figures>]{Indlæs navne i en løkke}
+\label{fig:figure 2} 
+\end{figure}
+Igen foregår det selvfølgelig i en løkke, og igen kører løkken bare indtil der er kørt lige så mange gange som der er angivet, at der skulle være spillere.
+Inde i løkken udskrives så først en lille tekst, som beder brugens indtaste et navn, derefter indsamles det indtastede fra konsollen, hvorefter det gemmes i det player-objekt som passer til spilleren, og til sidste opdateres GUI’en med den nye information.
+\\
+
+Herefter starter selve logikken for spillernes ”ture” i spillet. Turene køres i en endeløs løkke (”while(true)”), som så kan afbrydes ved forskellige scenarier. Denne løsning er valgt, dels fordi der er mange forskellige ting der kan afbryde spillet (en spiller trykker ”q”, en spiller vinder, en spiller taber), dels fordi vi er interesseret i at kunne afbryde spillet midt i en tur. F.eks. giver det ikke meget mening at der køres en hel tur færdig med score osv., hvis en spiller har trykket ”q” for at afslutte spillet, og det giver heller ikke meget mening at udskrive endnu en status i spillet, og tjekke for om en af spillerne har vundet, hvis der allerede er en spiller som har tabt osv..
+\\
+
+Selve tur-logikken starter med at udskrive navnet på den spiller, som skal slå. Herefter ventes på input fra konsollen. Når der er givet et input, tjekkes om inputtet er ”q” – er det det, afsluttes spillet. Ellers fortsættes, og der slås med terningerne. Ud fra værdien af terningerne, findes så det felt som spilleren er landet på, og scoren for det pågældende felt hentes. Denne score tilføjes så spillerens player-objekt, og der tjekkes om transaktionen er gennemført. Er den ikke det, må det skyldes at balancen på spillerens konto er blevet negativ, så spillet afsluttes og den aktuelle spiller erklæres som taber af spillet. Bliver transaktionen gennemført fortættes spillet, og der udskrives en status. Herefter tjekkes om spilleren har opnået det ønskede antal point for at vinde – har han det, afsluttes spillet og spilleren erklæres som vinder. Har han ikke det, fortsættes spillet, og der tjekkes om det felt, spilleren er landet på, giver en ekstra tur. Gør det det, køres en ny tur med den samme spiller, gør det ikke det, skiftes til den næste spiller i rækkefølgen, før der køres en ny tur.
+\\
+
+For hver af alle disse handlinger (afslut spillet, erklær en spiller som taber, erklær en spiller som vinder, udskriv status, skift til næste spiller i rækkefølgen), findes en hjælpemetode, som udfører de relevante operationer for en handling.
+\\
+
+Når spillet afsluttes udføres en oprydning af de benyttede komponenter.
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.4]{Game-illustration3.jpg}
+\caption[<Text for the list of figures>]{Metode til oprydning}
+\label{fig:figure 2} 
+\end{figure}
+GUI’en lukkes, scanneren, som benyttes til at hente input fra konsollen, lukkes, og til sidst afsluttes programmet.
+\\
+
+Når en spiller erklæres som taber, udskrives navnet og scoren for taberen, og der ventes på konsolinput, for at sikre at spillerne når at se beskeden, inden spillet lukker. Når der gives et input, lukkes spillet med cleanUp metoden ovenfor.
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.4]{Game-illustration4.jpg}
+\caption[<Text for the list of figures>]{Metode for tabt spil}
+\label{fig:figure 2} 
+\end{figure}
+Præcist det samme gør sig gældende når en spiller vinder, bortset selvfølgelig fra at teksten som udskrives er anderledes.
+\\
+
+Når der udskrives status, foregår det ligeledes med en hjælpemetode. Herfra opdateres både GUI og TUI.
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.4]{Game-illustration5.jpg}
+\caption[<Text for the list of figures>]{Metode til opdatering af TUI og GUI}
+\label{fig:figure 2} 
+\end{figure}
+Der udskrives en status til TUI’en terningernes værdi, samt score for alle spillere. Derudover indstilles terningerne på GUI’en, ligesom spillerens score opdateres og den aktuelle spillers placering på spillepladen ændres.
+\\
+
+På samme måde er der også en metode til at skifte til den næste bruger i rækkefølgen.
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.4]{Game-illustration6.jpg}
+\caption[<Text for the list of figures>]{Metode til næste spiller}
+\label{fig:figure 2} 
+\end{figure}
+Igen er det her værd at bemærke, at metoden også vil virke med mere end 2 spillere. Metoden tager nummeret på den nuværende spiller som input, og lægger en til – med mindre den spiller der i så fald skulle returneres ville have et højere nummer, end den konstant der er angivet for antallet af spillere – i så fald returneres blot 0 (dvs. der startes forfra i rækkefølgen).

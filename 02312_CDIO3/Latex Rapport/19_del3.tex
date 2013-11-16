@@ -1,0 +1,166 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern} 
+\usepackage{amssymb}
+\usepackage[danish]{babel}
+\usepackage{pstricks-add}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+%\usepackage{anysize}
+%\marginsize{3cm}{3cm}{1.5cm}{4cm} % venstre, højre, top, bund.
+\lstset{literate=%
+{æ}{{\ae}}1
+{å}{{\aa}}1
+{ø}{{\o}}1
+{Æ}{{\AE}}1
+{Å}{{\AA}}1
+{Ø}{{\O}}1
+}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.5,0,0.3}
+\definecolor{myblue}{rgb}{0,0.4,0.9}
+\pagestyle{plain}
+\begin{document}
+\section*{Projektopgave efterår 2013 - jan 2014}
+\section*{02312-14 Indledende programmering og 02313 Udviklingsmetoder til IT-Systemer}
+Projektnavn: \textcolor{red}{del2}
+Gruppe nr: \textcolor{red}{19}
+Afleveringsfrist: \textcolor{red}{mandag den 11/11 2013 Kl. 5:00}
+\\\\
+Denne rapport er afleveret via Campusnet (der skrives ikke under)
+\\\\
+Denne rapport indeholder \textcolor{red}{57} sider incl. denne side
+\\\\
+Studie nr, Efternavn, Fornavne
+\\\\
+\textcolor{red}{s110795, Mortensen, Thomas Martin}
+\\
+Kontakt person (Projektleder)
+\\\\
+\includegraphics[scale=0.5]{ThomasM.jpg}
+\\\\
+\textcolor{red}{s113577, Johansen, Chris Dons}
+\\\\
+\includegraphics[scale=0.5]{ChrisJ.jpg}
+\\\\
+\textcolor{red}{s123897, Ahlgreen, Thomas Kamper}
+\\\\
+\includegraphics[scale=0.5]{ThomasA.jpg}
+\newpage
+\section*{Timeregnskab}
+\begin{tabular}{|c|c|c|c|c|c|c|r|} \hline
+ Dato & Deltager & Design & Implementering & Test & Dok. & Andet & I alt \\ \hline
+&&&&&&& \\ \hline
+ 18/10-13 & Thomas Mortensen & 2& & & & & 2\\ \hline
+ 18/10-13 & Chris Johansen & 2& & & & &2 \\ \hline
+ 18/10-13 & Thomas Ahlgreen & 2& & & & & 2\\ \hline
+ &&&&&&& \\ \hline
+ 25/10-13 & Thomas Mortensen & & 2,5& & & &2,5 \\ \hline
+ 25/10-13 & Chris Johansen & &2,5 & & & &2,5 \\ \hline
+ 25/10-13 & Thomas Ahlgren & & 2,5& & & &2,5 \\ \hline
+ &&&&&&& \\ \hline
+ 1/11-13 & Thomas Mortensen & &2,5 & & & &2,5 \\ \hline
+ 1/11-13 & Chris Johansen & &2,5 & & & & 2,5 \\ \hline
+ 1/11-13 & Thomas Ahlgren & &2,5 & & & & 2,5 \\ \hline
+ &&&&&&& \\ \hline
+ 8/11-13 & Thomas Mortensen & & &1 &6 & &7 \\ \hline
+ 8/11-13 & Chris Johansen & & &1 &6 & &7 \\ \hline
+ 8/11-13 & Thomas Ahlgren & & &1 &6 & &7 \\ \hline
+ &&&&&&& \\ \hline
+ diverse & Thomas Mortensen & & & &4 & & \\ \hline
+ diverse & Chris Johansen & & & & &2 & \\ \hline
+ diverse & Thomas Ahlgren & & & & & & \\ \hline
+ &&&&&&& 48\\ \hline
+\end{tabular}
+\newpage
+\tableofcontents
+\newpage
+\section{Indledning}
+Spilfirmaet IOOuterActive var så imponeret over deres sidste bestilling at
+de har bedt os om at lave endnu et spil til dem.
+\\
+Løsningen ønskes endnu en gang dokumenteret ved brug af analytiske metoder,
+design principper, effektiv implementering, og tests af det implementeret.
+En lang fortælling kort, så vil kunden have et spil hvor det er muligt at slå
+rundt på nogen felter (med forskellige konsekvenser) ved brug af terninger
+til maks 2 spillere.
+\\
+
+
+Denne gang ønskes projektet efter GRASP principperne. 
+Kunden har vedlagt nogen ekstra implementations muligheder til en GUI, som ønskes
+implementeret hvis der er tid og penge til det i det givne budget/ tidsrum.
+Vores projekt leder har udtrykt at det er til vores fordel at følge rækkefølgen
+på udarbejdelsen, som der står anført i opgavestillingen.
+\\
+Der er, fra projektlederens side, stillet materialer til rådighed der vil
+hjælpe os med at løse opgaven, samt sørge for at vi følger alle ønskede
+protokoller i forhold til dokumentations kravene.
+\\\\
+OBS: alle gruppemedlemmer er lige ansvarlige for alle dele af vores dokumentation
+\input{Kravspecificering.tex}
+\input{Domaenemodel.tex}
+\input{BCEmodel.tex}
+\input{SystemsekvensDiagram.tex}
+\input{Kode.tex}
+\input{Test.tex}
+\input{Designsekvens-diagram.tex}
+\input{Design-klassediagram.tex}
+\input{GRASP.tex}
+\input{FURPS.tex}
+\section{Kildeliste}
+Her vil vi oplyse om hvilke kilder, der er brugt til rapporten.
+Vi vil både oplyse om hvilke bøger, hjemmesider og software vi har brugt.
+\subsection{Bøger/rapporter}
+\begin{itemize}
+\item Applying UML and patterns - An introduction to Object-Oriented Analysis and Design and Iterative Development - Craig Larman, Third Edition
+\item Java Software Solutions -  Foundations of Program Design - Lewis and Loftus, Seventh Edition
+\item 19\_del1 - Ahlgreen, Johansen og Mortensen
+\end{itemize}
+\subsection{Hjemmesider}
+\begin{itemize}
+\item http://en.wikipedia.org/wiki/GRASP\_(object-oriented\_design)
+\item http://en.wikipedia.org/wiki/Encapsulation\_(object-oriented\_programming)
+\end{itemize}
+\subsection{Programmer}
+\begin{itemize}
+\item Eclipse - kepler
+\item UMLet
+\item Google Docs
+\item TexMaker
+\end{itemize}
+\newpage
+\section{Bilag}
+\subsection{Kode}
+Her vil hele vores kode til programmet være repræsenteret som bilag.
+\subsubsection{TUI - Boundary}
+\lstinputlisting[language = Java, tabsize = 2,stringstyle=\color{myblue},commentstyle=\color{mygreen},showstringspaces = false, breaklines=true, numbers = left,keywordstyle = \bfseries\color{mymauve}]{TUI.java}
+\subsubsection{Graphic - Boundary}
+\lstinputlisting[language = Java, tabsize = 2,stringstyle=\color{myblue},commentstyle=\color{mygreen},showstringspaces = false, breaklines=true, numbers = left,keywordstyle = \bfseries\color{mymauve}]{Graphic.java}
+\subsubsection{Main - Controller}
+\lstinputlisting[language = Java, tabsize = 2,stringstyle=\color{myblue},commentstyle=\color{mygreen},showstringspaces = false, breaklines=true ,numbers = left,keywordstyle = \bfseries\color{mymauve}]{Main.java}
+\subsubsection{Game - Controller}
+\lstinputlisting[language = Java, tabsize = 2,stringstyle=\color{myblue},commentstyle=\color{mygreen},showstringspaces = false, breaklines=true, numbers = left,keywordstyle = \bfseries\color{mymauve}]{Game.java}
+\subsubsection{Player - Entity}
+\lstinputlisting[language = Java, tabsize = 2,stringstyle=\color{myblue},commentstyle=\color{mygreen},showstringspaces = false, breaklines=true, numbers = left,keywordstyle = \bfseries\color{mymauve}]{Player.java}
+\subsubsection{Account - Entity}
+\lstinputlisting[language = Java, tabsize = 2,stringstyle=\color{myblue},commentstyle=\color{mygreen},showstringspaces = false,breaklines=true, numbers = left,keywordstyle = \bfseries\color{mymauve}]{Account.java}
+\subsubsection{Gameboard - Entity}
+\lstinputlisting[language = Java, tabsize = 2,stringstyle=\color{myblue},commentstyle=\color{mygreen},showstringspaces = false,breaklines=true, numbers = left,keywordstyle = \bfseries\color{mymauve}]{Gameboard.java}
+\subsubsection{Field - Entity}
+\lstinputlisting[language = Java, tabsize = 2,stringstyle=\color{myblue},commentstyle=\color{mygreen},showstringspaces = false,breaklines=true, numbers = left,keywordstyle = \bfseries\color{mymauve}]{Field.java}
+\subsubsection{DieCup - Entity}
+\lstinputlisting[language = Java, tabsize = 2,stringstyle=\color{myblue},commentstyle=\color{mygreen},showstringspaces = false, breaklines=true, numbers = left,keywordstyle = \bfseries\color{mymauve}]{DieCup.java}
+\subsubsection{Die - Entity}
+\lstinputlisting[language = Java, tabsize = 2,stringstyle=\color{myblue},commentstyle=\color{mygreen},showstringspaces = false,breaklines=true, numbers = left,keywordstyle = \bfseries\color{mymauve}]{Die.java}
+\subsubsection{AccountTesterController - TestTools}
+\lstinputlisting[language = Java, tabsize = 2,stringstyle=\color{myblue},commentstyle=\color{mygreen},showstringspaces = false, breaklines=true, numbers = left,keywordstyle = \bfseries\color{mymauve}]{AccountTesterController.java}
+\subsubsection{DieCupTestEntity - TestTools}
+\lstinputlisting[language = Java, tabsize = 2,stringstyle=\color{myblue},commentstyle=\color{mygreen},showstringspaces = false, breaklines=true, numbers = left,keywordstyle = \bfseries\color{mymauve}]{DieCupTestEntity.java}
+\subsubsection{GameBoardTestEntity - TestTools}
+\lstinputlisting[language = Java, tabsize = 2,stringstyle=\color{myblue},commentstyle=\color{mygreen},showstringspaces = false, breaklines=true, numbers = left,keywordstyle = \bfseries\color{mymauve}]{GameBoardTestEntity.java}
+\end{document}
