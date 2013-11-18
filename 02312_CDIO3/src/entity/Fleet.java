@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.Scanner;
+
 public class Fleet extends Ownable {
 	private final int[] FLEET_FIELDS = {18, 19, 20, 21};
 	
@@ -10,8 +12,8 @@ public class Fleet extends Ownable {
 	
 	private GameBoard gameBoard;
 	
-	public Fleet(int price, GameBoard gameBoard) {
-		super(price);
+	public Fleet(int price, GameBoard gameBoard, Scanner scanner) {
+		super(price, scanner);
 		this.gameBoard = gameBoard;
 	}
 	

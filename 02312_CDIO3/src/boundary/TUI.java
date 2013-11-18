@@ -36,7 +36,7 @@ public class TUI {
 		while(numberOfPlayers == 0) {
 			printNumberRequest();
 			try {
-				numberOfPlayers = new Integer(TUI.getUserInput(scanner));
+				numberOfPlayers = new Integer(getUserInput(scanner));
 				if(numberOfPlayers < 0 || numberOfPlayers > 6) {
 					numberOfPlayers = 0;
 				}
@@ -47,6 +47,15 @@ public class TUI {
 		}
 		
 		return numberOfPlayers;
+	}
+	
+	public static boolean getYesNo(Scanner scanner) {
+		String input = getUserInput(scanner);
+		if(input == "Y" || input == "y") {
+			return true;
+		}
+		
+		return false;
 	}
 	
 	/**
@@ -166,6 +175,10 @@ public class TUI {
 		System.out.println();
 	}
 
+	public static void printBuyOption() {
+		System.out.println("This field is ownable but not owned by anyone. Would you like to buy it? (Y/N)");
+	}
+	
 	/**
 	 * Prints the name and score of the winning player.
 	 * 
