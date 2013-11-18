@@ -34,8 +34,8 @@ public class GameBoard {
 		fields[14] = new LaborCamp(100, 2500);
 		fields[15] = new LaborCamp(100, 2500);
 		
-		fields[16] = new Tax(2000, -1);
-		fields[17] = new Tax(4000, 10);
+		fields[16] = new Tax(2000);
+		fields[17] = new Tax(4000, 10, this);
 		
 		fields[18] = new Fleet(4000, this);
 		fields[19] = new Fleet(4000, this);
@@ -50,6 +50,14 @@ public class GameBoard {
 	public Player getOwner(int fieldNumber) {
 		Fleet fleet = (Fleet)fields[fieldNumber];
 		return fleet.getOwner();
+	}
+	
+	public Ownable getOwnableField(int fieldNumber) {
+		if(fields[fieldNumber] instanceof Ownable) {
+			return (Ownable)fields[fieldNumber];
+		}
+		
+		return null;
 	}
 	
 	/**
