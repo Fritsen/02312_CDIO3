@@ -5,11 +5,17 @@ import java.util.Scanner;
 public class LaborCamp extends Ownable {
 	private int baseRent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	private GameBoard gameBoard;
 
 	public LaborCamp(int baseRent, int price, GameBoard gameBoard) {
 		super(price);
+=======
+	
+	public LaborCamp(int baseRent, int price, Scanner scanner) {
+		super(price, scanner);
+>>>>>>> 36ff0e4aeb37abe209819cce739e758c9d893da8
 =======
 	
 	public LaborCamp(int baseRent, int price, Scanner scanner) {
