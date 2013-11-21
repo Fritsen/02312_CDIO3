@@ -1,11 +1,7 @@
 package entity;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 import control.Game;
-=======
-import java.util.Scanner;
->>>>>>> 36ff0e4aeb37abe209819cce739e758c9d893da8
 =======
 import java.util.Scanner;
 >>>>>>> 36ff0e4aeb37abe209819cce739e758c9d893da8
@@ -27,7 +23,6 @@ public class GameBoard {
 	 */
 	public GameBoard(Scanner scanner) {
 		fields = new Field[22];
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 		// Create the fields
@@ -73,24 +68,6 @@ public class GameBoard {
 		
 		fields[12] = new Refuge(5000);
 		fields[13] = new Refuge(500);
-=======
-		
-    	//Create the fields
-		fields[1] = new Territory(100, 1000, scanner);
-		fields[2] = new Territory(300, 1500, scanner);
-		fields[3] = new Territory(500, 2000, scanner);
-		fields[4] = new Territory(700, 3000, scanner);
-		fields[5] = new Territory(1000, 4000, scanner);
-		fields[6] = new Territory(1300, 4300, scanner);
-		fields[7] = new Territory(1600, 4750, scanner);
-		fields[8] = new Territory(2000, 5000, scanner);
-		fields[9] = new Territory(2600, 5500, scanner);
-		fields[10] = new Territory(3200, 6000, scanner);
-		fields[11] = new Territory(4000, 8000, scanner);
-		
-		fields[12] = new Refuge(5000);
-		fields[13] = new Refuge(500);
->>>>>>> 36ff0e4aeb37abe209819cce739e758c9d893da8
 		
 		fields[14] = new LaborCamp(100, 2500, scanner);
 		fields[15] = new LaborCamp(100, 2500, scanner);
@@ -102,9 +79,6 @@ public class GameBoard {
 		fields[19] = new Fleet(4000, this, scanner);
 		fields[20] = new Fleet(4000, this, scanner);
 		fields[21] = new Fleet(4000, this, scanner);
-<<<<<<< HEAD
->>>>>>> 36ff0e4aeb37abe209819cce739e758c9d893da8
-=======
 >>>>>>> 36ff0e4aeb37abe209819cce739e758c9d893da8
 	}
 
@@ -133,9 +107,6 @@ public class GameBoard {
 		return null;
 	}
 	
-<<<<<<< HEAD
->>>>>>> 36ff0e4aeb37abe209819cce739e758c9d893da8
-=======
 >>>>>>> 36ff0e4aeb37abe209819cce739e758c9d893da8
 	/**
 	 * A method to generate a nice string containing the value of all the
