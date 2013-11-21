@@ -30,7 +30,7 @@ public class Game {
 	public Game() {
 		dieCup = new DieCup();
 		scanner = new Scanner(System.in);
-		gameBoard = new GameBoard();
+		gameBoard = new GameBoard(scanner);
 
 		Graphic.setupFields();
 	}
