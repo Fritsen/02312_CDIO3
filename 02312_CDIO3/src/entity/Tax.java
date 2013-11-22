@@ -8,16 +8,18 @@ public class Tax extends Field{
 	private int taxAmount;
 	private int taxRate;
 	private GameBoard gameBoard;
+	private Scanner scanner;
 	
 	public Tax(int taxAmount) {
 		this.taxAmount = taxAmount;
 		taxRate = -1;
 	}
 	
-	public Tax(int taxAmount, int taxRate, GameBoard gameBoard) {
+	public Tax(int taxAmount, int taxRate, GameBoard gameBoard, Scanner scanner) {
 		this.taxAmount = taxAmount;
 		this.taxRate = taxRate;
 		this.gameBoard = gameBoard;
+		this.scanner = scanner;
 	}
 	
 	public void landOnField(Player player) {
@@ -29,14 +31,14 @@ public class Tax extends Field{
 		else if(player.getLocation() == 17)
 		{
 			//TODO Fix TUI message for Tax
-			if(TUI.getYesNo(Scanner) = True)
+			if(!TUI.getYesNo(scanner))
 			{
 				player.addToAccount(-4000);
 			}
-		else
-		{
-			player.addToAccount(-1*(taxRate/100*calculateAssets(player)));
-		}
+			else
+			{
+				player.addToAccount(-1*(taxRate/100*calculateAssets(player)));
+			}
 	}
 		
 		
