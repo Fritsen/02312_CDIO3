@@ -11,7 +11,6 @@ public class Player {
     private Account account;
     private boolean isBankrupt;
     private int location;
-    private int lastDieSum;
     
     /**
      * Constructor that initiates name to empty and account to an initial score.
@@ -80,14 +79,6 @@ public class Player {
     public void transferTo(Player player, int amount) {
     	this.addToAccount(-1*amount);
     	player.addToAccount(amount);
-    }
-    
-    public void setLastDieSum(int input) {
-    	lastDieSum = input;
-    }
-    
-    public int getLastDieSum() {
-    	return lastDieSum;
     }
     
     /**
