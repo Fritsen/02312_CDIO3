@@ -57,7 +57,7 @@ public class TUI {
 
 	public static boolean getYesNo(Scanner scanner) {
 		String input = getUserInput(scanner);
-		if (input == "Y" || input == "y") {
+		if ("Y".equals(input) || "y".equals(input)) {
 			return true;
 		}
 
@@ -148,6 +148,10 @@ public class TUI {
 		System.out.print("\nIt's " + name + "'s turn. Press enter to roll.");
 	}
 
+	public static void printFieldName(int fieldNumber) {
+		System.out.println("You hit field number " + fieldNumber + ", " + getFieldName(fieldNumber));
+	}
+	
 	/**
 	 * Prints the current status of the game. Thats all players score and the
 	 * sum of the dice.
@@ -157,16 +161,12 @@ public class TUI {
 	 * @param sum
 	 *            The value that was hit with the dice.
 	 */
-	public static void printStatus(Player[] players, int activePlayer) {
-		int i, loc;
-		loc = players[activePlayer].getLocation();
-		System.out.println("You hit field number " + loc + ", "
-				+ getFieldName(loc));
+	public static void printStatus(Player[] players) {
+		int i;
 		System.out.println("The score is now:");
 
 		for (i = 0; i < players.length; i++) {
-			System.out.print(players[i].getName() + " = "
-					+ players[i].getAccountValue() + "\t");
+			System.out.print(players[i].getName() + " = " + players[i].getAccountValue() + "\t");
 		}
 
 		System.out.println();
