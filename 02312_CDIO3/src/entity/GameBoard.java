@@ -2,8 +2,6 @@ package entity;
 
 import java.util.Scanner;
 
-import control.Game;
-
 /**
  * Class to create a game board. This class takes in a lot of fields and makes
  * it a board.
@@ -12,14 +10,16 @@ import control.Game;
  * 
  */
 public class GameBoard {
+	private DieCup dieCup;
 	Field[] fields;
-	private Game game;
 
 	/**
 	 * Constructor that makes an array of fields and sets it according to the
 	 * rules of the game.
 	 */
 	public GameBoard(Scanner scanner) {
+		dieCup = new DieCup();
+		
 		fields = new Field[22];
 
 		// Create the fields
@@ -38,8 +38,8 @@ public class GameBoard {
 		fields[12] = new Refuge(5000);
 		fields[13] = new Refuge(500);
 
-		fields[14] = new LaborCamp(100, 2500, scanner, this);
-		fields[15] = new LaborCamp(100, 2500, scanner, this);
+		fields[14] = new LaborCamp(100, 2500, this, scanner);
+		fields[15] = new LaborCamp(100, 2500, this, scanner);
 
 		fields[16] = new Tax(2000);
 		fields[17] = new Tax(4000, 10, this);
@@ -59,16 +59,28 @@ public class GameBoard {
 		return fleet.getOwner();
 	}
 
-	public int calcRentLabor() {
-		return game.xtraShake();
-	}
-
 	public Ownable getOwnableField(int fieldNumber) {
 		if (fields[fieldNumber] instanceof Ownable) {
 			return (Ownable) fields[fieldNumber];
 		}
 
 		return null;
+	}
+	
+	public void shakeDieCup() {
+		dieCup.shakeDieCup();
+	}
+	
+	public int getDieCupSum() {
+		return dieCup.getSum();
+	}
+	
+	public int getDieValue1() {
+		return dieCup.getValueDie1();
+	}
+	
+	public int getDieValue2() {
+		return dieCup.getValueDie2();
 	}
 
 	/**

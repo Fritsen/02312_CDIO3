@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import boundary.Graphic;
 import boundary.TUI;
-import entity.DieCup;
 import entity.GameBoard;
 import entity.Player;
 
@@ -16,8 +15,7 @@ import entity.Player;
  */
 public class Game {
 	private final int POINTS_TO_START_WITH = 30000;
-
-	private DieCup dieCup;
+	
 	private Scanner scanner;
 	private GameBoard gameBoard;
 	private Player[] players;
@@ -28,7 +26,6 @@ public class Game {
 	 * Game constructor. Creates new instances of the required classes.
 	 */
 	public Game() {
-		dieCup = new DieCup();
 		scanner = new Scanner(System.in);
 		gameBoard = new GameBoard(scanner);
 
@@ -70,9 +67,9 @@ public class Game {
 				cleanUp();
 			}
 
-			dieCup.shakeDieCup();
-			players[activePlayer].moveFieldsForward(dieCup.getSum());
-			players[activePlayer].setLastDieSum(dieCup.getSum());
+			gameBoard.shakeDieCup();
+			players[activePlayer].moveFieldsForward(gameBoard.getDieCupSum());
+			TUI.printFieldName(players[activePlayer].getLocation());
 			gameBoard.landOnField(players[activePlayer]);
 
 			statusTasks(activePlayer);
@@ -136,20 +133,14 @@ public class Game {
 		return 0;
 	}
 
-	public int xtraShake() {
-		dieCup.shakeDieCup();
-		return dieCup.getSum();
-	}
-
 	/**
 	 * Writes score and dice values to both GUI and TUI
 	 */
 	private void statusTasks(int activePlayer) {
 		TUI.printStatus(players, activePlayer);
-		Graphic.setDice(dieCup.getValueDie1(), dieCup.getValueDie2());
+		Graphic.setDice(gameBoard.getDieValue1(), gameBoard.getDieValue2());
 		Graphic.updatePlayers(players);
-		Graphic.moveCar(players[activePlayer].getName(),
-				players[activePlayer].getLocation());
+		Graphic.moveCar(players[activePlayer].getName(), players[activePlayer].getLocation());
 	}
 
 	/**
