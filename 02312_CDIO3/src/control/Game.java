@@ -136,9 +136,9 @@ public class Game {
 		return 0;
 	}
 
-	public void xtraShake() {
+	public int xtraShake() {
 		dieCup.shakeDieCup();
-		dieCup.getSum();
+		return dieCup.getSum();
 	}
 
 	/**

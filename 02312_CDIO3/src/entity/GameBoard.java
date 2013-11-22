@@ -38,8 +38,8 @@ public class GameBoard {
 		fields[12] = new Refuge(5000);
 		fields[13] = new Refuge(500);
 
-		fields[14] = new LaborCamp(100, 2500, scanner);
-		fields[15] = new LaborCamp(100, 2500, scanner);
+		fields[14] = new LaborCamp(100, 2500, scanner, this);
+		fields[15] = new LaborCamp(100, 2500, scanner, this);
 
 		fields[16] = new Tax(2000);
 		fields[17] = new Tax(4000, 10, this);
@@ -59,9 +59,8 @@ public class GameBoard {
 		return fleet.getOwner();
 	}
 
-	public int calcRentLabor(int baseRent) {
-		game.xtraShake();
-		return baseRent;
+	public int calcRentLabor() {
+		return game.xtraShake();
 	}
 
 	public Ownable getOwnableField(int fieldNumber) {

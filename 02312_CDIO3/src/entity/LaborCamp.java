@@ -7,27 +7,23 @@ public class LaborCamp extends Ownable {
 
 	private GameBoard gameBoard;
 
-	public LaborCamp(int baseRent, int price, Scanner scanner) {
+	public LaborCamp(int baseRent, int price, Scanner scanner, GameBoard gameBoard) {
 		super(price, scanner);
 		this.baseRent = baseRent;
+		this.gameBoard = gameBoard;
 	}
 
 	public void landOnField(Player player) {
 		if (owner == null) {
 			buyFieldOption(player);
 		} else {
-			int baseRent = getRent();
-			player.transferTo(owner, baseRent);
+			int rent = getRent();
+			player.transferTo(owner, rent);
 		}
 
 	}
 
 	public int getRent() {
-		baseRent = gameBoard.calcRentLabor(baseRent) * 100;
-		return baseRent;
-	}
-
-	public Player getOwner() {
-		return owner;
+		return gameBoard.calcRentLabor() * baseRent;
 	}
 }

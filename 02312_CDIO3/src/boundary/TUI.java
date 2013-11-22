@@ -15,7 +15,6 @@ public class TUI {
 	 * Prints game rules.
 	 */
 	public static void printRules() {
-		// TODO: Lav nye regler
 		System.out.println("");
 		System.out
 				.println("--------------------------------------------------------------");
@@ -28,7 +27,7 @@ public class TUI {
 		System.out
 				.println("| You get points on some, and loses points on others.        |");
 		System.out
-				.println("| A player wins when the othes go bankrupt.                  |");
+				.println("| A player wins when the others go bankrupt.                  |");
 		System.out
 				.println("| Press \"Enter\" to roll, press \"q\" to exit.                  |");
 		System.out
@@ -105,46 +104,6 @@ public class TUI {
 	}
 
 	/**
-	 * Method to get the description of a field from the field number. The
-	 * descriptions are given according to the game rules, but could be
-	 * translated.
-	 * 
-	 * @param fieldNumber
-	 *            The number of the field to get a description for.
-	 * @return The description for the field with the given number. Null if the
-	 *         field doesn't exist.
-	 */
-	public static String getFieldDescription(int fieldNumber) {
-		// TODO: Ret beskrivelser på felter og tilføj de nye...
-		switch (fieldNumber) {
-		case 2:
-			return "You entered the tower. Gain 250 credits for climbing it.";
-		case 3:
-			return "You crashed into the road creating a crater. Pay 200 credits towards repair costs.";
-		case 4:
-			return "You went sightseeing at the palace gates but got robbed. Pay 100 credits.";
-		case 5:
-			return "You ran out of gas exploring the Cold Desert. Pay 20 credits for more gas to get home.";
-		case 6:
-			return "You bet on a race in the Walled City and won. Gain 180 credits.";
-		case 7:
-			return "You climbed the mountain and gained wisdom. Do nothing.";
-		case 8:
-			return "You got lost in the black cave. Pay a park ranger 70 credits for helping you out.";
-		case 9:
-			return "You accidentally set fire to a hut on the mountain. Pay 60 credits for materials to rebuild.";
-		case 10:
-			return "You got caught naked and drunk strolling around in Wearwall. Pay the police a fine of 80 credits.\nThey felt sorry for you. Recieve another turn.";
-		case 11:
-			return "You tried to steal a police car. Pay 90 credits as bail.";
-		case 12:
-			return "You travelled to Alaska and struck it big in gold. Recieve 650 credits.";
-		}
-
-		return null;
-	}
-
-	/**
 	 * Prints a short text, asking the specified player to type his name.
 	 * 
 	 * @param playerNo
@@ -182,13 +141,11 @@ public class TUI {
 	public static void printStatus(Player[] players, int activePlayer) {
 		int i, loc;
 		loc = players[activePlayer].getLocation();
-		System.out.println("You hit field number " + loc + ", "
-				+ getFieldName(loc) + "\n" + getFieldDescription(loc));
+		System.out.println("You hit field number " + loc + ", " + getFieldName(loc));
 		System.out.println("The score is now:");
 
 		for (i = 0; i < players.length; i++) {
-			System.out.print(players[i].getName() + " = "
-					+ players[i].getAccountValue() + "\t");
+			System.out.print(players[i].getName() + " = " + players[i].getAccountValue() + "\t");
 		}
 
 		System.out.println();

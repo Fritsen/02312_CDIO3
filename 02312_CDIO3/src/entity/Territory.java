@@ -16,7 +16,6 @@ public class Territory extends Ownable {
 		{
 			buyFieldOption(player);
 		} 
-		
 		else
 		{
 			int rent = getRent();
@@ -25,6 +24,6 @@ public class Territory extends Ownable {
 	}
 
 	public int getRent() {
-		return 0;
+		return rent;
 	}
 }
