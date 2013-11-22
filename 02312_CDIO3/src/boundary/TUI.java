@@ -74,30 +74,49 @@ public class TUI {
 	 *         doesn't exist.
 	 */
 	public static String getFieldName(int fieldNumber) {
-		// TODO: Ret navne på felter og tilføj de nye...
 		switch (fieldNumber) {
+		case 1:
+			return "Tribe Encampment";
 		case 2:
-			return "Tower";
-		case 3:
 			return "Crater";
+		case 3:
+			return "Mountain";
 		case 4:
-			return "Palace gates";
-		case 5:
 			return "Cold Desert";
+		case 5:
+			return "Black Cave";
 		case 6:
-			return "Walled city";
+			return "The Werewall";
 		case 7:
-			return "Monastery";
+			return "Mountain village";
 		case 8:
-			return "Black cave";
+			return "South Citadel";
 		case 9:
-			return "Huts in the mountain";
+			return "Palace gates";
 		case 10:
-			return "The Wearwall";
+			return "Tower";
 		case 11:
-			return "The pit";
+			return "Castle";
 		case 12:
+			return "Walled city";
+		case 13:
+			return "Monastery";
+		case 14:
+			return "Huts in the mountain";
+		case 15:
+			return "The pit";
+		case 16:
 			return "Goldmine";
+		case 17:
+			return "Caravan";
+		case 18:
+			return "Second Sail";
+		case 19:
+			return "Sea Grover";
+		case 20:
+			return "The Buccaneers";
+		case 21:
+			return "Privateer armade";
 		}
 
 		return null;
@@ -141,11 +160,13 @@ public class TUI {
 	public static void printStatus(Player[] players, int activePlayer) {
 		int i, loc;
 		loc = players[activePlayer].getLocation();
-		System.out.println("You hit field number " + loc + ", " + getFieldName(loc));
+		System.out.println("You hit field number " + loc + ", "
+				+ getFieldName(loc));
 		System.out.println("The score is now:");
 
 		for (i = 0; i < players.length; i++) {
-			System.out.print(players[i].getName() + " = " + players[i].getAccountValue() + "\t");
+			System.out.print(players[i].getName() + " = "
+					+ players[i].getAccountValue() + "\t");
 		}
 
 		System.out.println();
