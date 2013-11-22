@@ -2,6 +2,8 @@ package entity;
 
 import java.util.Scanner;
 
+import control.Game;
+
 /**
  * Class to create a game board. This class takes in a lot of fields and makes
  * it a board.
@@ -11,6 +13,7 @@ import java.util.Scanner;
  */
 public class GameBoard {
 	Field[] fields;
+	private Game game;
 
 	/**
 	 * Constructor that makes an array of fields and sets it according to the
@@ -54,6 +57,11 @@ public class GameBoard {
 	public Player getOwner(int fieldNumber) {
 		Fleet fleet = (Fleet) fields[fieldNumber];
 		return fleet.getOwner();
+	}
+
+	public int calcRentLabor(int baseRent) {
+		game.xtraShake();
+		return baseRent;
 	}
 
 	public Ownable getOwnableField(int fieldNumber) {
