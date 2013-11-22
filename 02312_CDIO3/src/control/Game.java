@@ -137,7 +137,7 @@ public class Game {
 	 * Writes score and dice values to both GUI and TUI
 	 */
 	private void statusTasks(int activePlayer) {
-		TUI.printStatus(players, activePlayer);
+		TUI.printStatus(players);
 		Graphic.setDice(gameBoard.getDieValue1(), gameBoard.getDieValue2());
 		Graphic.updatePlayers(players);
 		Graphic.moveCar(players[activePlayer].getName(), players[activePlayer].getLocation());
