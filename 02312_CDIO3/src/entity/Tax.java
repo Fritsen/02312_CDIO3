@@ -1,5 +1,9 @@
 package entity;
 
+import java.util.Scanner;
+
+import boundary.TUI;
+
 public class Tax extends Field{
 	private int taxAmount;
 	private int taxRate;
@@ -17,8 +21,26 @@ public class Tax extends Field{
 	}
 	
 	public void landOnField(Player player) {
-		//TODO: Skriv hvad der skal ske...
+		if(player.getLocation() == 16)
+		{
+			player.addToAccount(-2000);	
+		}
+		
+		else if(player.getLocation() == 17)
+		{
+			//TODO Fix TUI message for Tax
+			if(TUI.getYesNo(Scanner) = True)
+			{
+				player.addToAccount(-4000);
+			}
+		else
+		{
+			player.addToAccount(-1*(taxRate/100*calculateAssets(player)));
+		}
 	}
+		
+		
+}
 	
 	private int calculateAssets(Player player) {
 		int i, assets = 0;
