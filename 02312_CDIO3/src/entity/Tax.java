@@ -23,26 +23,25 @@ public class Tax extends Field{
 	}
 	
 	public void landOnField(Player player) {
-		if(player.getLocation() == 16)
+		if(taxRate == -1)
 		{
-			player.addToAccount(-2000);	
+			player.addToAccount(-1 * taxAmount);	
 		}
-		
-		else if(player.getLocation() == 17)
+		else
 		{
-			//TODO Fix TUI message for Tax
-			if(!TUI.getYesNo(scanner))
+			TUI.printTaxOption();
+			if(TUI.getYesNo(scanner))
 			{
-				player.addToAccount(-4000);
+				player.addToAccount(-1 * calculateTax(player));
+				System.out.println("Betalte 10%");
 			}
 			else
 			{
-				player.addToAccount(-1*(taxRate/100*calculateAssets(player)));
+				player.addToAccount(-1 * taxAmount);
+				System.out.println("Betalte 4000");
 			}
+		}
 	}
-		
-		
-}
 	
 	private int calculateAssets(Player player) {
 		int i, assets = 0;
@@ -56,5 +55,9 @@ public class Tax extends Field{
 		}
 		
 		return assets;
+	}
+	
+	private int calculateTax(Player player) {
+		return (taxRate * calculateAssets(player)) / 100;
 	}
 }

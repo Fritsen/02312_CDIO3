@@ -15,7 +15,8 @@ public class LaborCamp extends Ownable {
 	public void landOnField(Player player) {
 		if (owner == null) {
 			buyFieldOption(player);
-		} else {
+		}
+		else {
 			int rent = getRent();
 			player.transferTo(owner, rent);
 		}

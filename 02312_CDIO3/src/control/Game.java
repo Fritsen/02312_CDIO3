@@ -51,6 +51,7 @@ public class Game {
 		// Ask for all player names and save them in the player objects.
 		for (i = 0; i < numberOfPlayers; i++) {
 			TUI.printNameRequest(i);
+			//TODO: lav default player name...
 			players[i].setName(TUI.getUserInput(scanner));
 			Graphic.addPlayer(players[i].getName(),
 					players[i].getAccountValue());
@@ -69,6 +70,7 @@ public class Game {
 
 			gameBoard.shakeDieCup();
 			players[activePlayer].moveFieldsForward(gameBoard.getDieCupSum());
+			Graphic.moveCar(players[activePlayer].getName(), players[activePlayer].getLocation());
 			TUI.printFieldName(players[activePlayer].getLocation());
 			gameBoard.landOnField(players[activePlayer]);
 
@@ -140,7 +142,6 @@ public class Game {
 		TUI.printStatus(players);
 		Graphic.setDice(gameBoard.getDieValue1(), gameBoard.getDieValue2());
 		Graphic.updatePlayers(players);
-		Graphic.moveCar(players[activePlayer].getName(), players[activePlayer].getLocation());
 	}
 
 	/**

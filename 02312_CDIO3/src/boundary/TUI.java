@@ -56,12 +56,20 @@ public class TUI {
 	}
 
 	public static boolean getYesNo(Scanner scanner) {
-		String input = getUserInput(scanner);
-		if ("Y".equals(input) || "y".equals(input)) {
-			return true;
+		String input;
+		
+		while(true) {
+			input = getUserInput(scanner);
+			if ("Y".equals(input) || "y".equals(input)) {
+				return true;
+			}
+			
+			if("N".equals(input) || "n".equals(input)) {
+				return false;
+			}
+			
+			System.out.print("Not valid. Must be \"Y\" og \"N\"");
 		}
-
-		return false;
 	}
 
 	/**
@@ -173,8 +181,11 @@ public class TUI {
 	}
 
 	public static void printBuyOption() {
-		System.out
-				.println("This field is ownable but not owned by anyone. Would you like to buy it? (Y/N)");
+		System.out.println("This field is ownable but not owned by anyone. Would you like to buy it? (Y/N)");
+	}
+	
+	public static void printTaxOption() {
+		System.out.println("You can either pay 4000 or 10% of total assets. Would you like to pay 10% of total assets?");
 	}
 
 	/**
