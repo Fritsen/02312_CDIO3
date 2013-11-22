@@ -73,64 +73,6 @@ public class TUI {
 	}
 
 	/**
-	 * Method to get the name of a field from the field number. The names are
-	 * given according to the game rules, but could be translated.
-	 * 
-	 * @param fieldNumber
-	 *            The number of the field to get a name for.
-	 * @return The name of the field with the given number. Null if the field
-	 *         doesn't exist.
-	 */
-	public static String getFieldName(int fieldNumber) {
-		switch (fieldNumber) {
-		case 1:
-			return "Tribe Encampment";
-		case 2:
-			return "Crater";
-		case 3:
-			return "Mountain";
-		case 4:
-			return "Cold Desert";
-		case 5:
-			return "Black Cave";
-		case 6:
-			return "The Werewall";
-		case 7:
-			return "Mountain village";
-		case 8:
-			return "South Citadel";
-		case 9:
-			return "Palace gates";
-		case 10:
-			return "Tower";
-		case 11:
-			return "Castle";
-		case 12:
-			return "Walled city";
-		case 13:
-			return "Monastery";
-		case 14:
-			return "Huts in the mountain";
-		case 15:
-			return "The pit";
-		case 16:
-			return "Goldmine";
-		case 17:
-			return "Caravan";
-		case 18:
-			return "Second Sail";
-		case 19:
-			return "Sea Grover";
-		case 20:
-			return "The Buccaneers";
-		case 21:
-			return "Privateer armade";
-		}
-
-		return null;
-	}
-
-	/**
 	 * Prints a short text, asking the specified player to type his name.
 	 * 
 	 * @param playerNo
@@ -156,8 +98,8 @@ public class TUI {
 		System.out.print("\nIt's " + name + "'s turn. Press enter to roll.");
 	}
 
-	public static void printFieldName(int fieldNumber) {
-		System.out.println("You hit field number " + fieldNumber + ", " + getFieldName(fieldNumber));
+	public static void printFieldName(int fieldNumber, String fieldName) {
+		System.out.println("You hit field number " + fieldNumber + ", " + fieldName);
 	}
 	
 	/**

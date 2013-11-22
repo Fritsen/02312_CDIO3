@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Territory extends Ownable {
 	private int rent;
 
-	public Territory(int rent, int price, Scanner scanner) {
-		super(price, scanner);
+	public Territory(String name, int rent, int price, Scanner scanner) {
+		super(name, price, scanner);
 		this.rent = rent;
 	}
 

@@ -28,8 +28,7 @@ public class Game {
 	public Game() {
 		scanner = new Scanner(System.in);
 		gameBoard = new GameBoard(scanner);
-
-		Graphic.setupFields();
+		setupGuiFields();
 	}
 
 	/**
@@ -59,7 +58,7 @@ public class Game {
 			gameBoard.shakeDieCup();
 			players[activePlayer].moveFieldsForward(gameBoard.getDieCupSum());
 			Graphic.moveCar(players[activePlayer].getName(), players[activePlayer].getLocation());
-			TUI.printFieldName(players[activePlayer].getLocation());
+			TUI.printFieldName(players[activePlayer].getLocation(), gameBoard.getName(players[activePlayer].getLocation()));
 			gameBoard.landOnField(players[activePlayer]);
 
 			statusTasks(activePlayer);
@@ -141,6 +140,19 @@ public class Game {
 		return 0;
 	}
 
+	private void setupGuiFields() {
+		int i;
+		
+		for(i = 1; i<=21; i++) {
+			Graphic.createField(gameBoard.getName(i), "", i);
+		}
+		
+		// Remove unused fields from GUI
+		for (i = 22; i < 41; i++) {
+			Graphic.createField("", "", i);
+		}
+	}
+	
 	/**
 	 * Writes score and dice values to both GUI and TUI
 	 */

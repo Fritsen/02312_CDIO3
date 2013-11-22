@@ -3,7 +3,8 @@ package entity;
 public class Refuge extends Field {
 	int bonus;
 	
-	public Refuge(int bonus) {
+	public Refuge(String name, int bonus) {
+		super(name);
 		this.bonus = bonus;
 	}
 	

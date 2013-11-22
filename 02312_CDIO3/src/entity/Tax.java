@@ -10,12 +10,14 @@ public class Tax extends Field{
 	private GameBoard gameBoard;
 	private Scanner scanner;
 	
-	public Tax(int taxAmount) {
+	public Tax(String name, int taxAmount) {
+		super(name);
 		this.taxAmount = taxAmount;
 		taxRate = -1;
 	}
 	
-	public Tax(int taxAmount, int taxRate, GameBoard gameBoard, Scanner scanner) {
+	public Tax(String name, int taxAmount, int taxRate, GameBoard gameBoard, Scanner scanner) {
+		super(name);
 		this.taxAmount = taxAmount;
 		this.taxRate = taxRate;
 		this.gameBoard = gameBoard;

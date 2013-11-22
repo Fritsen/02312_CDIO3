@@ -9,7 +9,8 @@ public abstract class Ownable extends Field {
 	protected Player owner;
 	private Scanner scanner;
 
-	public Ownable(int price, Scanner scanner) {
+	public Ownable(String name, int price, Scanner scanner) {
+		super(name);
 		this.price = price;
 		owner = null;
 		this.scanner = scanner;

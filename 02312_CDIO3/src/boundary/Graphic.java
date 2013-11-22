@@ -57,41 +57,6 @@ public class Graphic {
 	}
 
 	/**
-	 * Method to setup all the fields on the GUI, according to the rules of the
-	 * game. Also clears all the unused fields.
-	 */
-	public static void setupFields() {
-		createField("Tribe Encampment", "Rent 100", 1);
-		createField("Crater", "Rent 300", 2);
-		createField("Mountain", "Rent 500", 3);
-		createField("Cold Dessert", "Rent 700", 4);
-		createField("Black Cave", "Rent 1000", 5);
-		createField("The Werewall", "Rent 1300", 6);
-		createField("Mountain Village", "Rent 1600", 7);
-		createField("South Citadel", "Rent 2000", 8);
-		createField("Palace ates", "Rent 2600", 9);
-		createField("Tower", "Rent 3200", 10);
-		createField("Castle", "Rent 4000", 11);
-		createField("Walled city", "Recieve 5000", 12);
-		createField("Monastry", "Recieve 500", 13);
-		createField("Huts in the mountain ", "Pay 100 x dice", 14);
-		createField("The pit", "Pay 100 x dice", 15);
-		createField("Goldmine", "Pay 2000", 16);
-		createField("Caravan", "Pay 4000, or 10%", 17);
-		createField("Second Sail", "Pay 500-4000", 18);
-		createField("Sea Grover", "Pay 500-4000", 19);
-		createField("The Buccaneers", "Pay 500-4000", 20);
-		createField("Privateer armade", "Pay 500-4000", 21);
-
-		// Remove unused fields from GUI
-		int i;
-		createField("", "", 1);
-		for (i = 22; i < 41; i++) {
-			createField("", "", i);
-		}
-	}
-
-	/**
 	 * Method to move a car from any field to the field number given.
 	 * 
 	 * @param playerName
@@ -115,8 +80,7 @@ public class Graphic {
 	 * @param fieldNumber
 	 *            The number of the field to change.
 	 */
-	private static void createField(String title, String subTitle,
-			int fieldNumber) {
+	public static void createField(String title, String subTitle, int fieldNumber) {
 		GUI.setTitleText(fieldNumber, title);
 		GUI.setSubText(fieldNumber, subTitle);
 		GUI.setDescriptionText(fieldNumber, title);

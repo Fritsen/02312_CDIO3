@@ -12,8 +12,8 @@ public class Fleet extends Ownable {
 
 	private GameBoard gameBoard;
 
-	public Fleet(int price, GameBoard gameBoard, Scanner scanner) {
-		super(price, scanner);
+	public Fleet(String name, int price, GameBoard gameBoard, Scanner scanner) {
+		super(name, price, scanner);
 		this.gameBoard = gameBoard;
 	}
 

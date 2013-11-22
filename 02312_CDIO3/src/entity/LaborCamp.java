@@ -8,8 +8,8 @@ public class LaborCamp extends Ownable {
 	private GameBoard gameBoard;
 	private int baseRent;
 
-	public LaborCamp(int baseRent, int price, GameBoard gameBoard, Scanner scanner) {
-		super(price, scanner);
+	public LaborCamp(String name, int baseRent, int price, GameBoard gameBoard, Scanner scanner) {
+		super(name, price, scanner);
 		this.gameBoard = gameBoard;
 		this.baseRent = baseRent;
 	}
