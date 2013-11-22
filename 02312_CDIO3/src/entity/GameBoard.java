@@ -54,6 +54,15 @@ public class GameBoard {
 		fields[player.getLocation()].landOnField(player);
 	}
 
+	public void clearFieldOwners(Player player) {
+		int i;
+		for(i = 0; i<=21; i++) {
+			if(getOwner(i) == player) {
+				((Ownable)fields[i]).owner = null;
+			}
+		}
+	}
+	
 	public Player getOwner(int fieldNumber) {
 		if(getOwnableField(fieldNumber) != null) {
 			return getOwnableField(fieldNumber).owner;

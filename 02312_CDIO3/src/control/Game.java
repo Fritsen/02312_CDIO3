@@ -36,26 +36,14 @@ public class Game {
 	 * Start the game.
 	 */
 	public void startGame() {
-		int i, activePlayer = 0;
+		int activePlayer = 0;
 		String userInput;
 
 		TUI.printRules();
 		numberOfPlayers = TUI.getNumberOfPlayers(scanner);
 		players = new Player[numberOfPlayers];
 
-		// Make all player-objekts in loop
-		for (i = 0; i < numberOfPlayers; i++) {
-			players[i] = new Player(POINTS_TO_START_WITH);
-		}
-
-		// Ask for all player names and save them in the player objects.
-		for (i = 0; i < numberOfPlayers; i++) {
-			TUI.printNameRequest(i);
-			//TODO: lav default player name...
-			players[i].setName(TUI.getUserInput(scanner));
-			Graphic.addPlayer(players[i].getName(),
-					players[i].getAccountValue());
-		}
+		createPlayers();
 
 		// Start of the actual game-turns
 		while (true) {
@@ -111,6 +99,24 @@ public class Game {
 		return playerToTest;
 	}
 
+	private void createPlayers() {
+		int i;
+		String userInput;
+		
+		// Ask for all player names and save them in the player objects.
+		for (i = 0; i < numberOfPlayers; i++) {
+			TUI.printNameRequest(i);
+			
+			userInput = TUI.getUserInput(scanner);
+			if("".equals(userInput)) {
+				userInput = "Player" + (i+1);
+			}
+			
+			players[i] = new Player(POINTS_TO_START_WITH, userInput);
+			Graphic.addPlayer(players[i].getName(), players[i].getAccountValue());
+		}
+	}
+	
 	private int countPlayersLeft() {
 		int i, playersLeft = 0;
 
@@ -168,8 +174,8 @@ public class Game {
 	 *            The number of the player who should be declared the loser.
 	 */
 	private void loseTasks(int activePlayer) {
-		TUI.printLoser(players[activePlayer].getName(),
-				players[activePlayer].getAccountValue());
+		TUI.printLoser(players[activePlayer].getName(), players[activePlayer].getAccountValue());
+		gameBoard.clearFieldOwners(players[activePlayer]);
 
 		if (countPlayersLeft() == 1) {
 			winTasks(getLastPlayerLeft());

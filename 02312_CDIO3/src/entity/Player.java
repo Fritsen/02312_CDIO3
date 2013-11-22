@@ -15,8 +15,8 @@ public class Player {
     /**
      * Constructor that initiates name to empty and account to an initial score.
      */
-    public Player(int initialScore) {
-        name = "";
+    public Player(int initialScore, String name) {
+        this.name = name;
         account = new Account(initialScore);
         isBankrupt = false;
         location = 1;
