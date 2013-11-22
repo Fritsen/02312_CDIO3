@@ -136,6 +136,11 @@ public class Game {
 		return 0;
 	}
 
+	public void xtraShake() {
+		dieCup.shakeDieCup();
+		dieCup.getSum();
+	}
+
 	/**
 	 * Writes score and dice values to both GUI and TUI
 	 */

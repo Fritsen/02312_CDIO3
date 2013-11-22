@@ -5,16 +5,29 @@ import java.util.Scanner;
 public class LaborCamp extends Ownable {
 	private int baseRent;
 
+	private GameBoard gameBoard;
+
 	public LaborCamp(int baseRent, int price, Scanner scanner) {
 		super(price, scanner);
 		this.baseRent = baseRent;
 	}
 
 	public void landOnField(Player player) {
-		// TODO: Skriv hvad der skal ske...
+		if (owner == null) {
+			buyFieldOption(player);
+		} else {
+			int baseRent = getRent();
+			player.transferTo(owner, baseRent);
+		}
+
 	}
 
 	public int getRent() {
-		return 0;
+		baseRent = gameBoard.calcRentLabor(baseRent) * 100;
+		return baseRent;
+	}
+
+	public Player getOwner() {
+		return owner;
 	}
 }

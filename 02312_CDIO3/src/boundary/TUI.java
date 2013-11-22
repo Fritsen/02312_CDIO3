@@ -28,7 +28,7 @@ public class TUI {
 		System.out
 				.println("| You get points on some, and loses points on others.        |");
 		System.out
-				.println("| The first player to hit 3000 points win.                   |");
+				.println("| A player wins when the othes go bankrupt.                  |");
 		System.out
 				.println("| Press \"Enter\" to roll, press \"q\" to exit.                  |");
 		System.out
