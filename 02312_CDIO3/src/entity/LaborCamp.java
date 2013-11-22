@@ -3,6 +3,8 @@ package entity;
 import java.util.Scanner;
 
 public class LaborCamp extends Ownable {
+	private final int[] LABOR_CAMP_FIELDS = { 14, 15 };
+	
 	private GameBoard gameBoard;
 	private int baseRent;
 
@@ -12,17 +14,20 @@ public class LaborCamp extends Ownable {
 		this.baseRent = baseRent;
 	}
 
-	public void landOnField(Player player) {
-		if (owner == null) {
-			buyFieldOption(player);
-		}
-		else {
-			int rent = getRent();
-			player.transferTo(owner, rent);
-		}
-	}
-
 	public int getRent() {
-		return gameBoard.getDieCupSum() * baseRent;
+		gameBoard.shakeDieCup();
+		return baseRent * gameBoard.getDieCupSum() * getLaborCampsOwned();
+	}
+	
+	public int getLaborCampsOwned() {
+		int i, numberOfLaborCampsOwned = 0;
+
+		for (i = 0; i < LABOR_CAMP_FIELDS.length; i++) {
+			if (owner == gameBoard.getOwner(LABOR_CAMP_FIELDS[i])) {
+				numberOfLaborCampsOwned++;
+			}
+		}
+		
+		return numberOfLaborCampsOwned;
 	}
 }

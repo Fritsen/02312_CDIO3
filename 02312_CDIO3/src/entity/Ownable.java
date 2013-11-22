@@ -14,8 +14,20 @@ public abstract class Ownable extends Field {
 		owner = null;
 		this.scanner = scanner;
 	}
+	
+	public void landOnField(Player player) {
+		if (owner == null) {
+			buyFieldOption(player);
+		}
+		else {
+			int rent = getRent();
+			player.transferTo(owner, rent);
+		}
+	}
+	
+	public abstract int getRent();
 
-	protected void buyFieldOption(Player player) {
+	private void buyFieldOption(Player player) {
 		TUI.printBuyOption();
 		boolean wantToBuy = TUI.getYesNo(scanner);
 
@@ -24,6 +36,4 @@ public abstract class Ownable extends Field {
 			owner = player;
 		}
 	}
-
-	public abstract int getRent();
 }

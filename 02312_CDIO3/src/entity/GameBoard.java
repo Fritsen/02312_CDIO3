@@ -55,16 +55,15 @@ public class GameBoard {
 	}
 
 	public Player getOwner(int fieldNumber) {
-		Fleet fleet = (Fleet) fields[fieldNumber];
-		return fleet.getOwner();
-	}
-
-	public Ownable getOwnableField(int fieldNumber) {
-		if (fields[fieldNumber] instanceof Ownable) {
-			return (Ownable) fields[fieldNumber];
+		if(getOwnableField(fieldNumber) != null) {
+			return getOwnableField(fieldNumber).owner;
 		}
 
 		return null;
+	}
+	
+	public int getPrice(int fieldNumber) {
+		return getOwnableField(fieldNumber).price;
 	}
 	
 	public void shakeDieCup() {
@@ -82,7 +81,7 @@ public class GameBoard {
 	public int getDieValue2() {
 		return dieCup.getValueDie2();
 	}
-
+	
 	/**
 	 * A method to generate a nice string containing the value of all the
 	 * fields.
@@ -100,5 +99,13 @@ public class GameBoard {
 		}
 
 		return output;
+	}
+	
+	private Ownable getOwnableField(int fieldNumber) {
+		if (fields[fieldNumber] instanceof Ownable) {
+			return (Ownable)fields[fieldNumber];
+		}
+		
+		return null;
 	}
 }

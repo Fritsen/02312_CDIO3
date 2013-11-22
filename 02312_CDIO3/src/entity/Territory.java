@@ -10,19 +10,6 @@ public class Territory extends Ownable {
 		this.rent = rent;
 	}
 
-	public void landOnField(Player player) 
-	{
-		if (owner == null)
-		{
-			buyFieldOption(player);
-		} 
-		else
-		{
-			int rent = getRent();
-			player.transferTo(owner, rent);
-		}
-	}
-
 	public int getRent() {
 		return rent;
 	}

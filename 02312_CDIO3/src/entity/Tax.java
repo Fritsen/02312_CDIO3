@@ -47,14 +47,12 @@ public class Tax extends Field{
 		int i, assets = 0;
 		
 		for(i=1; i<=21; i++) {
-			Ownable ownableField = gameBoard.getOwnableField(i);
-			
-			if(ownableField != null && player == ownableField.owner) {
-				assets = assets + ownableField.price;
+			if(gameBoard.getOwner(i) != null && gameBoard.getOwner(i) == player) {
+				assets = assets + gameBoard.getPrice(i);
 			}
 		}
 		
-		return assets;
+		return assets + player.getAccountValue();
 	}
 	
 	private int calculateTax(Player player) {

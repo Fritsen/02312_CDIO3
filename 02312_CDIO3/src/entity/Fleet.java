@@ -17,24 +17,9 @@ public class Fleet extends Ownable {
 		this.gameBoard = gameBoard;
 	}
 
-	public void landOnField(Player player) {
-		if (owner == null) {
-			buyFieldOption(player);
-		} else {
-			int rent = getRent();
-			player.transferTo(owner, rent);
-		}
-	}
-
 	public int getRent() {
-		int i, numberOfFleetsOwned = 0;
-
-		for (i = 0; i < 4; i++) {
-			if (owner == gameBoard.getOwner(FLEET_FIELDS[i])) {
-				numberOfFleetsOwned++;
-			}
-		}
-
+		int numberOfFleetsOwned = getFleetsOwned();
+		
 		switch (numberOfFleetsOwned) {
 		case 1:
 			return RENT_1;
@@ -48,8 +33,16 @@ public class Fleet extends Ownable {
 			return 0;
 		}
 	}
+	
+	public int getFleetsOwned() {
+		int i, numberOfFleetsOwned = 0;
 
-	public Player getOwner() {
-		return owner;
+		for (i = 0; i < FLEET_FIELDS.length; i++) {
+			if (owner == gameBoard.getOwner(FLEET_FIELDS[i])) {
+				numberOfFleetsOwned++;
+			}
+		}
+		
+		return numberOfFleetsOwned;
 	}
 }
