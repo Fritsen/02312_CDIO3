@@ -7,7 +7,7 @@ package entity;
  *
  */
 public abstract class Field {
-	private String name;
+	protected String name;
 	
 	public Field(String name) {
 		this.name = name;

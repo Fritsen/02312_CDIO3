@@ -42,7 +42,7 @@ public class GameBoard {
 		fields[15] = new LaborCamp("The pit", 100, 2500, this, scanner);
 
 		fields[16] = new Tax("Goldmine", 2000);
-		fields[17] = new Tax("Caravan", 4000, 10, this, scanner);
+		fields[17] = new Tax("Caravan", 4000, 10, this);
 
 		fields[18] = new Fleet("Second Sail", 4000, this, scanner);
 		fields[19] = new Fleet("Sea Grover", 4000, this, scanner);

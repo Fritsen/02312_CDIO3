@@ -66,19 +66,27 @@ public class Player {
     public int getAccountValue() {
     	return account.getAccountValue();
     }
-    
+
     public void addToAccount(int amount) {
-    	boolean succes;
-    	succes = account.addToAccount(amount);
+    	boolean succes = account.addToAccount(amount);
     	
     	if(!succes) {
     		isBankrupt = true;
+    		account.setAccountValue(0);
     	}
     }
     
     public void transferTo(Player player, int amount) {
-    	this.addToAccount(-1*amount);
-    	player.addToAccount(amount);
+    	boolean succes = account.addToAccount(-1*amount); 
+    	
+    	if(succes) {
+    		player.addToAccount(amount);
+    	}
+    	else {
+    		player.addToAccount(account.getAccountValue());
+    		account.setAccountValue(0);
+    		isBankrupt = true;
+    	}
     }
     
     /**

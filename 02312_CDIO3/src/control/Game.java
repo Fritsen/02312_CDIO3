@@ -112,7 +112,7 @@ public class Game {
 			}
 			
 			players[i] = new Player(POINTS_TO_START_WITH, userInput);
-			Graphic.addPlayer(players[i].getName(), players[i].getAccountValue());
+			Graphic.addPlayer(players[i].getName(), players[i].getAccountValue(), i);
 		}
 	}
 	
@@ -140,6 +140,15 @@ public class Game {
 		return 0;
 	}
 
+	private void removeGuiOwner(int activePlayer) {
+		int i;
+		for(i = 0; i<=21; i++) {
+			if(gameBoard.getOwner(i) == players[activePlayer]) {
+				Graphic.removeOwner(i);
+			}
+		}
+	}
+	
 	private void setupGuiFields() {
 		int i;
 		
@@ -187,6 +196,8 @@ public class Game {
 	 */
 	private void loseTasks(int activePlayer) {
 		TUI.printLoser(players[activePlayer].getName(), players[activePlayer].getAccountValue());
+		removeGuiOwner(activePlayer);
+		Graphic.removePlayer(players[activePlayer].getName());
 		gameBoard.clearFieldOwners(players[activePlayer]);
 
 		if (countPlayersLeft() == 1) {

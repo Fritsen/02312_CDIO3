@@ -122,8 +122,8 @@ public class TUI {
 		System.out.println();
 	}
 
-	public static void printBuyOption() {
-		System.out.println("This field is ownable but not owned by anyone. Would you like to buy it? (Y/N)");
+	public static void printBuyOption(String name, int price) {
+		System.out.println("Would you like to buy " + name + " for " + price + "? (Y/N)");
 	}
 	
 	public static void printTaxOption() {

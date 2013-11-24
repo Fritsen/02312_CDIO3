@@ -3,6 +3,7 @@ package entity;
 import java.util.Scanner;
 
 import boundary.TUI;
+import boundaryToMatador.GUI;
 
 public abstract class Ownable extends Field {
 	protected int price;
@@ -20,7 +21,7 @@ public abstract class Ownable extends Field {
 		if (owner == null) {
 			buyFieldOption(player);
 		}
-		else {
+		else if(owner != player) {
 			int rent = getRent();
 			player.transferTo(owner, rent);
 		}
@@ -29,12 +30,13 @@ public abstract class Ownable extends Field {
 	public abstract int getRent();
 
 	private void buyFieldOption(Player player) {
-		TUI.printBuyOption();
+		TUI.printBuyOption(name, price);
 		boolean wantToBuy = TUI.getYesNo(scanner);
 
 		if (wantToBuy) {
 			player.addToAccount(-1 * price);
 			owner = player;
+			GUI.setOwner(player.getLocation(), player.getName());
 		}
 	}
 }

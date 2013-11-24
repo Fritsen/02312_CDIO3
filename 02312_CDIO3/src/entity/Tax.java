@@ -1,14 +1,9 @@
 package entity;
 
-import java.util.Scanner;
-
-import boundary.TUI;
-
 public class Tax extends Field{
 	private int taxAmount;
 	private int taxRate;
 	private GameBoard gameBoard;
-	private Scanner scanner;
 	
 	public Tax(String name, int taxAmount) {
 		super(name);
@@ -16,40 +11,22 @@ public class Tax extends Field{
 		taxRate = -1;
 	}
 	
-	public Tax(String name, int taxAmount, int taxRate, GameBoard gameBoard, Scanner scanner) {
+	public Tax(String name, int taxAmount, int taxRate, GameBoard gameBoard) {
 		super(name);
 		this.taxAmount = taxAmount;
 		this.taxRate = taxRate;
 		this.gameBoard = gameBoard;
-		this.scanner = scanner;
 	}
 	
 	public void landOnField(Player player) {
-		if(taxRate == -1)
-		{
-			player.addToAccount(-1 * taxAmount);	
-		}
-		else
-		{
-			TUI.printTaxOption();
-			if(TUI.getYesNo(scanner))
-			{
-				player.addToAccount(-1 * calculateTax(player));
-				System.out.println("Betalte 10%");
-			}
-			else
-			{
-				player.addToAccount(-1 * taxAmount);
-				System.out.println("Betalte 4000");
-			}
-		}
+		player.addToAccount(-1*getTax(player));
 	}
 	
-	private int calculateAssets(Player player) {
+	private int getAssets(Player player) {
 		int i, assets = 0;
 		
 		for(i=1; i<=21; i++) {
-			if(gameBoard.getOwner(i) != null && gameBoard.getOwner(i) == player) {
+			if(gameBoard.getOwner(i) == player) {
 				assets = assets + gameBoard.getPrice(i);
 			}
 		}
@@ -57,7 +34,15 @@ public class Tax extends Field{
 		return assets + player.getAccountValue();
 	}
 	
-	private int calculateTax(Player player) {
-		return (taxRate * calculateAssets(player)) / 100;
+	private int getTax(Player player) {
+		if(taxRate != -1)
+		{
+			int taxFromAssets = getAssets(player) * taxRate / 100;
+			if(taxFromAssets < taxAmount) {
+				return taxFromAssets;
+			}
+		}
+
+		return taxAmount;
 	}
 }

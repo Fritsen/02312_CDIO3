@@ -1,5 +1,7 @@
 package boundary;
 
+import java.awt.Color;
+
 import boundaryToMatador.GUI;
 import entity.Player;
 
@@ -30,8 +32,8 @@ public class Graphic {
 	 * @param playerScore
 	 *            The score of the player to add.
 	 */
-	public static void addPlayer(String playerName, int playerScore) {
-		GUI.addPlayer(playerName, playerScore);
+	public static void addPlayer(String playerName, int playerScore, int playerNumber) {
+		GUI.addPlayer(playerName, playerScore, getColor(playerNumber));
 	}
 
 	/**
@@ -68,6 +70,14 @@ public class Graphic {
 		GUI.removeAllCars(playerName);
 		GUI.setCar(fieldNumber, playerName);
 	}
+	
+	public static void removeOwner(int fieldNumber) {
+		GUI.removeOwner(fieldNumber);
+	}
+	
+	public static void removePlayer(String name) {
+		GUI.removeAllCars(name);
+	}
 
 	/**
 	 * Helper method to setup all the parameters of a field on the GUI at the
@@ -84,5 +94,22 @@ public class Graphic {
 		GUI.setTitleText(fieldNumber, title);
 		GUI.setSubText(fieldNumber, subTitle);
 		GUI.setDescriptionText(fieldNumber, title);
+	}
+
+	private static Color getColor(int playerNumber) {
+		switch(playerNumber) {
+		case 0:
+			return Color.RED;
+		case 1:
+			return Color.BLUE;
+		case 2:
+			return Color.YELLOW;
+		case 3:
+			return Color.WHITE;
+		case 4:
+			return Color.GREEN;
+		default:
+			return Color.BLACK;
+		}
 	}
 }
