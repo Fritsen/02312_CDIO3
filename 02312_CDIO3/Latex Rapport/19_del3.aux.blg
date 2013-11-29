@@ -1,5 +1,5 @@
 [0] Config.pm:387> INFO - This is Biber 1.6
 [1] Config.pm:390> INFO - Logfile is '19_del3.aux.blg'
-[235] biber-darwin:218> INFO - === Fri Nov 29, 2013, 18:20:48
-[958] Utils.pm:185> ERROR - Cannot find control file '19_del3.aux.bcf'! - did you pass the "backend=biber" option to BibLaTeX?
-[958] Biber.pm:109> INFO - ERRORS: 1
+[238] biber-darwin:218> INFO - === Fri Nov 29, 2013, 20:58:28
+[882] Utils.pm:185> ERROR - Cannot find control file '19_del3.aux.bcf'! - did you pass the "backend=biber" option to BibLaTeX?
+[883] Biber.pm:109> INFO - ERRORS: 1

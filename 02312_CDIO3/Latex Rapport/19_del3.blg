@@ -1,48 +1,74 @@
 This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: 19_del3.aux
-I found no \citation commands---while reading file 19_del3.aux
-I found no \bibdata command---while reading file 19_del3.aux
-I found no \bibstyle command---while reading file 19_del3.aux
-You've used 0 entries,
-            0 wiz_defined-function locations,
-            83 strings with 488 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
+The style file: biblatex.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: 19_del3-blx.bib
+Database file #2: 19_del3.bib
+You're missing a field name---line 7 of file 19_del3.bib
+ :   
+ :   %URL = {http://www.amazon.com/Software-Solutions-Foundations-Program-Design/dp/0273751476%3FSubscriptionId%3D0JYN1NVW651KCA56C102%26tag%3Dtechkie-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0273751476}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 15 of file 19_del3.bib
+ :   
+ :   %URL = {http://www.amazon.com/Applying-UML-Patterns-Introduction-Object-Oriented/dp/0131489062%3FSubscriptionId%3D0JYN1NVW651KCA56C102%26tag%3Dtechkie-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0131489062}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "del1"
+Warning--I didn't find a database entry for "del2"
+Biblatex version: 2.6
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+You've used 3 entries,
+            6019 wiz_defined-function locations,
+            1138 strings with 8366 characters,
+and the built_in function-call counts, 7220 in all, are:
+= -- 299
+> -- 239
+< -- 80
++ -- 87
+- -- 80
+* -- 398
+:= -- 613
 add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+call.type$ -- 3
+change.case$ -- 38
+chr.to.int$ -- 36
+cite$ -- 4
+duplicate$ -- 713
+empty$ -- 747
+format.name$ -- 105
+if$ -- 1666
 int.to.chr$ -- 0
-int.to.str$ -- 0
+int.to.str$ -- 5
 missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+newline$ -- 62
+num.names$ -- 106
+pop$ -- 682
+preamble$ -- 1
+purify$ -- 36
 quote$ -- 0
-skip$ -- 0
+skip$ -- 440
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
+substring$ -- 229
+swap$ -- 221
+text.length$ -- 78
+text.prefix$ -- 4
+top$ -- 1
+type$ -- 102
 warning$ -- 0
-while$ -- 0
+while$ -- 87
 width$ -- 0
-write$ -- 0
-(There were 3 error messages)
+write$ -- 58
+(There were 2 error messages)

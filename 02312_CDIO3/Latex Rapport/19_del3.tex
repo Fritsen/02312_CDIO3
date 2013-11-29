@@ -22,7 +22,7 @@
 \usepackage{color}
 ￼\usepackage{todonotes}
 \usepackage{url} % Nice url look
-\usepackage[backend=biber,style=alphabetic]{biblatex} %Bibliography package.
+\usepackage[backend=bibtex,style=alphabetic]{biblatex} %Bibliography package.
 %\usepackage{anysize}
 %\marginsize{3cm}{3cm}{1.5cm}{4cm} % venstre, højre, top, bund.
 \lstset{literate=%
@@ -39,6 +39,9 @@
 \definecolor{mymauve}{rgb}{0.5,0,0.3}
 \definecolor{myblue}{rgb}{0,0.4,0.9}
 \pagestyle{plain}
+
+\bibliography{19_del3} %Choose the bibliography to load, file to be called name.bib.
+
 \begin{document}
 \section*{Projektopgave efterår 2013 - jan 2014}
 \section*{02312-14 Indledende programmering og 02313 Udviklingsmetoder til IT-Systemer}
@@ -120,6 +123,7 @@ OBS: alle gruppemedlemmer er lige ansvarlige for alle dele af vores dokumentatio
 Her vil vi oplyse om hvilke kilder, der er brugt til rapporten.
 Vi vil både oplyse om hvilke bøger, hjemmesider og software vi har brugt.
 \subsection{Bøger/rapporter}
+\nocite{WikiFURPS}
 \printbibliography %Print the bibliography set under \bibliography.
 \begin{itemize}
 \item Applying UML and patterns - An introduction to Object-Oriented Analysis and Design and Iterative Development - Craig Larman, Third Edition

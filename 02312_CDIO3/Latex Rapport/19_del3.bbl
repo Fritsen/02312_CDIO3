@@ -1,0 +1,63 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{Larman}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Larman}{L.}%
+     {Craig}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Prentice Hall}%
+  }
+  \strng{namehash}{LC1}
+  \strng{fullhash}{LC1}
+  \field{labelalpha}{Lar04}
+  \field{sortinit}{L}
+  \field{isbn}{0131489062}
+  \field{title}{Applying UML and Patterns: An Introduction to Object-Oriented
+  Analysis and Design and Iterative Development (3rd Edition)}
+  \field{year}{2004}
+\endentry
+
+\entry{WikiFURPS}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Wikipedia}{W.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{W1}
+  \strng{fullhash}{W1}
+  \field{labelalpha}{Wik13}
+  \field{sortinit}{W}
+  \field{note}{[Online; accessed 16-November-2013]}
+  \field{title}{FURPS --- Wikipedia{,} The Free Encyclopedia}
+  \verb{url}
+  \verb \url{http://en.wikipedia.org/wiki/FURPS}
+  \endverb
+  \field{year}{2013}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
