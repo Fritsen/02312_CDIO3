@@ -64,6 +64,10 @@ public class Graphic {
 		GUI.setCar(fieldNumber, playerName);
 	}
 	
+	public static void setOwner(int location, String name) {
+		GUI.setOwner(location, name);
+	}
+	
 	/**
 	 * Method to remove the owner-marking from a field.
 	 * 

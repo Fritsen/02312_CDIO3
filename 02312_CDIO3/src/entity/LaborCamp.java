@@ -18,7 +18,6 @@ public class LaborCamp extends Ownable {
 	 * @param name The name of the field.
 	 * @param baseRent The baseRent to multiply with dice and number of LaborCamps owned
 	 * @param gameBoard The gameboard that this field is created in.
-	 * @param scanner A scanner to use for console inputs.
 	 */
 	public LaborCamp(String name, int baseRent, int price, GameBoard gameBoard) {
 		super(name, price);

@@ -22,7 +22,6 @@ public class Fleet extends Ownable {
 	 * @param name The name of the field.
 	 * @param price The price of the field.
 	 * @param gameBoard The gameboard that this field is created in.
-	 * @param scanner A scanner to use for console inputs.
 	 */
 	public Fleet(String name, int price, GameBoard gameBoard) {
 		super(name, price);

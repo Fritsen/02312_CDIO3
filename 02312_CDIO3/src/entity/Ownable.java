@@ -1,15 +1,26 @@
 package entity;
 
+/**
+ * Class that contains all the methods and values relevant for ownable fields.
+ * 
+ * @author DTU 02312 Gruppe 19
+ * 
+ */
 public abstract class Ownable extends Field {
 	protected int price;
 	protected Player owner;
 
+	
 	public Ownable(String name, int price) {
 		super(name);
 		this.price = price;
 		owner = null;
 	}
 	
+	/**
+	 * Method to take care of everything that should happen, when a player lands on this field.
+	 * This implementation is used by all the own able fields that inherits from this class.
+	 */
 	public void landOnField(Player player) {
 		if (owner == null) {
 			buyFieldOption(player);
@@ -20,6 +31,11 @@ public abstract class Ownable extends Field {
 		}
 	}
 	
+	/**
+	 * Method to calculate rent. Has different implementation for different types of fields.
+	 * 
+	 * @return
+	 */
 	public abstract int getRent();
 
 	private void buyFieldOption(Player player) {

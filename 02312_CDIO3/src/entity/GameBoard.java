@@ -21,8 +21,6 @@ public class GameBoard {
 	
 	/**
 	 * Creates all the fields according to the game rules.
-	 * 
-	 * @param scanner A scanner that can be used to take input from console in the fields.
 	 */
 	public void createFields() {
 		fields[1] = new Territory("Tribe Encampment", 100, 1000);
@@ -89,6 +87,11 @@ public class GameBoard {
 		return null;
 	}
 	
+	/**
+	 * Method to set a given player as owner of the field he is on.
+	 * 
+	 * @param player
+	 */
 	public void setOwner(Player player) {
 		getOwnableField(player.getLocation()).owner = player;
 	}

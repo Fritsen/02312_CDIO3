@@ -1,10 +1,7 @@
 package control;
 
-import java.util.Scanner;
-
 import boundary.Graphic;
 import boundary.TUI;
-import boundaryToMatador.GUI;
 import entity.GameBoard;
 import entity.Player;
 
@@ -17,7 +14,7 @@ import entity.Player;
 public class Game {
 	private final int POINTS_TO_START_WITH = 30000;
 	
-	private Scanner scanner;
+	private TUI tui;
 	private GameBoard gameBoard;
 	private Player[] players;
 
@@ -27,7 +24,7 @@ public class Game {
 	 * Game constructor. Creates new instances of the required classes.
 	 */
 	public Game() {
-		scanner = new Scanner(System.in);
+		tui = new TUI();
 		gameBoard = new GameBoard(22);
 		gameBoard.createFields();
 		setupGuiFields();
@@ -40,8 +37,8 @@ public class Game {
 		int activePlayer = 0;
 		String userInput;
 
-		TUI.printRules();
-		numberOfPlayers = TUI.getNumberOfPlayers(scanner);
+		tui.printRules();
+		numberOfPlayers = tui.getNumberOfPlayers();
 		players = new Player[numberOfPlayers];
 
 		createPlayers();
@@ -49,8 +46,8 @@ public class Game {
 		// Start of the actual game-turns
 		while (true) {
 			// Write whos turn it is and wait for input
-			TUI.printTurn(players[activePlayer].getName());
-			userInput = TUI.getUserInput(scanner);
+			tui.printTurn(players[activePlayer].getName());
+			userInput = tui.getUserInput();
 
 			// Exit game if user inputs "q"
 			if ("q".equals(userInput)) {
@@ -60,7 +57,7 @@ public class Game {
 			gameBoard.shakeDieCup();
 			players[activePlayer].moveFieldsForward(gameBoard.getDieCupSum());
 			Graphic.moveCar(players[activePlayer].getName(), players[activePlayer].getLocation());
-			TUI.printFieldName(players[activePlayer].getLocation(), gameBoard.getName(players[activePlayer].getLocation()));
+			tui.printFieldName(players[activePlayer].getLocation(), gameBoard.getName(players[activePlayer].getLocation()));
 			gameBoard.landOnField(players[activePlayer]);
 			
 			if(players[activePlayer].isOnBuyableField()) {
@@ -102,9 +99,9 @@ public class Game {
 		
 		// Ask for all player names and save them in the player objects.
 		for (i = 0; i < numberOfPlayers; i++) {
-			TUI.printNameRequest(i);
+			tui.printNameRequest(i);
 			
-			userInput = TUI.getUserInput(scanner);
+			userInput = tui.getUserInput();
 			if("".equals(userInput)) {
 				userInput = "Player" + (i+1);
 			}
@@ -139,14 +136,16 @@ public class Game {
 	}
 
 	private void fieldBuyOption(Player player) {
-		TUI.printBuyOption(gameBoard.getName(player.getLocation()), gameBoard.getPrice(player.getLocation()));
-		boolean wantToBuy = TUI.getYesNo(scanner);
+		tui.printBuyOption(gameBoard.getName(player.getLocation()), gameBoard.getPrice(player.getLocation()));
+		boolean wantToBuy = tui.getYesNo();
 
 		if (wantToBuy) {
 			player.addToAccount(-1 * gameBoard.getPrice(player.getLocation()));
 			gameBoard.setOwner(player);
-			GUI.setOwner(player.getLocation(), player.getName());
+			Graphic.setOwner(player.getLocation(), player.getName());
 		}
+		
+		player.setIsOnBuyableField(false);
 	}
 	
 	private void removeGuiOwner(int activePlayer) {
@@ -172,20 +171,20 @@ public class Game {
 	}
 	
 	private void statusTasks(int activePlayer) {
-		TUI.printStatus(players);
+		tui.printStatus(players);
 		Graphic.setDice(gameBoard.getDieValue1(), gameBoard.getDieValue2());
 		Graphic.updatePlayers(players);
 	}
 
 	private void winTasks(int activePlayer) {
-		TUI.printWinner(players[activePlayer].getName(),
+		tui.printWinner(players[activePlayer].getName(),
 				players[activePlayer].getAccountValue());
-		TUI.getUserInput(scanner);
+		tui.getUserInput();
 		cleanUp();
 	}
 
 	private void loseTasks(int activePlayer) {
-		TUI.printLoser(players[activePlayer].getName(), players[activePlayer].getAccountValue());
+		tui.printLoser(players[activePlayer].getName(), players[activePlayer].getAccountValue());
 		removeGuiOwner(activePlayer);
 		Graphic.removePlayer(players[activePlayer].getName());
 		gameBoard.clearFieldOwners(players[activePlayer]);
@@ -197,7 +196,7 @@ public class Game {
 
 	private void cleanUp() {
 		Graphic.close();
-		scanner.close();
+		tui.close();
 		System.exit(0);
 	}
 }
