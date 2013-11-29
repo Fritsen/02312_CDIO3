@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import boundary.Graphic;
 import boundary.TUI;
+import boundaryToMatador.GUI;
 import entity.GameBoard;
 import entity.Player;
 
@@ -28,8 +29,7 @@ public class Game {
 	public Game() {
 		scanner = new Scanner(System.in);
 		gameBoard = new GameBoard(22);
-		gameBoard.createFields(scanner);
-		//System.out.println(gameBoard);
+		gameBoard.createFields();
 		setupGuiFields();
 	}
 
@@ -62,6 +62,10 @@ public class Game {
 			Graphic.moveCar(players[activePlayer].getName(), players[activePlayer].getLocation());
 			TUI.printFieldName(players[activePlayer].getLocation(), gameBoard.getName(players[activePlayer].getLocation()));
 			gameBoard.landOnField(players[activePlayer]);
+			
+			if(players[activePlayer].isOnBuyableField()) {
+				fieldBuyOption(players[activePlayer]);
+			}
 
 			statusTasks(activePlayer);
 
@@ -134,6 +138,17 @@ public class Game {
 		return 0;
 	}
 
+	private void fieldBuyOption(Player player) {
+		TUI.printBuyOption(gameBoard.getName(player.getLocation()), gameBoard.getPrice(player.getLocation()));
+		boolean wantToBuy = TUI.getYesNo(scanner);
+
+		if (wantToBuy) {
+			player.addToAccount(-1 * gameBoard.getPrice(player.getLocation()));
+			gameBoard.setOwner(player);
+			GUI.setOwner(player.getLocation(), player.getName());
+		}
+	}
+	
 	private void removeGuiOwner(int activePlayer) {
 		int i;
 		for(i = 0; i<=21; i++) {

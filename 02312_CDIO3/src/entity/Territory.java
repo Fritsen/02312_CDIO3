@@ -1,12 +1,10 @@
 package entity;
 
-import java.util.Scanner;
-
 public class Territory extends Ownable {
 	private int rent;
 
-	public Territory(String name, int rent, int price, Scanner scanner) {
-		super(name, price, scanner);
+	public Territory(String name, int rent, int price) {
+		super(name, price);
 		this.rent = rent;
 	}
 

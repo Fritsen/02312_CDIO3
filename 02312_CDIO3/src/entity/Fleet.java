@@ -1,7 +1,5 @@
 package entity;
 
-import java.util.Scanner;
-
 /**
  * Class to make a Fleet-field.
  *
@@ -26,8 +24,8 @@ public class Fleet extends Ownable {
 	 * @param gameBoard The gameboard that this field is created in.
 	 * @param scanner A scanner to use for console inputs.
 	 */
-	public Fleet(String name, int price, GameBoard gameBoard, Scanner scanner) {
-		super(name, price, scanner);
+	public Fleet(String name, int price, GameBoard gameBoard) {
+		super(name, price);
 		this.gameBoard = gameBoard;
 	}
 

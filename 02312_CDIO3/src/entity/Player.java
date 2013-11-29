@@ -10,6 +10,7 @@ public class Player {
     private String name;
     private Account account;
     private boolean isBankrupt;
+    private boolean isOnBuyableField;
     private int location;
     
     /**
@@ -19,6 +20,7 @@ public class Player {
         this.name = name;
         account = new Account(initialScore);
         isBankrupt = false;
+        isOnBuyableField = false;
         location = 1;
     }
     
@@ -46,6 +48,14 @@ public class Player {
     
     public boolean isBankrupt() {
     	return isBankrupt;
+    }
+    
+    public void setIsOnBuyableField(boolean input) {
+    	isOnBuyableField = input;
+    }
+    
+    public boolean isOnBuyableField() {
+    	return isOnBuyableField;
     }
     
     public void setLocation(int location) {

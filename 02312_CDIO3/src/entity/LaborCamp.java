@@ -1,25 +1,42 @@
 package entity;
 
-import java.util.Scanner;
-
+/**
+ * Class to make a LaborCamp field.
+ * 
+ * @author DTU 02312 Gruppe 19
+ * 
+ */
 public class LaborCamp extends Ownable {
 	private final int[] LABOR_CAMP_FIELDS = { 14, 15 };
 	
 	private GameBoard gameBoard;
 	private int baseRent;
 
-	public LaborCamp(String name, int baseRent, int price, GameBoard gameBoard, Scanner scanner) {
-		super(name, price, scanner);
+	/**
+	 * Constructor that takes all inputs needed for the class.
+	 * 
+	 * @param name The name of the field.
+	 * @param baseRent The baseRent to multiply with dice and number of LaborCamps owned
+	 * @param gameBoard The gameboard that this field is created in.
+	 * @param scanner A scanner to use for console inputs.
+	 */
+	public LaborCamp(String name, int baseRent, int price, GameBoard gameBoard) {
+		super(name, price);
 		this.gameBoard = gameBoard;
 		this.baseRent = baseRent;
 	}
 
+	/**
+	 * Method to calculate rent for this field.
+	 * 
+	 * @return The rent for this field.
+	 */
 	public int getRent() {
 		gameBoard.shakeDieCup();
 		return baseRent * gameBoard.getDieCupSum() * getLaborCampsOwned();
 	}
 	
-	public int getLaborCampsOwned() {
+	private int getLaborCampsOwned() {
 		int i, numberOfLaborCampsOwned = 0;
 
 		for (i = 0; i < LABOR_CAMP_FIELDS.length; i++) {

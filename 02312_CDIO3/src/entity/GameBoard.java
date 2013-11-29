@@ -1,7 +1,5 @@
 package entity;
 
-import java.util.Scanner;
-
 /**
  * Class to create a game board. This class takes in a lot of fields and makes
  * it a board.
@@ -14,40 +12,44 @@ public class GameBoard {
 	Field[] fields;
 
 	/**
-	 * Constructor that makes an array of fields and sets it according to the
-	 * rules of the game.
+	 * Constructor that makes an array of fields and a DieCup
 	 */
 	public GameBoard(int numberOfFields) {
 		dieCup = new DieCup();
 		fields = new Field[numberOfFields];
 	}
 	
-	public void createFields(Scanner scanner) {
-		fields[1] = new Territory("Tribe Encampment", 100, 1000, scanner);
-		fields[2] = new Territory("Crater", 300, 1500, scanner);
-		fields[3] = new Territory("Mountain", 500, 2000, scanner);
-		fields[4] = new Territory("Cold Dessert", 700, 3000, scanner);
-		fields[5] = new Territory("Black Cave", 1000, 4000, scanner);
-		fields[6] = new Territory("The Werewall", 1300, 4300, scanner);
-		fields[7] = new Territory("Mountain Village", 1600, 4750, scanner);
-		fields[8] = new Territory("South Citadel", 2000, 5000, scanner);
-		fields[9] = new Territory("Palace ates", 2600, 5500, scanner);
-		fields[10] = new Territory("Tower", 3200, 6000, scanner);
-		fields[11] = new Territory("Castle", 4000, 8000, scanner);
+	/**
+	 * Creates all the fields according to the game rules.
+	 * 
+	 * @param scanner A scanner that can be used to take input from console in the fields.
+	 */
+	public void createFields() {
+		fields[1] = new Territory("Tribe Encampment", 100, 1000);
+		fields[2] = new Territory("Crater", 300, 1500);
+		fields[3] = new Territory("Mountain", 500, 2000);
+		fields[4] = new Territory("Cold Dessert", 700, 3000);
+		fields[5] = new Territory("Black Cave", 1000, 4000);
+		fields[6] = new Territory("The Werewall", 1300, 4300);
+		fields[7] = new Territory("Mountain Village", 1600, 4750);
+		fields[8] = new Territory("South Citadel", 2000, 5000);
+		fields[9] = new Territory("Palace ates", 2600, 5500);
+		fields[10] = new Territory("Tower", 3200, 6000);
+		fields[11] = new Territory("Castle", 4000, 8000);
 
 		fields[12] = new Refuge("Walled city", 5000);
 		fields[13] = new Refuge("Monastry", 500);
 
-		fields[14] = new LaborCamp("Huts in the mountain", 100, 2500, this, scanner);
-		fields[15] = new LaborCamp("The pit", 100, 2500, this, scanner);
+		fields[14] = new LaborCamp("Huts in the mountain", 100, 2500, this);
+		fields[15] = new LaborCamp("The pit", 100, 2500, this);
 
 		fields[16] = new Tax("Goldmine", 2000);
 		fields[17] = new Tax("Caravan", 4000, 10, this);
 
-		fields[18] = new Fleet("Second Sail", 4000, this, scanner);
-		fields[19] = new Fleet("Sea Grover", 4000, this, scanner);
-		fields[20] = new Fleet("The Buccaneers", 4000, this, scanner);
-		fields[21] = new Fleet("Privateer armade", 4000, this, scanner);
+		fields[18] = new Fleet("Second Sail", 4000, this);
+		fields[19] = new Fleet("Sea Grover", 4000, this);
+		fields[20] = new Fleet("The Buccaneers", 4000, this);
+		fields[21] = new Fleet("Privateer armade", 4000, this);
 	}
 
 	/**
@@ -85,6 +87,10 @@ public class GameBoard {
 		}
 
 		return null;
+	}
+	
+	public void setOwner(Player player) {
+		getOwnableField(player.getLocation()).owner = player;
 	}
 	
 	/**
