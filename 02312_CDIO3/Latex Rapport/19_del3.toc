@@ -8,7 +8,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}Kravspecificering}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Use Cases}{7}
+\contentsline {subsection}{\numberline {2.2}Use Cases}{6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.2.1}Use Case Diagram}{7}
 \defcounter {refsection}{0}\relax 
@@ -16,15 +16,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.2.3}Brief Use Case Account test}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Dom\IeC {\ae }nemodel}{10}
+\contentsline {section}{\numberline {3}Dom\IeC {\ae }nemodel}{9}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}BCE model}{10}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Systemsekvens Diagram}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Kode}{13}
+\contentsline {section}{\numberline {6}Kode}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Struktur og pakker}{13}
+\contentsline {subsection}{\numberline {6.1}Struktur og pakker}{12}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.2}TUI}{13}
 \defcounter {refsection}{0}\relax 
@@ -34,23 +34,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.5}Die}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6}DieCup:}{15}
+\contentsline {subsection}{\numberline {6.6}DieCup:}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.7}Field}{15}
+\contentsline {subsection}{\numberline {6.7}Field}{14}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.8}GameBoard}{15}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.9}Player}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.10}Main}{16}
+\contentsline {subsection}{\numberline {6.10}Main}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.11}Game}{16}
+\contentsline {subsection}{\numberline {6.11}Game}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Test}{19}
+\contentsline {section}{\numberline {7}Test}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Test af Account-klassen}{19}
+\contentsline {subsection}{\numberline {7.1}Test af Account-klassen}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Test og fejlfinding generelt}{20}
+\contentsline {subsection}{\numberline {7.2}Test og fejlfinding generelt}{19}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8}Design sekvens-diagram}{20}
 \defcounter {refsection}{0}\relax 
@@ -134,63 +134,49 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {11}FURPS+}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1}Functionallity}{29}
+\contentsline {subsection}{\numberline {11.1}Functional}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.1.1}Hvad er Functionallity?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.1.2}Hvordan har vi brugt det?}{29}
+\contentsline {subsubsection}{\numberline {11.1.1}Hvordan har vi brugt det?}{28}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.2}Usability}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.2.1}Hvad er Functionallity?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.2.2}Hvordan har vi brugt det?}{29}
+\contentsline {subsubsection}{\numberline {11.2.1}Hvordan har vi brugt det?}{29}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.3}Reliability}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.3.1}Hvad er Functionallity?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.3.2}Hvordan har vi brugt det?}{29}
+\contentsline {subsubsection}{\numberline {11.3.1}Hvordan har vi brugt det?}{29}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.4}Performance}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.4.1}Hvad er Functionallity?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.4.2}Hvordan har vi brugt det?}{29}
+\contentsline {subsubsection}{\numberline {11.4.1}Hvordan har vi brugt det?}{29}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.5}Supportability}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.5.1}Hvad er Functionallity?}{29}
+\contentsline {subsubsection}{\numberline {11.5.1}Hvordan har vi brugt det?}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.5.2}Hvordan har vi brugt det?}{29}
+\contentsline {subsection}{\numberline {11.6}Implementation}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.6}Functionallity}{29}
+\contentsline {subsubsection}{\numberline {11.6.1}Hvordan har vi brugt det?}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.6.1}Hvad er Functionallity?}{29}
+\contentsline {subsection}{\numberline {11.7}Interface}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.6.2}Hvordan har vi brugt det?}{29}
+\contentsline {subsubsection}{\numberline {11.7.1}Hvordan har vi brugt det?}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.7}Functionallity}{29}
+\contentsline {subsection}{\numberline {11.8}Operations}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.7.1}Hvad er Functionallity?}{29}
+\contentsline {subsubsection}{\numberline {11.8.1}Hvordan har vi brugt det?}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.7.2}Hvordan har vi brugt det?}{29}
+\contentsline {subsection}{\numberline {11.9}Packaging}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.8}Functionallity}{29}
+\contentsline {subsubsection}{\numberline {11.9.1}Hvordan har vi brugt det?}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.8.1}Hvad er Functionallity?}{29}
+\contentsline {subsection}{\numberline {11.10}Legal}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.8.2}Hvordan har vi brugt det?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.9}Functionallity}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.9.1}Hvad er Functionallity?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.9.2}Hvordan har vi brugt det?}{29}
+\contentsline {subsubsection}{\numberline {11.10.1}Hvordan har vi brugt det?}{29}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {12}Kildeliste}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.1}B\IeC {\o }ger/rapporter}{30}
+\contentsline {subsection}{\numberline {12.1}B\IeC {\o }ger/rapporter}{29}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {12.2}Hjemmesider}{30}
 \defcounter {refsection}{0}\relax 

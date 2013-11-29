@@ -1954,7 +1954,9 @@
     <bcf:datasource type="file" datatype="bibtex">19_del3.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Larman</bcf:citekey>
+    <bcf:citekey order="1">del1</bcf:citekey>
+    <bcf:citekey order="2">del2</bcf:citekey>
+    <bcf:citekey order="3">Larman</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="nty">
   <bcf:sorting>
