@@ -6,23 +6,23 @@ import org.junit.Before;
 import org.junit.Test;
 
 import entity.Field;
-import entity.Fleet;
 import entity.GameBoard;
 import entity.Player;
+import entity.Tax;
 
-public class FleetTest {
+public class Tax2Test {
 	private Player player;
-	private Field fleet200;
-	private Field fleet0;
-	private Field fleetNeg200;
+	private Field tax200;
+	private Field tax0;
+	private Field taxNeg200;
 	private GameBoard gameboard;
 
 	@Before
 	public void setUp() throws Exception {
 		this.player = new Player(1000, "Anders And");
-		this.fleet200 = new Fleet("Helle +200", 200, gameboard);
-		this.fleet0 = new Fleet("Helle 0", 0, gameboard);
-		this.fleetNeg200 = new Fleet("Helle -200", -200, gameboard);
+		this.tax200 = new Tax("Helle +200", 200, 10, gameboard);
+		this.tax0 = new Tax("Helle 0", 0, 10, gameboard);
+		this.taxNeg200 = new Tax("Helle -200", -200, 10, gameboard);
 	}
 
 	@After
@@ -34,12 +34,12 @@ public class FleetTest {
 	@Test
 	public void testEntities() {
 		Assert.assertNotNull(this.player);
-		Assert.assertNotNull(this.fleet200);
-		Assert.assertNotNull(this.fleet0);
-		Assert.assertNotNull(this.fleetNeg200);
-		Assert.assertTrue(this.fleet200 instanceof Fleet);
-		Assert.assertTrue(this.fleet0 instanceof Fleet);
-		Assert.assertTrue(this.fleetNeg200 instanceof Fleet);
+		Assert.assertNotNull(this.tax200);
+		Assert.assertNotNull(this.tax0);
+		Assert.assertNotNull(this.taxNeg200);
+		Assert.assertTrue(this.tax200 instanceof Tax);
+		Assert.assertTrue(this.tax0 instanceof Tax);
+		Assert.assertTrue(this.taxNeg200 instanceof Tax);
 	}
 
 	@Test
@@ -49,7 +49,7 @@ public class FleetTest {
 		Assert.assertEquals(expected, actual);
 
 		// Perform the action to be tested
-		this.fleet200.landOnField(this.player);
+		this.tax200.landOnField(this.player);
 		expected = 1000 + 200;
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
@@ -63,8 +63,8 @@ public class FleetTest {
 		Assert.assertEquals(expected, actual);
 
 		// Perform the action to be tested
-		this.fleet200.landOnField(this.player);
-		this.fleet200.landOnField(this.player);
+		this.tax200.landOnField(this.player);
+		this.tax200.landOnField(this.player);
 		expected = 1000 + 200 + 200;
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
@@ -77,7 +77,7 @@ public class FleetTest {
 		Assert.assertEquals(expected, actual);
 
 		// Perform the action to be tested
-		this.fleet0.landOnField(this.player);
+		this.tax0.landOnField(this.player);
 		expected = 1000;
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
@@ -90,8 +90,8 @@ public class FleetTest {
 		Assert.assertEquals(expected, actual);
 
 		// Perform the action to be tested
-		this.fleet0.landOnField(this.player);
-		this.fleet0.landOnField(this.player);
+		this.tax0.landOnField(this.player);
+		this.tax0.landOnField(this.player);
 		expected = 1000;
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
