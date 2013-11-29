@@ -8,7 +8,7 @@ import entity.GameBoard;
 import entity.Player;
 
 /**
- * This is controller class in the dice game.
+ * This is controller class in the game.
  * 
  * @author DTU 02312 Gruppe 19
  * 
@@ -27,7 +27,9 @@ public class Game {
 	 */
 	public Game() {
 		scanner = new Scanner(System.in);
-		gameBoard = new GameBoard(scanner);
+		gameBoard = new GameBoard(22);
+		gameBoard.createFields(scanner);
+		//System.out.println(gameBoard);
 		setupGuiFields();
 	}
 
@@ -72,14 +74,6 @@ public class Game {
 		}
 	}
 
-	/**
-	 * Simple method to get the number of the next player.
-	 * 
-	 * @param input
-	 *            The number to toggle away from.
-	 * @return 2 if 1 is given etc., but gives 1 if the value for number of
-	 *         players is reached.
-	 */
 	private int getNextPlayer(int input) {
 		if (input + 1 >= numberOfPlayers) {
 			return 0;
@@ -162,23 +156,12 @@ public class Game {
 		}
 	}
 	
-	/**
-	 * Writes score and dice values to both GUI and TUI
-	 */
 	private void statusTasks(int activePlayer) {
 		TUI.printStatus(players);
 		Graphic.setDice(gameBoard.getDieValue1(), gameBoard.getDieValue2());
 		Graphic.updatePlayers(players);
 	}
 
-	/**
-	 * Prints the name of the given player, along with a message telling that he
-	 * has won the game., then waits for input, to make sure the message stays
-	 * on the screen. Ends the program when any input is given.
-	 * 
-	 * @param activePlayer
-	 *            The number of the player who should be declared the winner.
-	 */
 	private void winTasks(int activePlayer) {
 		TUI.printWinner(players[activePlayer].getName(),
 				players[activePlayer].getAccountValue());
@@ -186,14 +169,6 @@ public class Game {
 		cleanUp();
 	}
 
-	/**
-	 * Prints the name of the given player, along with a message telling that he
-	 * has lost the game., then waits for input, to make sure the message stays
-	 * on the screen. Ends the program when any input is given.
-	 * 
-	 * @param activePlayer
-	 *            The number of the player who should be declared the loser.
-	 */
 	private void loseTasks(int activePlayer) {
 		TUI.printLoser(players[activePlayer].getName(), players[activePlayer].getAccountValue());
 		removeGuiOwner(activePlayer);
@@ -205,9 +180,6 @@ public class Game {
 		}
 	}
 
-	/**
-	 * Closes the program and cleans up properly.
-	 */
 	private void cleanUp() {
 		Graphic.close();
 		scanner.close();

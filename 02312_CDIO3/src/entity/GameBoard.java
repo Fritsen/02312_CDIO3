@@ -17,12 +17,12 @@ public class GameBoard {
 	 * Constructor that makes an array of fields and sets it according to the
 	 * rules of the game.
 	 */
-	public GameBoard(Scanner scanner) {
+	public GameBoard(int numberOfFields) {
 		dieCup = new DieCup();
-		
-		fields = new Field[22];
-
-		// Create the fields
+		fields = new Field[numberOfFields];
+	}
+	
+	public void createFields(Scanner scanner) {
 		fields[1] = new Territory("Tribe Encampment", 100, 1000, scanner);
 		fields[2] = new Territory("Crater", 300, 1500, scanner);
 		fields[3] = new Territory("Mountain", 500, 2000, scanner);
@@ -50,10 +50,20 @@ public class GameBoard {
 		fields[21] = new Fleet("Privateer armade", 4000, this, scanner);
 	}
 
+	/**
+	 * Method that calls the landOnField method on the fieldNumber that the player is on.
+	 * 
+	 * @param player The player that landed on a field.
+	 */
 	public void landOnField(Player player) {
 		fields[player.getLocation()].landOnField(player);
 	}
 
+	/**
+	 * Method that sets the owner to null in all the fields owned by a given player.
+	 * 
+	 * @param player The player to remove.
+	 */
 	public void clearFieldOwners(Player player) {
 		int i;
 		for(i = 0; i<=21; i++) {
@@ -63,6 +73,12 @@ public class GameBoard {
 		}
 	}
 	
+	/**
+	 * Gets the owner of a field.
+	 * 
+	 * @param fieldNumber The number of the field to get owner for.
+	 * @return The owner of the field.
+	 */
 	public Player getOwner(int fieldNumber) {
 		if(getOwnableField(fieldNumber) != null) {
 			return getOwnableField(fieldNumber).owner;
@@ -71,33 +87,63 @@ public class GameBoard {
 		return null;
 	}
 	
+	/**
+	 * Gets the price of a field.
+	 * 
+	 * @param fieldNumber The number of the field to get price for.
+	 * @return The price of the field.
+	 */
 	public int getPrice(int fieldNumber) {
 		return getOwnableField(fieldNumber).price;
 	}
 	
+	/**
+	 * Gets the name of a field.
+	 * 
+	 * @param fieldNumber The number of the field to get name for.
+	 * @return The name of the field.
+	 */
 	public String getName(int fieldNumber) {
 		return fields[fieldNumber].getName();
 	}
 	
+	/**
+	 * Method to shake the DieCup.
+	 */
 	public void shakeDieCup() {
 		dieCup.shakeDieCup();
 	}
 	
+	/**
+	 * Gets the sum of the values of the Dice in the DieCup.
+	 * 
+	 * @return The sum of the Dice.
+	 */
 	public int getDieCupSum() {
 		return dieCup.getSum();
 	}
 	
+	/**
+	 * Gets the value of Die1.
+	 * 
+	 * @return The value of Die1.
+	 */
 	public int getDieValue1() {
 		return dieCup.getValueDie1();
 	}
 	
+	/**
+	 * Gets the value of Die2.
+	 * 
+	 * @return The value of Die2.
+	 */
 	public int getDieValue2() {
 		return dieCup.getValueDie2();
 	}
 	
 	/**
 	 * A method to generate a nice string containing the value of all the
-	 * fields.
+	 * fields. Also contains value of the DieCup.
 	 * 
 	 * @return All the field values as a string.
 	 */
@@ -111,7 +157,7 @@ public class GameBoard {
 			}
 		}
 
-		return output;
+		return output + dieCup;
 	}
 	
 	private Ownable getOwnableField(int fieldNumber) {

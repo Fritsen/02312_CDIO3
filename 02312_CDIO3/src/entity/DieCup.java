@@ -71,6 +71,6 @@ public class DieCup {
      * @return A coherent string with values of Die1 and Die2
      */
     public String toString() {
-        return "Die1 = " + die1.getValue() + ", Die2 = " + die2.getValue();
+        return "Die1 = " + die1 + ", Die2 = " + die2;
     }
 }

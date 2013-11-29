@@ -2,6 +2,12 @@ package entity;
 
 import java.util.Scanner;
 
+/**
+ * Class to make a Fleet-field.
+ *
+ * @author DTU 02312 Gruppe 19
+ *
+ */
 public class Fleet extends Ownable {
 	private final int[] FLEET_FIELDS = { 18, 19, 20, 21 };
 
@@ -12,11 +18,24 @@ public class Fleet extends Ownable {
 
 	private GameBoard gameBoard;
 
+	/**
+	 * Constructor that takes all inputs needed for the class.
+	 * 
+	 * @param name The name of the field.
+	 * @param price The price of the field.
+	 * @param gameBoard The gameboard that this field is created in.
+	 * @param scanner A scanner to use for console inputs.
+	 */
 	public Fleet(String name, int price, GameBoard gameBoard, Scanner scanner) {
 		super(name, price, scanner);
 		this.gameBoard = gameBoard;
 	}
 
+	/**
+	 * Method to calculate rent for this field.
+	 * 
+	 * @return The rent for this field.
+	 */
 	public int getRent() {
 		int numberOfFleetsOwned = getFleetsOwned();
 		
@@ -34,7 +53,7 @@ public class Fleet extends Ownable {
 		}
 	}
 	
-	public int getFleetsOwned() {
+	private int getFleetsOwned() {
 		int i, numberOfFleetsOwned = 0;
 
 		for (i = 0; i < FLEET_FIELDS.length; i++) {
