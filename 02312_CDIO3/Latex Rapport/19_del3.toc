@@ -2,212 +2,136 @@
 \defcounter {refsection}{0}\relax 
 \select@language {danish}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Indledning}{6}
+\contentsline {section}{\numberline {1}Indledning}{5}{section.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Kravspecificering og Use cases}{6}
+\contentsline {section}{\numberline {2}Kravspecificering og Use cases}{5}{section.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Kravspecificering}{6}
+\contentsline {subsection}{\numberline {2.1}Kravspecificering}{5}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Use Cases}{6}
+\contentsline {subsection}{\numberline {2.2}Use Cases}{5}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.1}Use Case Diagram}{7}
+\contentsline {subsubsection}{\numberline {2.2.1}Use Case Diagram}{6}{subsubsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.2}Fully Dressed Use Case}{8}
+\contentsline {subsubsection}{\numberline {2.2.2}Fully Dressed Use Case}{7}{subsubsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.3}Brief Use Case Account test}{9}
+\contentsline {subsubsection}{\numberline {2.2.3}Brief Use Case Account test}{8}{subsubsection.2.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Dom\IeC {\ae }nemodel}{9}
+\contentsline {section}{\numberline {3}Dom\IeC {\ae }nemodel}{8}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}BCE model}{10}
+\contentsline {section}{\numberline {4}BCE model}{9}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Systemsekvens Diagram}{11}
+\contentsline {section}{\numberline {5}Systemsekvens Diagram}{10}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Kode}{12}
+\contentsline {section}{\numberline {6}Kode}{11}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Struktur og pakker}{12}
+\contentsline {subsection}{\numberline {6.1}Struktur og pakker}{11}{subsection.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}TUI}{13}
+\contentsline {subsection}{\numberline {6.2}TUI}{12}{subsection.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3}Graphic}{13}
+\contentsline {subsection}{\numberline {6.3}Graphic}{12}{subsection.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4}Account}{14}
+\contentsline {subsection}{\numberline {6.4}Account}{13}{subsection.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.5}Die}{14}
+\contentsline {subsection}{\numberline {6.5}Die}{13}{subsection.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6}DieCup:}{14}
+\contentsline {subsection}{\numberline {6.6}DieCup:}{13}{subsection.6.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.7}Field}{14}
+\contentsline {subsection}{\numberline {6.7}Field}{13}{subsection.6.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.8}GameBoard}{15}
+\contentsline {subsection}{\numberline {6.8}GameBoard}{14}{subsection.6.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.9}Player}{15}
+\contentsline {subsection}{\numberline {6.9}Player}{14}{subsection.6.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.10}Main}{15}
+\contentsline {subsection}{\numberline {6.10}Main}{14}{subsection.6.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.11}Game}{15}
+\contentsline {subsection}{\numberline {6.11}Game}{14}{subsection.6.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Test}{18}
+\contentsline {section}{\numberline {7}Test}{17}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Test af Account-klassen}{18}
+\contentsline {subsection}{\numberline {7.1}Test af Refuge}{17}{subsection.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Test og fejlfinding generelt}{19}
+\contentsline {subsection}{\numberline {7.2}Test og fejlfinding generelt}{18}{subsection.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Design sekvens-diagram}{20}
+\contentsline {section}{\numberline {8}Design sekvens-diagram}{19}{section.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Design-klassediagram}{22}
+\contentsline {section}{\numberline {9}Design-klassediagram}{21}{section.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}GRASP (General Responsibilty Assignment Software Patterns)}{23}
+\contentsline {section}{\numberline {10}GRASP (General Responsibilty Assignment Software Patterns)}{22}{section.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1}Controller}{23}
+\contentsline {subsection}{\numberline {10.1}Controller}{22}{subsection.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.1.1}Problem}{23}
+\contentsline {subsection}{\numberline {10.2}Creater}{23}{subsection.10.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.1.2}System operationer}{23}
+\contentsline {subsection}{\numberline {10.3}Expert}{23}{subsection.10.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.1.3}Generel L\IeC {\o }sning}{23}
+\contentsline {subsection}{\numberline {10.4}High Cohesion (H\IeC {\o }j binding)}{24}{subsection.10.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.1.4}Vores L\IeC {\o }sning}{23}
+\contentsline {subsection}{\numberline {10.5}Indirection}{24}{subsection.10.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2}Creater}{24}
+\contentsline {subsection}{\numberline {10.6}Low Coupling (Lav kobling)}{25}{subsection.10.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.2.1}Problem}{24}
+\contentsline {subsection}{\numberline {10.7}Polymorphism}{26}{subsection.10.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.2.2}Generel L\IeC {\o }sning}{24}
+\contentsline {subsection}{\numberline {10.8}Protected Variations}{26}{subsection.10.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.2.3}Vores L\IeC {\o }sning}{24}
+\contentsline {subsection}{\numberline {10.9}Pure Fabrication}{27}{subsection.10.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3}Expert}{24}
+\contentsline {section}{\numberline {11}FURPS+}{27}{section.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.3.1}Problem}{24}
+\contentsline {subsection}{\numberline {11.1}Functional}{27}{subsection.11.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.3.2}Generel L\IeC {\o }sning}{24}
+\contentsline {subsection}{\numberline {11.2}Usability}{28}{subsection.11.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.3.3}Vores L\IeC {\o }sning}{25}
+\contentsline {subsection}{\numberline {11.3}Reliability}{28}{subsection.11.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4}High Cohesion (H\IeC {\o }j binding)}{25}
+\contentsline {subsection}{\numberline {11.4}Performance}{28}{subsection.11.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.4.1}Problem}{25}
+\contentsline {subsection}{\numberline {11.5}Supportability}{28}{subsection.11.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.4.2}Generel L\IeC {\o }sning}{25}
+\contentsline {subsection}{\numberline {11.6}Implementation}{28}{subsection.11.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.4.3}Vores L\IeC {\o }sning}{25}
+\contentsline {subsection}{\numberline {11.7}Interface}{28}{subsection.11.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.5}Indirection}{25}
+\contentsline {subsection}{\numberline {11.8}Operations}{28}{subsection.11.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.5.1}Problem}{25}
+\contentsline {subsection}{\numberline {11.9}Packaging}{28}{subsection.11.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.5.2}Generel L\IeC {\o }sning}{26}
+\contentsline {subsection}{\numberline {11.10}Legal}{28}{subsection.11.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.5.3}Vores L\IeC {\o }sning}{26}
+\contentsline {section}{\numberline {12}Kildeliste}{28}{section.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.6}Low Coupling (Lav kobling)}{26}
+\contentsline {subsection}{\numberline {12.1}B\IeC {\o }ger/rapporter}{28}{subsection.12.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.6.1}Problem}{26}
+\contentsline {subsection}{\numberline {12.2}Hjemmesider}{29}{subsection.12.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.6.2}Generel L\IeC {\o }sning}{26}
+\contentsline {subsection}{\numberline {12.3}Programmer}{29}{subsection.12.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.6.3}Vores L\IeC {\o }sning}{26}
+\contentsline {section}{\numberline {13}Bilag}{30}{section.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.7}Polymorphism}{27}
+\contentsline {subsection}{\numberline {13.1}Kode}{30}{subsection.13.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.7.1}Problem}{27}
+\contentsline {subsubsection}{\numberline {13.1.1}TUI - Boundary}{30}{subsubsection.13.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.7.2}Generel L\IeC {\o }sning}{27}
+\contentsline {subsubsection}{\numberline {13.1.2}Graphic - Boundary}{35}{subsubsection.13.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.7.3}Vores L\IeC {\o }sning}{27}
+\contentsline {subsubsection}{\numberline {13.1.3}Main - Controller}{37}{subsubsection.13.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.8}Protected Variations}{27}
+\contentsline {subsubsection}{\numberline {13.1.4}Game - Controller}{38}{subsubsection.13.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.8.1}Problem}{27}
+\contentsline {subsubsection}{\numberline {13.1.5}Player - Entity}{42}{subsubsection.13.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.8.2}Generel L\IeC {\o }sning}{27}
+\contentsline {subsubsection}{\numberline {13.1.6}Account - Entity}{43}{subsubsection.13.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.8.3}Vores L\IeC {\o }sning}{27}
+\contentsline {subsubsection}{\numberline {13.1.7}Gameboard - Entity}{45}{subsubsection.13.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.9}Pure Fabrication}{28}
+\contentsline {subsubsection}{\numberline {13.1.8}Field - Entity}{47}{subsubsection.13.1.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.9.1}Problem}{28}
+\contentsline {subsubsection}{\numberline {13.1.9}DieCup - Entity}{48}{subsubsection.13.1.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.9.2}Generel L\IeC {\o }sning}{28}
+\contentsline {subsubsection}{\numberline {13.1.10}Die - Entity}{50}{subsubsection.13.1.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.9.3}Vores L\IeC {\o }sning}{28}
+\contentsline {subsubsection}{\numberline {13.1.11}AccountTesterController - TestTools}{51}{subsubsection.13.1.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11}FURPS+}{28}
+\contentsline {subsubsection}{\numberline {13.1.12}DieCupTestEntity - TestTools}{53}{subsubsection.13.1.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1}Functional}{28}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.1.1}Hvordan har vi brugt det?}{28}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.2}Usability}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.2.1}Hvordan har vi brugt det?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.3}Reliability}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.3.1}Hvordan har vi brugt det?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.4}Performance}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.4.1}Hvordan har vi brugt det?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.5}Supportability}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.5.1}Hvordan har vi brugt det?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.6}Implementation}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.6.1}Hvordan har vi brugt det?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.7}Interface}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.7.1}Hvordan har vi brugt det?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.8}Operations}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.8.1}Hvordan har vi brugt det?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.9}Packaging}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.9.1}Hvordan har vi brugt det?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.10}Legal}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.10.1}Hvordan har vi brugt det?}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12}Kildeliste}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.1}B\IeC {\o }ger/rapporter}{29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.2}Hjemmesider}{30}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.3}Programmer}{30}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13}Bilag}{31}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.1}Kode}{31}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.1.1}TUI - Boundary}{31}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.1.2}Graphic - Boundary}{36}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.1.3}Main - Controller}{38}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.1.4}Game - Controller}{39}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.1.5}Player - Entity}{43}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.1.6}Account - Entity}{44}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.1.7}Gameboard - Entity}{46}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.1.8}Field - Entity}{48}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.1.9}DieCup - Entity}{49}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.1.10}Die - Entity}{51}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.1.11}AccountTesterController - TestTools}{52}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.1.12}DieCupTestEntity - TestTools}{54}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.1.13}GameBoardTestEntity - TestTools}{56}
+\contentsline {subsubsection}{\numberline {13.1.13}GameBoardTestEntity - TestTools}{55}{subsubsection.13.1.13}

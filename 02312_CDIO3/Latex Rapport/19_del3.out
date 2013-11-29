@@ -1,0 +1,67 @@
+\BOOKMARK [1][-]{section.1}{Indledning}{}% 1
+\BOOKMARK [1][-]{section.2}{Kravspecificering og Use cases}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Kravspecificering}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Use Cases}{section.2}% 4
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Use Case Diagram}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Fully Dressed Use Case}{subsection.2.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Brief Use Case Account test}{subsection.2.2}% 7
+\BOOKMARK [1][-]{section.3}{Dom\346nemodel}{}% 8
+\BOOKMARK [1][-]{section.4}{BCE model}{}% 9
+\BOOKMARK [1][-]{section.5}{Systemsekvens Diagram}{}% 10
+\BOOKMARK [1][-]{section.6}{Kode}{}% 11
+\BOOKMARK [2][-]{subsection.6.1}{Struktur og pakker}{section.6}% 12
+\BOOKMARK [2][-]{subsection.6.2}{TUI}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.3}{Graphic}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.4}{Account}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.5}{Die}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.6}{DieCup:}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.7}{Field}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.8}{GameBoard}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.9}{Player}{section.6}% 20
+\BOOKMARK [2][-]{subsection.6.10}{Main}{section.6}% 21
+\BOOKMARK [2][-]{subsection.6.11}{Game}{section.6}% 22
+\BOOKMARK [1][-]{section.7}{Test}{}% 23
+\BOOKMARK [2][-]{subsection.7.1}{Test af Refuge}{section.7}% 24
+\BOOKMARK [2][-]{subsection.7.2}{Test og fejlfinding generelt}{section.7}% 25
+\BOOKMARK [1][-]{section.8}{Design sekvens-diagram}{}% 26
+\BOOKMARK [1][-]{section.9}{Design-klassediagram}{}% 27
+\BOOKMARK [1][-]{section.10}{GRASP \(General Responsibilty Assignment Software Patterns\)}{}% 28
+\BOOKMARK [2][-]{subsection.10.1}{Controller}{section.10}% 29
+\BOOKMARK [2][-]{subsection.10.2}{Creater}{section.10}% 30
+\BOOKMARK [2][-]{subsection.10.3}{Expert}{section.10}% 31
+\BOOKMARK [2][-]{subsection.10.4}{High Cohesion \(H\370j binding\)}{section.10}% 32
+\BOOKMARK [2][-]{subsection.10.5}{Indirection}{section.10}% 33
+\BOOKMARK [2][-]{subsection.10.6}{Low Coupling \(Lav kobling\)}{section.10}% 34
+\BOOKMARK [2][-]{subsection.10.7}{Polymorphism}{section.10}% 35
+\BOOKMARK [2][-]{subsection.10.8}{Protected Variations}{section.10}% 36
+\BOOKMARK [2][-]{subsection.10.9}{Pure Fabrication}{section.10}% 37
+\BOOKMARK [1][-]{section.11}{FURPS+}{}% 38
+\BOOKMARK [2][-]{subsection.11.1}{Functional}{section.11}% 39
+\BOOKMARK [2][-]{subsection.11.2}{Usability}{section.11}% 40
+\BOOKMARK [2][-]{subsection.11.3}{Reliability}{section.11}% 41
+\BOOKMARK [2][-]{subsection.11.4}{Performance}{section.11}% 42
+\BOOKMARK [2][-]{subsection.11.5}{Supportability}{section.11}% 43
+\BOOKMARK [2][-]{subsection.11.6}{Implementation}{section.11}% 44
+\BOOKMARK [2][-]{subsection.11.7}{Interface}{section.11}% 45
+\BOOKMARK [2][-]{subsection.11.8}{Operations}{section.11}% 46
+\BOOKMARK [2][-]{subsection.11.9}{Packaging}{section.11}% 47
+\BOOKMARK [2][-]{subsection.11.10}{Legal}{section.11}% 48
+\BOOKMARK [1][-]{section.12}{Kildeliste}{}% 49
+\BOOKMARK [2][-]{subsection.12.1}{B\370ger/rapporter}{section.12}% 50
+\BOOKMARK [2][-]{subsection.12.2}{Hjemmesider}{section.12}% 51
+\BOOKMARK [2][-]{subsection.12.3}{Programmer}{section.12}% 52
+\BOOKMARK [1][-]{section.13}{Bilag}{}% 53
+\BOOKMARK [2][-]{subsection.13.1}{Kode}{section.13}% 54
+\BOOKMARK [3][-]{subsubsection.13.1.1}{TUI - Boundary}{subsection.13.1}% 55
+\BOOKMARK [3][-]{subsubsection.13.1.2}{Graphic - Boundary}{subsection.13.1}% 56
+\BOOKMARK [3][-]{subsubsection.13.1.3}{Main - Controller}{subsection.13.1}% 57
+\BOOKMARK [3][-]{subsubsection.13.1.4}{Game - Controller}{subsection.13.1}% 58
+\BOOKMARK [3][-]{subsubsection.13.1.5}{Player - Entity}{subsection.13.1}% 59
+\BOOKMARK [3][-]{subsubsection.13.1.6}{Account - Entity}{subsection.13.1}% 60
+\BOOKMARK [3][-]{subsubsection.13.1.7}{Gameboard - Entity}{subsection.13.1}% 61
+\BOOKMARK [3][-]{subsubsection.13.1.8}{Field - Entity}{subsection.13.1}% 62
+\BOOKMARK [3][-]{subsubsection.13.1.9}{DieCup - Entity}{subsection.13.1}% 63
+\BOOKMARK [3][-]{subsubsection.13.1.10}{Die - Entity}{subsection.13.1}% 64
+\BOOKMARK [3][-]{subsubsection.13.1.11}{AccountTesterController - TestTools}{subsection.13.1}% 65
+\BOOKMARK [3][-]{subsubsection.13.1.12}{DieCupTestEntity - TestTools}{subsection.13.1}% 66
+\BOOKMARK [3][-]{subsubsection.13.1.13}{GameBoardTestEntity - TestTools}{subsection.13.1}% 67

@@ -3,30 +3,30 @@
 Vi vil i dette afsnit beskrive de forskellige GRASP patterns og give eksempler på, hvordan vi har brugt det til implementering af vores program \cite{Larman}.
 \subsection{Controller}
 Beskrivelse af en Controller
-\subsubsection{Problem}
+\subsubsection*{Problem}
 Hvilket objet under UI laget kontrollerer system operationer
-\subsubsection{System operationer}
+\subsubsection*{System operationer}
 System operationer støder vi første gang på under analysen af \textbf{SSD} \textit{(System Sekvens Diagram)}. Dette er de vigtige hændelser i vores system.
 For eksempel, når en spiller i vores spil trykker enter for at rulle med terningerne. Her starter han en system hændelse, der giver et terningeslag.
 \\
 En \textbf{Controller} er det første object under vores \textbf{UI} \textit{User Interface}, der har ansvar for at modtage eller løse system operations beskeder.
-\subsubsection{Generel Løsning}
+\subsubsection*{Generel Løsning}
 Tildel ansvaret til en klasse, som benytter en af følgende to valgmuligheder.
 \begin{enumerate}
 \item Klassen repræsenterer hovedsystemet med en slags "rod object". En enhed, sofwaren kører inden i systemet, eller et decideret subsystem - Dette er variationer af en \textit{Facade Controller}.
 \item Klassen repræsenterer et use case scenarie hvor denne system handling ofte fremkommer. Denne vil tit være kaldet <UseCaseName>Handler, <UseCaseName>Coordinator eller <UseCaseName>Session.
 \end{enumerate}
-\subsubsection{Vores Løsning}
+\subsubsection*{Vores Løsning}
 Vi har lavet en \textbf{Controller} kaldet \textit{GameController} til at styre vores sekvenser i spillet efter princippet med en \textit{Facade Controller}. 
 \\
 Det giver meget god mening at have en klasse, der uddelegerer ansvar. Dette gør at \textit{GameController} kun skal kontrollere og kordinere opgaver til andre objekter. Samtidig skal \textit{GameController} ikke udføre meget arbejde selv. Dette opfylder den guideline, der findes i \textit{Larman}
 \subsection{Creater}
 Beskrivelse af en Creator
-\subsubsection{Problem}
+\subsubsection*{Problem}
 Oprettelse af objekter, er en af de mest almindelige aktiviteter i et objektorienteret system.
 \\
 Et generelt princip til oprettelses ansvar er meget brugbart. Hvis ansvarsfordelingen bliver fordelt godt, kan man opnå \textbf{lav kobling} \textit{(Andet GRAS Pattern, der beskrives senere)}, større klarhed, indkapsling (den internne representation af et objekt, der er gemt fra kig udenfor objektets definition.) og genanvendelighed.
-\subsubsection{Generel Løsning}
+\subsubsection*{Generel Løsning}
 Giv klasse B ansvar for at oprette en instans af klassen A, hvis et af disse udtryk er sande (Helst flere af udtrykkenne).
 \begin{itemize}
 \item B indeholder, eller komposit agrigerer A
@@ -35,21 +35,21 @@ Giv klasse B ansvar for at oprette en instans af klassen A, hvis et af disse udt
 \\
 Dermed er B \textbf{Expert} \textit{(Andet GRAS Pattern, der beskrives senere)} for at oprette A.
 \end{itemize}
-\subsubsection{Vores Løsning}
+\subsubsection*{Vores Løsning}
 Denne tankegang har vi brugt i forbindelse med vores domænemodel. I den kan vi udlede at vores \textit{Game} bruger et \textit{GameBoard}, som indeholder flere \textit{Fields}. Vi kan dermed se at \textit{Game} er en god kandidat til at bære ansvaret for at oprette \textit{GameBoard}. \textit{GameBoard} er også oplagt til at oprette \textit{Field} objekter. Samme historie gentages i resten af modellen, så godt som muligt efter denne tankegang.
 \subsection{Expert}
 Beskrivelse af en Expert
-\subsubsection{Problem}
+\subsubsection*{Problem}
 Hvad er den gennerelle fremgangsmåde for at tildele ansvar til objekter.
-\subsubsection{Generel Løsning}
+\subsubsection*{Generel Løsning}
 Tildel ansvar til informations eksperten. Dette er klassen, der har de nødvendige informationer til at fuldfylde det ansvar.
-\subsubsection{Vores Løsning}
+\subsubsection*{Vores Løsning}
 Hvis vi kigger på eksempelvis vores \textit{DieCup}, har den ansvaret for at kende \textit{Die} terningeslag. Dermed er \textit{Diecup} expert i at få terningeslag.
 \subsection{High Cohesion (Høj binding)}
 Beskrivelse af High Cohesion
-\subsubsection{Problem}
+\subsubsection*{Problem}
 Hvordan holder man objekter fokuserede, forståelige og håndterbare og som en sideeffekt benytter lav kobling \textit{(Andet GRAS Pattern, der beskrives senere)}
-\subsubsection{Generel Løsning}
+\subsubsection*{Generel Løsning}
 Tildel ansvar, så bindingen forbliver høj. Brug dette til at vurdere alternativer.
 \\
 En klasse med lav binding laver mange urelaterede ting, eller har for mange opgaver.
@@ -61,23 +61,23 @@ Sådanne klasser ønskes ikke fordi de kan være:
 \item Konstant udsat for forandringer
 \end{itemize}
 Klasser med lav binding har tit for meget ansvar, som kunne uddelegeres til andre objekter.
-\subsubsection{Vores Løsning}
+\subsubsection*{Vores Løsning}
 Et godt eksempel i vores program, er at vores \textit{Game}klasse,  holder styr på spillerne i \textit{Player} klassen. Istedet for at \textit{Game} også holder styr på spillerens pengebeholdning, har vi givet ansvaret til \textit{Player}, som holder styr på \textit{Account}.
 \subsection{Indirection}
 Beskrivelse af Indirection
-\subsubsection{Problem}
+\subsubsection*{Problem}
 Hvor skal man tildele et ansvarsområder, for at undgå direkte kobling mellem to eller flere ting?
 \\
 Hvordan afkobler man objekter, så man opnår lav kobling, og genanvendelsesmuligheder forbliver høje.
-\subsubsection{Generel Løsning}
+\subsubsection*{Generel Løsning}
 Giv ansvaret til et mellemliggende objekt til at kommunikere mellem andre komponenter, så de ikke er direkte sammenkoblet.
 \\
 Det mellemliggende objekt laver en \textit{inderection} mellem de andre komponenter.
-\subsubsection{Vores Løsning}
+\subsubsection*{Vores Løsning}
 Vi har forsøgt at bruge \textit{Inderection}, ved at lave en \textit{Graphic} klasse, der holder styr på alt, der foregår i forhold til at kalde vores eksterne GUI. Dette gjorde vi for, at det ville være nemmere at lave spillet om, hvis der skulle ske modifikationer i GUI biblioteket. Dette skete rent faktisk, da vi var midt i projektet. Vi fik besked om at GUI'en, nu var blevet ændret. Selvom vi syntes det var lidt irriterende, kunne vi hurtigt rette det til, da vi kun skulle rette i den ene klasse.
 \subsection{Low Coupling (Lav kobling)}
 Beskrivelse af Low Coupling
-\subsubsection{Problem}
+\subsubsection*{Problem}
 Hvordan opnår man lav afhængighed. lav forandrings indvirkning og forhøjet genanvendelse.
 \\
 \textbf{Coubling} er et mål for hvor stærkt et element er koblet til, har kendskab til eller er afhængig af andre elementer.
@@ -88,32 +88,32 @@ En klasse med høj kobling afhænger af mange klasser. Sådanne klasser kan vær
 \item Sværere at forstå i isolerede tilfælde.
 \item Sværere at genanvende, da det vil kræve tilhørende tilstedeværelse af afhængige klasser.
 \end{itemize}
-\subsubsection{Generel Løsning}
+\subsubsection*{Generel Løsning}
 Tildel ansvar, så koblingen forbliver lav. Brug dette princip til at evaluere alternativer.
-\subsubsection{Vores Løsning}
+\subsubsection*{Vores Løsning}
 Dette er forsøgt implementeret i for eksempel vores \textit{Game}, der istedet for at kalde til  \textit{Player} for bagefter at kalde \textit{Account}, og dermed skabe høj kobling, har vi valgt at kalde \textit{Account} igennem \textit{Player} klassen. Dette sikrer en lav kobling, men samtidig også høj binding, da man sjældent kan bruge principperne alene.
 \subsection{Polymorphism}
 Beskrivelse af Polymorphism
-\subsubsection{Problem}
+\subsubsection*{Problem}
 Hvordan opretter man alternativer baseret på typer eller software, der kan kobles direkte på de allerede eksisterende komponenter.
 \textit{Alternativer baseret på typer} - Hvis et program er designet med et if-else eller switch statement, og en ny variation opstår, kan det ofte betyde ændringer mange steder i koden. Denne fremgangsmåde gør det besværligt at udvide et program på en nem måde. Dette er fordi, ændringerne skal foretages flere forskellige steder, hvor denne betingelses logik er implementeret.
-\subsubsection{Generel Løsning}
+\subsubsection*{Generel Løsning}
 Når familiære alternativer eller opførsel varierer efter type (klasse), gives ansvaret for opførslen til typerne, hvori opførslen varierer. Dette gøres ved at bruge polymorfiske operatgioner.
-\subsubsection{Vores Løsning}
+\subsubsection*{Vores Løsning}
 Vi har ikke benyttet polymorphi i vores spil. Vi har dog tænkt på, at vores felter måske i fremtiden, vil komme til at være af forskellige typer. Dermed kan det blive aktuelt at benytte mønstret for polymorfi ved en eventuel opdatering af spillet.
 \subsection{Protected Variations}
 Beskrivelse af Protected Variations
-\subsubsection{Problem}
+\subsubsection*{Problem}
 Hvordan tildeler man ansvar til objekter, subsystemer eller systemer, så variationer og ustabilitet i disse elementer ikke får en uønsket effekt på andre elementer.
-\subsubsection{Generel Løsning}
+\subsubsection*{Generel Løsning}
 Identificer punkter med uønsket variation eller ustabilitet. Lav en stabil grænseflade om dem. Dette bruges tit i forbindelse med polymorfi.
-\subsubsection{Vores Løsning}
+\subsubsection*{Vores Løsning}
 I vores spil har det ikke været nødvendigt at bruge dette mønster.
 \subsection{Pure Fabrication}
 Beskrivelse af Pure Fabrication
-\subsubsection{Problem}
+\subsubsection*{Problem}
 Objekt orienterede designs er nogle gange karakteriserede ved at tage udgangspunkt i problemdomæner fra den virkelige verden, for at lette forståelsen. For eksempel \textit{Gameboard} og \textit{Field} klasserne. Nogle gange kan der der opstå situationer, hvor det giver problemer kun at tildele ansvar til domæne lags klasser. Det kan give dårlig binding, kobling eller lav genanvedelsesmulighed.
-\subsubsection{Generel Løsning}
+\subsubsection*{Generel Løsning}
 Giv et sæt ansvarsopgaver med høj sammenhæng til en kunstig eller belejelig klasse, der ikke er repræsenteret i domænelaget. Denne opfundne klasse skal supportere høj binding, lav kobling og være nem at genbruge.
-\subsubsection{Vores Løsning}
+\subsubsection*{Vores Løsning}
 Vi har opfundet klasser til at håndtere det grafiske i spillet med klassen \textit{Graphic}, og den tekstbaserede del kørers i klassen \textit{TUI}. Disse klasser opfylder ovenstående krav.

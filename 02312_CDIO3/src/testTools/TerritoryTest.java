@@ -1,7 +1,5 @@
 package testTools;
 
-import java.util.Scanner;
-
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -16,14 +14,13 @@ public class TerritoryTest {
 	private Field ter200;
 	private Field ter0;
 	private Field terNeg200;
-	Scanner scanner = new Scanner(System.in);
 
 	@Before
 	public void setUp() throws Exception {
 		this.player = new Player(1000, "Anders And");
-		this.ter200 = new Territory("Helle +200", 200, 200, scanner);
-		this.ter0 = new Territory("Helle 0", 0, 0, scanner);
-		this.terNeg200 = new Territory("Helle -200", -200, -200, scanner);
+		this.ter200 = new Territory("Helle +200", 200, 200);
+		this.ter0 = new Territory("Helle 0", 0, 0);
+		this.terNeg200 = new Territory("Helle -200", -200, -200);
 	}
 
 	@After

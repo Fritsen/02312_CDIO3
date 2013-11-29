@@ -1,10 +1,11 @@
 \section{Test}
-\todo{j-unit test, snydeterninger og bruger test}
-\subsection{Test af Account-klassen}
-Der skal laves en test, der sandsynliggør at balancen i Account aldrig kan blive negativ, uanset hvilken værdi set og add metoderne kaldes med. Dvs. en blackbox test af Account-klassen, hvor vi ikke bekymrer os om hvad der sker inde i Account, men blot tester hvad der kommer ud, ift. hvad vi har puttet ind.
+Vi blev bedt om at lave en J-unit test af vores felttypers \texttt{landOnField} metoder. Disse vil være beskrevet i dette afsnit.
+\todo[inline]{j-unit test, snydeterninger og bruger test Thomas M}
+\subsection{Test af Refuge}
+Sammen med opgaven fik vi et bilag, der beskrev hvordan testen af \texttt{Refuge} skulle laves.
 \\
 
-Til formålet oprettes en testklasse, ”AccountTesterController”, som tester grænseværdier, store værdier og mere gennemsnitlige værdier. Klassen opretter en ny Account, og kalder derefter ”setAccountValue” og ”addToAccount” med de forskellige værdier. Der udskrives så en kort beskrivelse af hver test, samt resultatet af testen. Herunder outputtet fra metoden.
+Til formålet oprettes en testklasse \texttt{RefugeTest}. I denne klasse tog vi indholdet fra bilagene, og modificerede det lidt. For at få koden til at passe til vores program ændrede vi nogle småting. Da vi har benyttet os af \textbf{BCE} notationen til vores pakker, måtte vi importere vores \texttt{Player} til at oprette objekter igennem \texttt{intity} pakken.
 \begin{figure}[!ht]
 \centering
 \includegraphics[scale=0.4]{test-illustrationer1.jpg}

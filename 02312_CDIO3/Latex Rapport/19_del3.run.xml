@@ -53,10 +53,9 @@
       <file>blx-dm.def</file>
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
-      <file>blx-natbib.def</file>
-      <file>numeric.bbx</file>
+      <file>alphabetic.bbx</file>
       <file>standard.bbx</file>
-      <file>numeric.cbx</file>
+      <file>alphabetic.cbx</file>
       <file>biblatex.cfg</file>
       <file>danish.lbx</file>
     </requires>
@@ -78,9 +77,6 @@
     </provides>
     <requires type="dynamic">
       <file>19_del3.bcf</file>
-    </requires>
-    <requires type="editable">
-      <file>19_del3.bib</file>
     </requires>
   </external>
 </requests>

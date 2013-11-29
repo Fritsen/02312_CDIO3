@@ -1,18 +1,28 @@
 \documentclass{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} %Better support for european accented chars
+\usepackage[utf8]{inputenc} %Enables danish chars and other good stuff
 \usepackage{lmodern} 
 \usepackage{amssymb}
 \usepackage[danish]{babel}
 \usepackage{pstricks-add}
-\usepackage{graphicx}
+\usepackage{lastpage} %Package for getting the number of the last page.
+\usepackage{graphicx} %Allows insertion of graphics
+\usepackage{amsmath} %Gives better math support.
+\usepackage{amsfonts} %Gives additional fonts.
+\usepackage{amssymb} %Adds additional symbols.
+
+%Pakker der bruges for at lave klikbare links i pdf filer
+\usepackage{varioref} %Gives the \vref{lbl} command that make nice references that includes page numbers.
+\usepackage[pdftex, colorlinks=false, pdfauthor={\authorText}, pdftitle={\titleText}]{hyperref} %Makes references clickables in the pdf file. colorlinks can be set to true for colored links.
+\usepackage{memhfixc} %Solves problems with hyperref in Memoir, to be loaded after hyperref.
+
+\usepackage{url}
+\usepackage{pdfpages}
 \usepackage{listings}
 \usepackage{color}
 ￼\usepackage{todonotes}
-\usepackage{varioref} %Allows references
 \usepackage{url} % Nice url look
-\usepackage[style=numeric,natbib=true]{biblatex}
-\bibliography{19_del3}
+\usepackage[backend=biber,style=alphabetic]{biblatex} %Bibliography package.
 %\usepackage{anysize}
 %\marginsize{3cm}{3cm}{1.5cm}{4cm} % venstre, højre, top, bund.
 \lstset{literate=%
@@ -109,8 +119,8 @@ OBS: alle gruppemedlemmer er lige ansvarlige for alle dele af vores dokumentatio
 \section{Kildeliste}
 Her vil vi oplyse om hvilke kilder, der er brugt til rapporten.
 Vi vil både oplyse om hvilke bøger, hjemmesider og software vi har brugt.
-\printbibliography
 \subsection{Bøger/rapporter}
+\printbibliography %Print the bibliography set under \bibliography.
 \begin{itemize}
 \item Applying UML and patterns - An introduction to Object-Oriented Analysis and Design and Iterative Development - Craig Larman, Third Edition
 \item Java Software Solutions -  Foundations of Program Design - Lewis and Loftus, Seventh Edition
