@@ -16,6 +16,48 @@
   {}
 \endgroup
 
+\entry{19del1}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {19}{.}%
+     {Gruppe}{G.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {DTU}%
+  }
+  \strng{namehash}{G1}
+  \strng{fullhash}{G1}
+  \field{labelalpha}{1913}
+  \field{extraalpha}{1}
+  \field{sortinit}{1}
+  \field{title}{19_del1}
+  \field{month}{10}
+  \field{year}{2013}
+\endentry
+
+\entry{19del2}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {19}{.}%
+     {Gruppe}{G.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {DTU}%
+  }
+  \strng{namehash}{G1}
+  \strng{fullhash}{G1}
+  \field{labelalpha}{1913}
+  \field{extraalpha}{2}
+  \field{sortinit}{1}
+  \field{title}{19_del2}
+  \field{month}{11}
+  \field{year}{2013}
+\endentry
+
 \entry{CDIO3}{misc}{}
   \name{author}{1}{}{%
     {{}%
