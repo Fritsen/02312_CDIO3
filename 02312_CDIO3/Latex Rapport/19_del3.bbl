@@ -16,6 +16,26 @@
   {}
 \endgroup
 
+\entry{CDIO3}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {IOOuterActive}{I.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {IOOuterActive}%
+  }
+  \strng{namehash}{I1}
+  \strng{fullhash}{I1}
+  \field{labelalpha}{IOO13}
+  \field{sortinit}{I}
+  \field{title}{CDIO opgave 3 (Version 12)}
+  \field{month}{11}
+  \field{year}{2013}
+\endentry
+
 \entry{Larman}{book}{}
   \name{author}{1}{}{%
     {{}%

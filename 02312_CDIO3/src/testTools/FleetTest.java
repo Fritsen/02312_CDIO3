@@ -44,7 +44,7 @@ public class FleetTest {
 
 	@Test
 	public void testLandOnField200() {
-		int expected = 1000;
+		int expected = 1000 + 200;
 		int actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 
