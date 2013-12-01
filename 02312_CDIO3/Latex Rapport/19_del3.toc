@@ -94,11 +94,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.2}Creater}{24}{subsection.11.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.3}Expert}{24}{subsection.11.3}
+\contentsline {subsection}{\numberline {11.3}Expert}{25}{subsection.11.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.4}High Cohesion (H\IeC {\o }j binding)}{25}{subsection.11.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.5}Indirection}{25}{subsection.11.5}
+\contentsline {subsection}{\numberline {11.5}Indirection}{26}{subsection.11.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.6}Low Coupling (Lav kobling)}{26}{subsection.11.6}
 \defcounter {refsection}{0}\relax 
