@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.7)  30 NOV 2013 15:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.7)  1 DEC 2013 13:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1764,7 +1764,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Domainmodel.pdf, id=430, 668.4975pt x 371.3875pt>
+<Domainmodel.pdf, id=431, 668.4975pt x 371.3875pt>
 File: Domainmodel.pdf Graphic file (type pdf)
  <use Domainmodel.pdf>
 Package pdftex.def Info: Domainmodel.pdf used on input line 9.
@@ -1775,31 +1775,31 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
- <BCEModel.pdf, id=431, 531.9875pt x 351.3125pt>
+
+! Undefined control sequence.
+l.5 ...ities} og \textit{Boundaries}, som i \citep
+                                                  {19del2}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 7.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 7.
+[11 <./Domainmodel.pdf>] <BCEModel.pdf, id=442, 531.9875pt x 351.3125pt>
 File: BCEModel.pdf Graphic file (type pdf)
 
 <use BCEModel.pdf>
-Package pdftex.def Info: BCEModel.pdf used on input line 5.
+Package pdftex.def Info: BCEModel.pdf used on input line 15.
 (pdftex.def)             Requested size: 345.0pt x 227.83578pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--21
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--21
-
- []
-
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 21.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 21.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 21.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 21.
-[11 <./Domainmodel.pdf>]) (./SystemsekvensDiagram.tex
+) (./SystemsekvensDiagram.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -1827,15 +1827,15 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 3.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 3.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 3.
 
 [13 <./SystemSequenceDiagramDieGame.jpg>]
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining danish shorthand "~
@@ -1903,20 +1903,20 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 40.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 40.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 40.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 40.
-[15]
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 40.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 40.
 
 Underfull \hbox (badness 10000) in paragraph at lines 41--43
 
  []
 
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 43.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 43.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 43.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 43.
+[15]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 46.
 Package babel Info: Redefining danish shorthand "~
@@ -1940,15 +1940,6 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 56.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 56.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 56.
-[16]
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 56.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 56.
-Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 58.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 58.
@@ -1957,7 +1948,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--61
 
  []
 
-
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 61.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 61.
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 62--64
 
  []
@@ -1997,7 +1996,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 90.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 90.
-[17 <./Game-illustration1.jpg>]
+[17 <./Game-illustration1.jpg> <./Game-illustration2.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
  []
@@ -2012,7 +2011,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--99
 
  []
 
-<Game-illustration3.jpg, id=480, 171.64125pt x 74.2775pt>
+<Game-illustration3.jpg, id=481, 171.64125pt x 74.2775pt>
 File: Game-illustration3.jpg Graphic file (type jpg)
 
 <use Game-illustration3.jpg>
@@ -2023,7 +2022,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--109
 
  []
 
-<Game-illustration4.jpg, id=481, 515.9275pt x 90.3375pt>
+<Game-illustration4.jpg, id=482, 515.9275pt x 90.3375pt>
 File: Game-illustration4.jpg Graphic file (type jpg)
 
 <use Game-illustration4.jpg>
@@ -2042,8 +2041,8 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 119.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 119.
-[18 <./Game-illustration2.jpg>]
-<Game-illustration5.jpg, id=487, 495.8525pt x 92.345pt>
+[18 <./Game-illustration3.jpg>]
+<Game-illustration5.jpg, id=488, 495.8525pt x 92.345pt>
 File: Game-illustration5.jpg Graphic file (type jpg)
 
 <use Game-illustration5.jpg>
@@ -2054,7 +2053,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--129
 
  []
 
-<Game-illustration6.jpg, id=488, 294.09875pt x 108.405pt>
+<Game-illustration6.jpg, id=489, 294.09875pt x 108.405pt>
 File: Game-illustration6.jpg Graphic file (type jpg)
 
 <use Game-illustration6.jpg>
@@ -2066,16 +2065,6 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 3.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 3.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 3.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 3.
- [19 <./Game-illustration3.jpg> <./Game-illustration4.jpg> <./Game-illustration
-5.jpg> <./Game-illustration6.jpg>]
-Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 4.
@@ -2084,7 +2073,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
-<test-illustrationer1.jpg, id=498, 216.81pt x 195.73125pt>
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 7.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 7.
+[19 <./Game-illustration4.jpg> <./Game-illustration5.jpg> <./Game-illustration6
+.jpg>] <test-illustrationer1.jpg, id=499, 216.81pt x 195.73125pt>
 File: test-illustrationer1.jpg Graphic file (type jpg)
 
 <use test-illustrationer1.jpg>
@@ -2115,15 +2113,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--30
 
  []
 
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 30.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 30.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 30.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 30.
-[20 <./test-illustrationer1.jpg>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
@@ -2137,7 +2127,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--37
 
  []
 
-) (./Designsekvens-diagram.tex
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 37.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 37.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 37.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 37.
+[20 <./test-illustrationer1.jpg>]) (./Designsekvens-diagram.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -2712,8 +2710,8 @@ Package logreq Info: Writing requests to '19_del3.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28016 strings out of 493315
- 471482 string characters out of 6137904
+ 28015 strings out of 493315
+ 471430 string characters out of 6137904
  877710 words of memory out of 5000000
  29627 multiletter control sequences out of 15000+600000
  42014 words of font info for 40 fonts, out of 8000000 for 9000
@@ -2731,10 +2729,10 @@ ve/2013/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2013/tex
 mf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2013/texmf-dist/fo
 nts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
 public/lm/lmtt10.pfb>
-Output written on 19_del3.pdf (57 pages, 1333896 bytes).
+Output written on 19_del3.pdf (57 pages, 1334657 bytes).
 PDF statistics:
- 2053 PDF objects out of 2073 (max. 8388607)
- 1949 compressed objects within 20 object streams
- 1255 named destinations out of 1440 (max. 500000)
+ 2052 PDF objects out of 2073 (max. 8388607)
+ 1948 compressed objects within 20 object streams
+ 1254 named destinations out of 1440 (max. 500000)
  613 words of extra memory for PDF output out of 10000 (max. 10000000)
 

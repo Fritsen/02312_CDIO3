@@ -56,7 +56,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.5}Die}{15}{subsection.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6}DieCup:}{16}{subsection.7.6}
+\contentsline {subsection}{\numberline {7.6}DieCup:}{15}{subsection.7.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.7}Field}{16}{subsection.7.7}
 \defcounter {refsection}{0}\relax 
@@ -64,11 +64,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.9}Player}{16}{subsection.7.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.10}Main}{17}{subsection.7.10}
+\contentsline {subsection}{\numberline {7.10}Main}{16}{subsection.7.10}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.11}Game}{17}{subsection.7.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Test}{20}{section.8}
+\contentsline {section}{\numberline {8}Test}{19}{section.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.1}Test af Refuge}{20}{subsection.8.1}
 \defcounter {refsection}{0}\relax 
