@@ -18,7 +18,7 @@ public class Fleet extends Ownable {
 
 	/**
 	 * Constructor that takes all inputs needed for the class.
-	 * 
+	 *
 	 * @param name The name of the field.
 	 * @param price The price of the field.
 	 * @param gameBoard The gameboard that this field is created in.
@@ -30,12 +30,12 @@ public class Fleet extends Ownable {
 
 	/**
 	 * Method to calculate rent for this field.
-	 * 
+	 *
 	 * @return The rent for this field.
 	 */
 	public int getRent() {
 		int numberOfFleetsOwned = getFleetsOwned();
-		
+
 		switch (numberOfFleetsOwned) {
 		case 1:
 			return RENT_1;
@@ -49,7 +49,7 @@ public class Fleet extends Ownable {
 			return 0;
 		}
 	}
-	
+
 	private int getFleetsOwned() {
 		int i, numberOfFleetsOwned = 0;
 
@@ -58,7 +58,7 @@ public class Fleet extends Ownable {
 				numberOfFleetsOwned++;
 			}
 		}
-		
+
 		return numberOfFleetsOwned;
 	}
 }

@@ -7,7 +7,6 @@ package entity;
  *
  */
 public class DieCup {
-
     private Die die1, die2;
 
     /**
@@ -34,7 +33,7 @@ public class DieCup {
     public int getSum() {
         return die1.getValue() + die2.getValue();
     }
-    
+
     /**
      * Get faceValue from die1
      *
@@ -43,7 +42,7 @@ public class DieCup {
     public int getValueDie1() {
         return die1.getValue();
     }
-    
+
     /**
      * Get faceValue from die2
      *
@@ -64,7 +63,7 @@ public class DieCup {
         }
         return false;
     }
-    
+
     /**
      * Method that makes a text with the most important values in the class, and some description.
      *

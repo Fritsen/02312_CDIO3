@@ -2,21 +2,26 @@ package entity;
 
 /**
  * Class that contains all the methods and values relevant for ownable fields.
- * 
+ *
  * @author DTU 02312 Gruppe 19
- * 
+ *
  */
 public abstract class Ownable extends Field {
 	protected int price;
 	protected Player owner;
 
-	
+	/**
+	 * Constructor that set name and price.
+	 *
+	 * @param name Name of the field.
+	 * @param price Price of the field.
+	 */
 	public Ownable(String name, int price) {
 		super(name);
 		this.price = price;
 		owner = null;
 	}
-	
+
 	/**
 	 * Method to take care of everything that should happen, when a player lands on this field.
 	 * This implementation is used by all the own able fields that inherits from this class.
@@ -30,10 +35,10 @@ public abstract class Ownable extends Field {
 			player.transferTo(owner, rent);
 		}
 	}
-	
+
 	/**
 	 * Method to calculate rent. Has different implementation for different types of fields.
-	 * 
+	 *
 	 * @return
 	 */
 	public abstract int getRent();
