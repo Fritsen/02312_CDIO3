@@ -5,88 +5,70 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import entity.Field;
+import entity.LaborCamp;
+import entity.GameBoard;
 import entity.Player;
-import entity.Tax;
 
 public class LaborCampTest {
 	private Player player;
-	private Field labor200;
-	private Field labor0;
+	private Player owner;
+	private GameBoard gameBoard;
 
 	@Before
 	public void setUp() throws Exception {
-		this.player = new Player(1000, "Anders And");
-		this.labor200 = new Tax("Helle +200", 200);
-		this.labor0 = new Tax("Helle 0", 0);
+		this.gameBoard = new GameBoard(16);
+		this.player = new Player(5000, "Anders And");
+		this.owner = new Player(1000, "Andersine");
+		
+		this.gameBoard.setField(new LaborCamp("LaborCamp1", 100, 0, gameBoard), 14);
+		this.gameBoard.setField(new LaborCamp("LaborCamp2", 100, 0, gameBoard), 15);
+		this.gameBoard.shakeDieCup();
+		
+		this.owner.setLocation(14);
+		this.gameBoard.setOwner(owner);
+		
+		this.player.setLocation(14);
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		this.player = new Player(1000, "Anders And");
-		// The fields are unaltered
+		this.player = new Player(5000, "Anders And");
+		this.owner = new Player(1000, "Andersine");
+		this.gameBoard.setField(new LaborCamp("LaborCamp2", 100, 0, gameBoard), 15);
 	}
 
 	@Test
 	public void testEntities() {
 		Assert.assertNotNull(this.player);
-		Assert.assertNotNull(this.labor200);
-		Assert.assertNotNull(this.labor0);
-		Assert.assertTrue(this.labor200 instanceof Tax);
-		Assert.assertTrue(this.labor0 instanceof Tax);
+		Assert.assertNotNull(this.owner);
+		Assert.assertNotNull(this.gameBoard);
 	}
 
 	@Test
-	public void testLandOnField200() {
-		int expected = 1000;
+	public void testLandOnField1Owned() {
+		int expected = 5000;
 		int actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 
 		// Perform the action to be tested
-		this.labor200.landOnField(this.player);
-		expected = 1000 - 200;
+		this.gameBoard.landOnField(this.player);
+		expected = 5000 - (1 * 100 * this.gameBoard.getDieCupSum());
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 	}
 
 	@Test
-	public void testLandOnField200Twice() {
-
-		int expected = 1000;
+	public void testLandOnField2Owned() {
+		int expected = 5000;
 		int actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 
 		// Perform the action to be tested
-		this.labor200.landOnField(this.player);
-		this.labor200.landOnField(this.player);
-		expected = 1000 - 200 - 200;
-		actual = this.player.getAccountValue();
-		Assert.assertEquals(expected, actual);
-	}
-
-	@Test
-	public void testLandOnField0() {
-		int expected = 1000;
-		int actual = this.player.getAccountValue();
-		Assert.assertEquals(expected, actual);
-
-		// Perform the action to be tested
-		this.labor0.landOnField(this.player);
-		expected = 1000;
-		actual = this.player.getAccountValue();
-		Assert.assertEquals(expected, actual);
-	}
-
-	@Test
-	public void testLandOnField0Twice() {
-		int expected = 1000;
-		int actual = this.player.getAccountValue();
-		Assert.assertEquals(expected, actual);
-
-		// Perform the action to be tested
-		this.labor0.landOnField(this.player);
-		this.labor0.landOnField(this.player);
-		expected = 1000;
+		this.owner.setLocation(15);
+		this.gameBoard.setOwner(owner);
+		
+		this.gameBoard.landOnField(this.player);
+		expected = 5000 - (2 * 100 * this.gameBoard.getDieCupSum());
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 	}

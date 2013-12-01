@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import entity.Field;
 import entity.Fleet;
 import entity.GameBoard;
 import entity.Player;
@@ -96,7 +95,7 @@ public class FleetTest {
 	}
 
 	@Test
-	public void testLandOnField0Twice() {
+	public void testLandOnField4Owned() {
 		int expected = 5000;
 		int actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
