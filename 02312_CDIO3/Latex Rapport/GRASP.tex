@@ -2,24 +2,7 @@
 \todo[inline]{Thomas A: Forklar hvad vi har brugt}
 Vi vil i dette afsnit beskrive de forskellige GRASP patterns og give eksempler på, hvordan vi har brugt det til implementering af vores program \cite{Larman}.
 \subsection{Controller}
-En controller er et vækrtøj (eller en funktion) i et program der angiver hvad der skal ske i programmet i den rigtige rækkefølge. Man kan næsten sige at det er direktøren i et firma der søger for alt kører som det skal.
-\subsubsection*{Problem}
-Hvilket objet under UI laget kontrollerer system operationer
-\subsubsection*{System operationer}
-System operationer støder vi første gang på under analysen af \textbf{SSD} \textit{(System Sekvens Diagram)}. Dette er de vigtige hændelser i vores system.
-For eksempel, når en spiller i vores spil trykker enter for at rulle med terningerne. Her starter han en system hændelse, der giver et terningeslag.
-\\
-En \textbf{Controller} er det første object under vores \textbf{UI} \textit{User Interface}, der har ansvar for at modtage eller løse system operations beskeder.
-\subsubsection*{Generel Løsning}
-Tildel ansvaret til en klasse, som benytter en af følgende to valgmuligheder.
-\begin{enumerate}
-\item Klassen repræsenterer hovedsystemet med en slags "rod object". En enhed, sofwaren kører inden i systemet, eller et decideret subsystem - Dette er variationer af en \textit{Facade Controller}.
-\item Klassen repræsenterer et use case scenarie hvor denne system handling ofte fremkommer. Denne vil tit være kaldet <UseCaseName>Handler, <UseCaseName>Coordinator eller <UseCaseName>Session.
-\end{enumerate}
-\subsubsection*{Vores Løsning}
-Vi har lavet en \textbf{Controller} kaldet \textit{GameController} til at styre vores sekvenser i spillet efter princippet med en \textit{Facade Controller}. 
-\\
-Det giver meget god mening at have en klasse, der uddelegerer ansvar. Dette gør at \textit{GameController} kun skal kontrollere og kordinere opgaver til andre objekter. Samtidig skal \textit{GameController} ikke udføre meget arbejde selv. Dette opfylder den guideline, der findes i \textit{Larman}
+Vi har for overskueligeheden, og funktionaliteten i vores program, lavet en controller, \textit{Game}, der styrer alt hvad der sker. Alle kald og informationer der går på tværs af programmet går igennem vores kontroller uden at den egentlig har noget med nogen af signalerne at gøre udover at bestemme hvad der skal ske i de forskellige tilfælde. Man kan vel næsten sige at controlleren er vores lyskryds hvor en masse veje mødes og bliver omdirigeret.  
 \subsection{Creater}
 I forbindelse med vores domænemodel kan vi se at vores \textit{Game} bruger et \textit{GameBoard}, som indeholder flere \textit{Fields}. Vi kan dermed se at \textit{Game} er en god kandidat til at bære ansvaret for at oprette \textit{GameBoard}. \textit{GameBoard} er også oplagt til at oprette \textit{Field} objekter. Samme historie gentages i resten af modellen, så godt som muligt efter denne
 \subsection{Expert}
@@ -27,58 +10,18 @@ I vores kode har der været brug for en expert til at holde styr på vores felte
 Man kan bruge et eksempel fra den virkelige verden. Forestil dig at du skal slå 20 dyr op. Hvis du skal slå op i en bog for hvert dyr kan det tage sin tid, i forhold til hvis du kun skal have fat i en bog.
 \\
 \subsection{High Cohesion (Høj binding)}
-Høj binding er noget man altid stræber efter i et system. Det har vi også gjort som man kan se på vores \textit{Account} og \textit{Player} klasser. De
+Høj binding er noget man altid stræber efter i et system. Det har vi også gjort som man kan se på vores \textit{Account} og \textit{Player} klasser. De kender til hindanden uden at de kan gøre andet end at give kommandoer. Det vil sige at Player for eksempel kan bede om data om en spiller fra Account, og modsat kan Account modtage data fra Player om en spiller. 
 \subsection{Indirection}
-Beskrivelse af Indirection
-\subsubsection*{Problem}
-Hvor skal man tildele et ansvarsområder, for at undgå direkte kobling mellem to eller flere ting?
+Indirection er noget der bliver brugt i vores kode. Faktisk er vores controller \textit{Game} en indirection da den lever op til det krav at den formidler information imellem to parter der ikke kender hinanden.
 \\
-Hvordan afkobler man objekter, så man opnår lav kobling, og genanvendelsesmuligheder forbliver høje.
-\subsubsection*{Generel Løsning}
-Giv ansvaret til et mellemliggende objekt til at kommunikere mellem andre komponenter, så de ikke er direkte sammenkoblet.
-\\
-Det mellemliggende objekt laver en \textit{inderection} mellem de andre komponenter.
-\subsubsection*{Vores Løsning}
-Vi har forsøgt at bruge \textit{Inderection}, ved at lave en \textit{Graphic} klasse, der holder styr på alt, der foregår i forhold til at kalde vores eksterne GUI. Dette gjorde vi for, at det ville være nemmere at lave spillet om, hvis der skulle ske modifikationer i GUI biblioteket. Dette skete rent faktisk, da vi var midt i projektet. Vi fik besked om at GUI'en, nu var blevet ændret. Selvom vi syntes det var lidt irriterende, kunne vi hurtigt rette det til, da vi kun skulle rette i den ene klasse.
 \subsection{Low Coupling (Lav kobling)}
-Beskrivelse af Low Coupling
-\subsubsection*{Problem}
-Hvordan opnår man lav afhængighed. lav forandrings indvirkning og forhøjet genanvendelse.
-\\
-\textbf{Coubling} er et mål for hvor stærkt et element er koblet til, har kendskab til eller er afhængig af andre elementer.
-\\
-En klasse med høj kobling afhænger af mange klasser. Sådanne klasser kan være uønskede. De kan lide af følgende problemer.
-\begin{itemize}
-\item Tvunge lokale forandringer på grund af forandringer i sammenhængende klasser.
-\item Sværere at forstå i isolerede tilfælde.
-\item Sværere at genanvende, da det vil kræve tilhørende tilstedeværelse af afhængige klasser.
-\end{itemize}
-\subsubsection*{Generel Løsning}
-Tildel ansvar, så koblingen forbliver lav. Brug dette princip til at evaluere alternativer.
-\subsubsection*{Vores Løsning}
-Dette er forsøgt implementeret i for eksempel vores \textit{Game}, der istedet for at kalde til  \textit{Player} for bagefter at kalde \textit{Account}, og dermed skabe høj kobling, har vi valgt at kalde \textit{Account} igennem \textit{Player} klassen. Dette sikrer en lav kobling, men samtidig også høj binding, da man sjældent kan bruge principperne alene.
+Et godt eksempel på lav kobling i vores program er imellem vores \textit{Field} og \textit{GameBoard} klasserne. Her er det kun GameBoard der kender til Field. Generelt i vores klassediagram kan man se at der ikke er nogen returnerende pile, hvilket antyder lav kobling.
+
 \subsection{Polymorphism}
-Beskrivelse af Polymorphism
-\subsubsection*{Problem}
-Hvordan opretter man alternativer baseret på typer eller software, der kan kobles direkte på de allerede eksisterende komponenter.
-\textit{Alternativer baseret på typer} - Hvis et program er designet med et if-else eller switch statement, og en ny variation opstår, kan det ofte betyde ændringer mange steder i koden. Denne fremgangsmåde gør det besværligt at udvide et program på en nem måde. Dette er fordi, ændringerne skal foretages flere forskellige steder, hvor denne betingelses logik er implementeret.
-\subsubsection*{Generel Løsning}
-Når familiære alternativer eller opførsel varierer efter type (klasse), gives ansvaret for opførslen til typerne, hvori opførslen varierer. Dette gøres ved at bruge polymorfiske operatgioner.
-\subsubsection*{Vores Løsning}
-Vi har ikke benyttet polymorphi i vores spil. Vi har dog tænkt på, at vores felter måske i fremtiden, vil komme til at være af forskellige typer. Dermed kan det blive aktuelt at benytte mønstret for polymorfi ved en eventuel opdatering af spillet.
+Polymorfi bruger vi til vores \textit{Field}, \textit{Ownable}, \textit{Game}, \textit{Fleet}, \textit{LabourCamp}, og \textit{Territory klasser}. Polymorfi er et andet ord for nedarving. Vi nedarver fra Field, for at gøre vores program det mindre, hurtigere og mere overskueligt. Havde vi ikke brugt det, var vi kommet ud i en situation hvor vi ville skulle have lavet en masse ekstra kald for at hente alle data fra andre klasser.
+
 \subsection{Protected Variations}
-Beskrivelse af Protected Variations
-\subsubsection*{Problem}
-Hvordan tildeler man ansvar til objekter, subsystemer eller systemer, så variationer og ustabilitet i disse elementer ikke får en uønsket effekt på andre elementer.
-\subsubsection*{Generel Løsning}
-Identificer punkter med uønsket variation eller ustabilitet. Lav en stabil grænseflade om dem. Dette bruges tit i forbindelse med polymorfi.
-\subsubsection*{Vores Løsning}
-I vores spil har det ikke været nødvendigt at bruge dette mønster.
+Vi bruger meget \textit{Protected Variations} i vores kode da det sørger for at vi ikke ved en fejl kommer til at ændre en variabel et sted hvor det ikke er intentionen. Det kan bl. a. ses i vores kode i \textit{Ownable} klassen hvor "price" er protected netop for at undgå dette. 
+
 \subsection{Pure Fabrication}
-Beskrivelse af Pure Fabrication
-\subsubsection*{Problem}
-Objekt orienterede designs er nogle gange karakteriserede ved at tage udgangspunkt i problemdomæner fra den virkelige verden, for at lette forståelsen. For eksempel \textit{Gameboard} og \textit{Field} klasserne. Nogle gange kan der der opstå situationer, hvor det giver problemer kun at tildele ansvar til domæne lags klasser. Det kan give dårlig binding, kobling eller lav genanvedelsesmulighed.
-\subsubsection*{Generel Løsning}
-Giv et sæt ansvarsopgaver med høj sammenhæng til en kunstig eller belejelig klasse, der ikke er repræsenteret i domænelaget. Denne opfundne klasse skal supportere høj binding, lav kobling og være nem at genbruge.
-\subsubsection*{Vores Løsning}
-Vi har opfundet klasser til at håndtere det grafiske i spillet med klassen \textit{Graphic}, og den tekstbaserede del kørers i klassen \textit{TUI}. Disse klasser opfylder ovenstående krav.
+Vores Field klasse kunne anses for at være \textit{Pure Fabrication}. Egentlig \textit{kan man godt} gøre det uden en Field klasse, det ville bare ødelægge alle former for lav kobling man ellers arbejder hårdt for at opnå i et system.
