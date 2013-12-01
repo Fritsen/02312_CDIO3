@@ -12,84 +12,105 @@ import entity.Player;
 
 public class FleetTest {
 	private Player player;
-	private Field fleet200;
-	private Field fleet0;
-	private GameBoard gameboard;
+	private Player owner;
+	private GameBoard gameBoard;
 
 	@Before
 	public void setUp() throws Exception {
-		this.gameboard.setOwner(player);
-		this.player = new Player(1000, "Anders And");
-		this.fleet200 = new Fleet("Helle +200", 200, gameboard);
-		this.fleet0 = new Fleet("Helle 0", 0, gameboard);
+		this.gameBoard = new GameBoard(22);
+		this.player = new Player(5000, "Anders And");
+		this.owner = new Player(1000, "Andersine");
+		
+		this.gameBoard.setField(new Fleet("Fleet1", 0, gameBoard), 18);
+		this.gameBoard.setField(new Fleet("Fleet2", 0, gameBoard), 19);
+		this.gameBoard.setField(new Fleet("Fleet3", 0, gameBoard), 20);
+		this.gameBoard.setField(new Fleet("Fleet4", 0, gameBoard), 21);
+		
+		this.owner.setLocation(18);
+		this.gameBoard.setOwner(owner);
+		
+		this.player.setLocation(18);
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		this.player = new Player(1000, "Anders And");
-		// The fields are unaltered
+		this.player = new Player(5000, "Anders And");
+		this.owner = new Player(1000, "Andersine");
+		this.gameBoard.setField(new Fleet("Fleet2", 0, gameBoard), 19);
+		this.gameBoard.setField(new Fleet("Fleet3", 0, gameBoard), 20);
+		this.gameBoard.setField(new Fleet("Fleet4", 0, gameBoard), 21);
 	}
 
 	@Test
 	public void testEntities() {
 		Assert.assertNotNull(this.player);
-		Assert.assertNotNull(this.fleet200);
-		Assert.assertNotNull(this.fleet0);
-		Assert.assertTrue(this.fleet200 instanceof Fleet);
-		Assert.assertTrue(this.fleet0 instanceof Fleet);
+		Assert.assertNotNull(this.owner);
+		Assert.assertNotNull(this.gameBoard);
 	}
 
 	@Test
-	public void testLandOnField200() {
-		int expected = 1000;
+	public void testLandOnField1Owned() {
+		int expected = 5000;
 		int actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 
 		// Perform the action to be tested
-		this.fleet200.landOnField(this.player);
-		expected = 1000;
+		this.gameBoard.landOnField(this.player);
+		expected = 5000 - 500;
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 	}
 
 	@Test
-	public void testLandOnField200Twice() {
-
-		int expected = 1000;
+	public void testLandOnField2Owned() {
+		int expected = 5000;
 		int actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 
 		// Perform the action to be tested
-		this.fleet200.landOnField(this.player);
-		this.fleet200.landOnField(this.player);
-		expected = 1000;
+		this.owner.setLocation(19);
+		this.gameBoard.setOwner(owner);
+		
+		this.gameBoard.landOnField(this.player);
+		expected = 5000 - 1000;
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 	}
 
 	@Test
-	public void testLandOnField0() {
-		int expected = 1000;
+	public void testLandOnField3Owned() {
+		int expected = 5000;
 		int actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 
 		// Perform the action to be tested
-		this.fleet0.landOnField(this.player);
-		expected = 1000;
+		this.owner.setLocation(19);
+		this.gameBoard.setOwner(owner);
+		this.owner.setLocation(20);
+		this.gameBoard.setOwner(owner);
+		
+		this.gameBoard.landOnField(this.player);
+		expected = 5000 - 2000;
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 	}
 
 	@Test
 	public void testLandOnField0Twice() {
-		int expected = 1000;
+		int expected = 5000;
 		int actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 
 		// Perform the action to be tested
-		this.fleet0.landOnField(this.player);
-		this.fleet0.landOnField(this.player);
-		expected = 1000;
+		this.owner.setLocation(19);
+		this.gameBoard.setOwner(owner);
+		this.owner.setLocation(20);
+		this.gameBoard.setOwner(owner);
+		this.owner.setLocation(21);
+		this.gameBoard.setOwner(owner);
+		
+		this.gameBoard.landOnField(this.player);
+		expected = 5000 - 4000;
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 	}
