@@ -2,7 +2,7 @@
 \todo[inline]{Thomas A: Forklar hvad vi har brugt}
 Vi vil i dette afsnit beskrive de forskellige GRASP patterns og give eksempler på, hvordan vi har brugt det til implementering af vores program \cite{Larman}.
 \subsection{Controller}
-Beskrivelse af en Controller
+En controller er et vækrtøj (eller en funktion) i et program der angiver hvad der skal ske i programmet i den rigtige rækkefølge. Man kan næsten sige at det er direktøren i et firma der søger for alt kører som det skal.
 \subsubsection*{Problem}
 Hvilket objet under UI laget kontrollerer system operationer
 \subsubsection*{System operationer}
@@ -21,7 +21,17 @@ Vi har lavet en \textbf{Controller} kaldet \textit{GameController} til at styre 
 \\
 Det giver meget god mening at have en klasse, der uddelegerer ansvar. Dette gør at \textit{GameController} kun skal kontrollere og kordinere opgaver til andre objekter. Samtidig skal \textit{GameController} ikke udføre meget arbejde selv. Dette opfylder den guideline, der findes i \textit{Larman}
 \subsection{Creater}
-Beskrivelse af en Creator
+En creator er bogstaveligt tatlt det. Den skaber objekter af en klasse. Det er en funktion man bruger meget til at gøre programmering mere simpel og effektiv. Nedenfor kan der ses generelle situationer hvori, dette bruges:
+\begin{enumerate}
+\item Instancer af B indeholder aggregerede instancer af A
+\item Instancer af B iagtager instancer af A
+\item Instancer af B ligger tæt op af instancer af A
+\item Instancer af B indeholder den igang-sættende information for instancer af A & senere krearer det
+\end{enumerate}
+Et godt eksempel fra vores egen kode kunne være vores Ownable klasse. Den indeholder instancer af Field. Ownable "reagere" kun på hvorvidt instancerne i Field bliver aktiveret. 
+\subsubsection*{Problem}
+Oprettelse af objekter, er en af de mest almindelige aktiviteter i et objektorienteret system.
+\\
 \subsubsection*{Problem}
 Oprettelse af objekter, er en af de mest almindelige aktiviteter i et objektorienteret system.
 \\
