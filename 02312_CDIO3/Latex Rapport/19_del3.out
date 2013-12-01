@@ -4,7 +4,7 @@
 \BOOKMARK [2][-]{subsection.2.2}{Use Cases}{section.2}% 4
 \BOOKMARK [3][-]{subsubsection.2.2.1}{Use Case Diagram}{subsection.2.2}% 5
 \BOOKMARK [3][-]{subsubsection.2.2.2}{Fully Dressed Use Case}{subsection.2.2}% 6
-\BOOKMARK [3][-]{subsubsection.2.2.3}{Brief Use Case Account test}{subsection.2.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Brief Use Case af Tax}{subsection.2.2}% 7
 \BOOKMARK [1][-]{section.3}{FURPS+}{}% 8
 \BOOKMARK [2][-]{subsection.3.1}{Functional}{section.3}% 9
 \BOOKMARK [2][-]{subsection.3.2}{Usability}{section.3}% 10
@@ -35,36 +35,35 @@
 \BOOKMARK [2][-]{subsection.8.1}{Test af Refuge}{section.8}% 35
 \BOOKMARK [2][-]{subsection.8.2}{Test af Laborcamp}{section.8}% 36
 \BOOKMARK [2][-]{subsection.8.3}{Test af Tax}{section.8}% 37
-\BOOKMARK [2][-]{subsection.8.4}{Test af Tax2}{section.8}% 38
-\BOOKMARK [2][-]{subsection.8.5}{Test af Territory}{section.8}% 39
-\BOOKMARK [2][-]{subsection.8.6}{Test af Fleet}{section.8}% 40
-\BOOKMARK [2][-]{subsection.8.7}{Test og fejlfinding generelt}{section.8}% 41
-\BOOKMARK [1][-]{section.9}{Design sekvens-diagram}{}% 42
-\BOOKMARK [1][-]{section.10}{Design-klassediagram}{}% 43
-\BOOKMARK [1][-]{section.11}{GRASP \(General Responsibilty Assignment Software Patterns\)}{}% 44
-\BOOKMARK [2][-]{subsection.11.1}{Controller}{section.11}% 45
-\BOOKMARK [2][-]{subsection.11.2}{Creater}{section.11}% 46
-\BOOKMARK [2][-]{subsection.11.3}{Expert}{section.11}% 47
-\BOOKMARK [2][-]{subsection.11.4}{High Cohesion \(H\370j binding\)}{section.11}% 48
-\BOOKMARK [2][-]{subsection.11.5}{Indirection}{section.11}% 49
-\BOOKMARK [2][-]{subsection.11.6}{Low Coupling \(Lav kobling\)}{section.11}% 50
-\BOOKMARK [2][-]{subsection.11.7}{Polymorphism}{section.11}% 51
-\BOOKMARK [2][-]{subsection.11.8}{Protected Variations}{section.11}% 52
-\BOOKMARK [2][-]{subsection.11.9}{Pure Fabrication}{section.11}% 53
-\BOOKMARK [1][-]{section.12}{Kildeliste}{}% 54
-\BOOKMARK [1][-]{section.13}{Anvendte v\346rkt\370jer}{}% 55
-\BOOKMARK [1][-]{section.14}{Bilag}{}% 56
-\BOOKMARK [2][-]{subsection.14.1}{Kode}{section.14}% 57
-\BOOKMARK [3][-]{subsubsection.14.1.1}{TUI - Boundary}{subsection.14.1}% 58
-\BOOKMARK [3][-]{subsubsection.14.1.2}{Graphic - Boundary}{subsection.14.1}% 59
-\BOOKMARK [3][-]{subsubsection.14.1.3}{Main - Controller}{subsection.14.1}% 60
-\BOOKMARK [3][-]{subsubsection.14.1.4}{Game - Controller}{subsection.14.1}% 61
-\BOOKMARK [3][-]{subsubsection.14.1.5}{Player - Entity}{subsection.14.1}% 62
-\BOOKMARK [3][-]{subsubsection.14.1.6}{Account - Entity}{subsection.14.1}% 63
-\BOOKMARK [3][-]{subsubsection.14.1.7}{Gameboard - Entity}{subsection.14.1}% 64
-\BOOKMARK [3][-]{subsubsection.14.1.8}{Field - Entity}{subsection.14.1}% 65
-\BOOKMARK [3][-]{subsubsection.14.1.9}{DieCup - Entity}{subsection.14.1}% 66
-\BOOKMARK [3][-]{subsubsection.14.1.10}{Die - Entity}{subsection.14.1}% 67
-\BOOKMARK [3][-]{subsubsection.14.1.11}{AccountTesterController - TestTools}{subsection.14.1}% 68
-\BOOKMARK [3][-]{subsubsection.14.1.12}{DieCupTestEntity - TestTools}{subsection.14.1}% 69
-\BOOKMARK [3][-]{subsubsection.14.1.13}{GameBoardTestEntity - TestTools}{subsection.14.1}% 70
+\BOOKMARK [2][-]{subsection.8.4}{Test af Territory}{section.8}% 38
+\BOOKMARK [2][-]{subsection.8.5}{Test af Fleet}{section.8}% 39
+\BOOKMARK [2][-]{subsection.8.6}{Test og fejlfinding generelt}{section.8}% 40
+\BOOKMARK [1][-]{section.9}{Design sekvens-diagram}{}% 41
+\BOOKMARK [1][-]{section.10}{Design-klassediagram}{}% 42
+\BOOKMARK [1][-]{section.11}{GRASP \(General Responsibilty Assignment Software Patterns\)}{}% 43
+\BOOKMARK [2][-]{subsection.11.1}{Controller}{section.11}% 44
+\BOOKMARK [2][-]{subsection.11.2}{Creater}{section.11}% 45
+\BOOKMARK [2][-]{subsection.11.3}{Expert}{section.11}% 46
+\BOOKMARK [2][-]{subsection.11.4}{High Cohesion \(H\370j binding\)}{section.11}% 47
+\BOOKMARK [2][-]{subsection.11.5}{Indirection}{section.11}% 48
+\BOOKMARK [2][-]{subsection.11.6}{Low Coupling \(Lav kobling\)}{section.11}% 49
+\BOOKMARK [2][-]{subsection.11.7}{Polymorphism}{section.11}% 50
+\BOOKMARK [2][-]{subsection.11.8}{Protected Variations}{section.11}% 51
+\BOOKMARK [2][-]{subsection.11.9}{Pure Fabrication}{section.11}% 52
+\BOOKMARK [1][-]{section.12}{Kildeliste}{}% 53
+\BOOKMARK [1][-]{section.13}{Anvendte v\346rkt\370jer}{}% 54
+\BOOKMARK [1][-]{section.14}{Bilag}{}% 55
+\BOOKMARK [2][-]{subsection.14.1}{Kode}{section.14}% 56
+\BOOKMARK [3][-]{subsubsection.14.1.1}{TUI - Boundary}{subsection.14.1}% 57
+\BOOKMARK [3][-]{subsubsection.14.1.2}{Graphic - Boundary}{subsection.14.1}% 58
+\BOOKMARK [3][-]{subsubsection.14.1.3}{Main - Controller}{subsection.14.1}% 59
+\BOOKMARK [3][-]{subsubsection.14.1.4}{Game - Controller}{subsection.14.1}% 60
+\BOOKMARK [3][-]{subsubsection.14.1.5}{Player - Entity}{subsection.14.1}% 61
+\BOOKMARK [3][-]{subsubsection.14.1.6}{Account - Entity}{subsection.14.1}% 62
+\BOOKMARK [3][-]{subsubsection.14.1.7}{Gameboard - Entity}{subsection.14.1}% 63
+\BOOKMARK [3][-]{subsubsection.14.1.8}{Field - Entity}{subsection.14.1}% 64
+\BOOKMARK [3][-]{subsubsection.14.1.9}{DieCup - Entity}{subsection.14.1}% 65
+\BOOKMARK [3][-]{subsubsection.14.1.10}{Die - Entity}{subsection.14.1}% 66
+\BOOKMARK [3][-]{subsubsection.14.1.11}{AccountTesterController - TestTools}{subsection.14.1}% 67
+\BOOKMARK [3][-]{subsubsection.14.1.12}{DieCupTestEntity - TestTools}{subsection.14.1}% 68
+\BOOKMARK [3][-]{subsubsection.14.1.13}{GameBoardTestEntity - TestTools}{subsection.14.1}% 69
