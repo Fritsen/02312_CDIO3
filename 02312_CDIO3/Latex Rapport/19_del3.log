@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.10.7)  1 DEC 2013 16:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.7)  1 DEC 2013 17:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -446,12 +446,21 @@ Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/dvips.def
-File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count119
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
@@ -472,8 +481,8 @@ Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/multido/multido.tex
  v1.42, 2010/05/14 <tvz>
-\multido@count=\count119
-\multidocount=\count120
+\multido@count=\count120
+\multidocount=\count121
 \multido@stuff=\toks30
 )
 File: multido.tex 2010/05/14 v1.42 `multido' (tvz,hv)
@@ -484,7 +493,7 @@ Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
  v1.45, 2013/04/29 (tvz,hv)
 \pstRadUnit=\dimen131
 \pstRadUnitInv=\dimen132
-\pst@linecnt=\count121
+\pst@linecnt=\count122
 \psxlabelsep=\dimen133
 \psylabelsep=\dimen134
 \psk@subticksize=\dimen135
@@ -494,7 +503,7 @@ Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
 \pst@yticksizeA=\dimen139
 \pst@yticksizeB=\dimen140
 \pst@yticksizeC=\dimen141
-\@digitcounter=\count122
+\@digitcounter=\count123
 \psk@llx=\dimen142
 \psk@lly=\dimen143
 \psk@urx=\dimen144
@@ -510,14 +519,14 @@ Package: pst-node 2010/04/22 package wrapper for pst-node.tex
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pst-node/pst-node.tex
  v1.27, 2013/04/12
-\psrow=\count123
-\pscol=\count124
-\psmatrixcnt=\count125
+\psrow=\count124
+\pscol=\count125
+\psmatrixcnt=\count126
 \psrowsep=\skip43
 \pscolsep=\skip44
-\pst@args=\count126
-\num@pts=\count127
-\pst@argcnt=\count128
+\pst@args=\count127
+\num@pts=\count128
+\pst@argcnt=\count129
 )
 File: pst-node.tex 2013/04/12 1.27 `pst-node' (tvz,hv)
 )
@@ -543,14 +552,14 @@ hv)
 \psparallelogramsep=\dimen148
 \pshooklength=\dimen149
 \pshookwidth=\dimen150
-\pst@cntC=\count129
+\pst@cntC=\count130
 \chart@ColorIndex=\dimen151
 \chart@ColorStep=\dimen152
 \pst@chartHeight=\dimen153
 \pst@chartStackDepth=\dimen154
 \pst@chartStackWidth=\dimen155
-\chart@Toggle=\count130
-\psVectorCtr=\count131
+\chart@Toggle=\count131
+\psVectorCtr=\count132
 )
 File: pstricks-add.tex 2013/01/01 v3.60 `PSTricks-add' (hv)
 )
@@ -569,7 +578,7 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: dvips.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 )
 \Gin@req@height=\dimen156
 \Gin@req@width=\dimen157
@@ -594,13 +603,13 @@ Package: amsbsy 1999/11/29 v1.2d
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count132
+\inf@bad=\count133
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count133
-\leftroot@=\count134
+\uproot@=\count134
+\leftroot@=\count135
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count135
-\DOTSCASE@=\count136
+\classnum@=\count136
+\DOTSCASE@=\count137
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
@@ -609,15 +618,15 @@ LaTeX Info: Redefining \cdots on input line 466.
 \big@size=\dimen160
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count137
-\c@MaxMatrixCols=\count138
+\macc@depth=\count138
+\c@MaxMatrixCols=\count139
 \dotsspace@=\muskip10
-\c@parentequation=\count139
-\dspbrk@lvl=\count140
+\c@parentequation=\count140
+\dspbrk@lvl=\count141
 \tag@help=\toks32
-\row@=\count141
-\column@=\count142
-\maxfields@=\count143
+\row@=\count142
+\column@=\count143
+\maxfields@=\count144
 \andhelp@=\toks33
 \eqnshift@=\dimen161
 \alignsep@=\dimen162
@@ -634,7 +643,7 @@ LaTeX Info: Redefining \] on input line 2666.
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/tools/varioref.sty
 Package: varioref 2011/10/02 v1.4z package for extended references (FMi)
-\c@vrcnt=\count144
+\c@vrcnt=\count145
 )
 ! Undefined control sequence.
 \reserved@b ...inks=false, pdfauthor={\authorText 
@@ -668,15 +677,15 @@ Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -689,7 +698,7 @@ Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+Package pdftexcmds Info: \pdfdraftmode found.
 Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
 )
@@ -715,32 +724,19 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen167
-\Hy@linkcounter=\count145
-\Hy@pagecounter=\count146
+\Hy@linkcounter=\count146
+\Hy@pagecounter=\count147
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count147
+\Hy@SavedSpaceFactor=\count148
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-
-! Package hyperref Error: Wrong driver option `pdftex',
-(hyperref)                because pdfTeX in PDF mode is not detected.
-
-See the hyperref package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4319 \ProcessKeyvalOptions{Hyp}
-                                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Package hyperref Info: Option `colorlinks' set `false' on input line 4319.
 Package hyperref Info: Hyper figures OFF on input line 4443.
 Package hyperref Info: Link nesting OFF on input line 4448.
@@ -749,14 +745,15 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count148
+\c@Hy@tempcnt=\count149
+
 (/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen168
-\Fld@menulength=\count149
+\Fld@menulength=\count150
 \Field@Width=\dimen169
 \Fld@charsize=\dimen170
 Package hyperref Info: Hyper figures OFF on input line 6295.
@@ -768,23 +765,15 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count150
-\c@Item=\count151
-\c@Hfootnote=\count152
+\Hy@abspage=\count151
+\c@Item=\count152
+\c@Hfootnote=\count153
 )
 
-Package hyperref Message: Driver (default): hdvips.
+Package hyperref Message: Driver: hpdftex.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hdvips.def
-File: hdvips.def 2012/11/06 v6.83m Hyperref driver for dvips
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/pdfmark.def
-File: pdfmark.def 2012/11/06 v6.83m Hyperref definitions for pdfmark specials
-\pdf@docset=\toks36
-\pdf@box=\box32
-\pdf@toks=\toks37
-\pdf@defaulttoks=\toks38
-\HyField@AnnotCount=\count153
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count154
 \c@bookmark@seq@number=\count155
 
@@ -794,7 +783,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip48
-))
+)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/memoir/memhfixc.sty
 Package: memhfixc 2013/05/16 v1.16 nameref/hyperref package fixes for memoir cl
 ass
@@ -824,24 +813,16 @@ Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2012/08/31 v0.4t Pdfpages driver for pdfTeX (AM)
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/pdfpages/ppnull.def
-File: ppnull.def 2012/08/31 v0.4t Pdfpages dummy driver (AM)
-
-
-Package pdfpages Warning: I will use a dummy \includepdf command
-(pdfpages)                which will NOT insert any pages, because
-(pdfpages)                you are producing DVI output.
-
-))
-\AM@pagebox=\box33
-\AM@toc@title=\toks39
+)
+\AM@pagebox=\box32
+\AM@toc@title=\toks36
 \c@AM@survey=\count159
-\AM@templatesizebox=\box34
-) (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.sty
+\AM@templatesizebox=\box33
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count160
-\lst@gtempboxa=\box35
-\lst@token=\toks40
+\lst@gtempboxa=\box34
+\lst@token=\toks37
 \lst@length=\count161
 \lst@currlwidth=\dimen173
 \lst@column=\count162
@@ -856,7 +837,7 @@ Package pdfpages Warning: I will use a dummy \includepdf command
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count166
 \lst@skipnumbers=\count167
-\lst@framebox=\box36
+\lst@framebox=\box35
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
@@ -885,10 +866,10 @@ Package: todonotes 2012/07/25
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
-\pgfutil@everybye=\toks41
+\pgfutil@everybye=\toks38
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box37
+\pgfutil@abb=\box36
 (/usr/local/texlive/2013/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -918,22 +899,21 @@ Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Package pgfsys Info: Driver file for pgf: pgfsys-dvips.def on input line 900.
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvips.de
-f
-File: pgfsys-dvips.def 2008/04/03  (rcs-revision 1.20)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
-ostscript.def
-File: pgfsys-common-postscript.def 2008/10/01  (rcs-revision 1.22)
-\pgf@objectcount=\count172
+df.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 )))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
-\pgfsyssoftpath@smallbuffer@items=\count173
-\pgfsyssoftpath@bigbuffer@items=\count174
+\pgfsyssoftpath@smallbuffer@items=\count172
+\pgfsyssoftpath@bigbuffer@items=\count173
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -946,11 +926,11 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen185
-\pgfmath@count=\count175
-\pgfmath@box=\box38
-\pgfmath@toks=\toks42
-\pgfmath@stack@operand=\toks43
-\pgfmath@stack@operation=\toks44
+\pgfmath@count=\count174
+\pgfmath@box=\box37
+\pgfmath@toks=\toks39
+\pgfmath@stack@operand=\toks40
+\pgfmath@stack@operation=\toks41
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex
@@ -969,7 +949,7 @@ code.tex)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
 code.tex)))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count176
+\c@pgfmathroundto@lastzeros=\count175
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
@@ -1004,10 +984,10 @@ File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
 File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
-\pgfpic=\box39
-\pgf@hbox=\box40
-\pgf@layerbox@main=\box41
-\pgf@picture@serial@count=\count177
+\pgfpic=\box38
+\pgf@hbox=\box39
+\pgf@layerbox@main=\box40
+\pgf@picture@serial@count=\count176
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
@@ -1041,7 +1021,7 @@ File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 e.tex
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
 \pgf@max=\dimen208
-\pgf@sys@shading@range@num=\count178
+\pgf@sys@shading@range@num=\count177
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -1050,7 +1030,7 @@ File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
 code.tex
 File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
-\pgfexternal@startupbox=\box42
+\pgfexternal@startupbox=\box41
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
 de.tex
@@ -1067,7 +1047,7 @@ File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
 e.tex
 File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
-\pgfnodeparttextbox=\box43
+\pgfnodeparttextbox=\box42
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
 tex
@@ -1090,8 +1070,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
 \pgffor@iter=\dimen211
 \pgffor@skip=\dimen212
-\pgffor@stack=\toks45
-\pgffor@toks=\toks46
+\pgffor@stack=\toks42
+\pgffor@toks=\toks43
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -1100,7 +1080,7 @@ Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
-\pgf@plot@mark@count=\count179
+\pgf@plot@mark@count=\count178
 \pgfplotmarksize=\dimen213
 )
 \tikz@lastx=\dimen214
@@ -1109,21 +1089,21 @@ File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \tikz@lastysaved=\dimen217
 \tikzleveldistance=\dimen218
 \tikzsiblingdistance=\dimen219
-\tikz@figbox=\box44
-\tikz@tempbox=\box45
-\tikztreelevel=\count180
-\tikznumberofchildren=\count181
-\tikznumberofcurrentchild=\count182
-\tikz@fig@count=\count183
+\tikz@figbox=\box43
+\tikz@tempbox=\box44
+\tikztreelevel=\count179
+\tikznumberofchildren=\count180
+\tikznumberofcurrentchild=\count181
+\tikz@fig@count=\count182
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
-\pgfmatrixcurrentrow=\count184
-\pgfmatrixcurrentcolumn=\count185
-\pgf@matrix@numberofcolumns=\count186
+\pgfmatrixcurrentrow=\count183
+\pgfmatrixcurrentcolumn=\count184
+\pgf@matrix@numberofcolumns=\count185
 )
-\tikz@expandcount=\count187
+\tikz@expandcount=\count186
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -1133,7 +1113,7 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 s/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
 )
-\c@@todonotes@numberoftodonotes=\count188
+\c@@todonotes@numberoftodonotes=\count187
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2013/05/01 v2.6 programmable bibliographies (PK/JW/AB)
@@ -1144,46 +1124,46 @@ AB)
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count189
+\lrq@indent=\count188
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count190
-\c@listtotal=\count191
-\c@listcount=\count192
-\c@liststart=\count193
-\c@liststop=\count194
-\c@citecount=\count195
-\c@citetotal=\count196
-\c@multicitecount=\count197
-\c@multicitetotal=\count198
-\c@instcount=\count199
-\c@maxnames=\count200
-\c@minnames=\count201
-\c@maxitems=\count202
-\c@minitems=\count203
-\c@citecounter=\count204
-\c@savedcitecounter=\count205
-\c@uniquelist=\count206
-\c@uniquename=\count207
-\c@refsection=\count208
-\c@refsegment=\count209
-\c@maxextrayear=\count210
-\c@maxextraalpha=\count211
-\c@abbrvpenalty=\count212
-\c@highnamepenalty=\count213
-\c@lownamepenalty=\count214
-\c@maxparens=\count215
-\c@parenlevel=\count216
-\blx@tempcnta=\count217
-\blx@tempcntb=\count218
-\blx@tempcntc=\count219
-\blx@maxsection=\count220
-\blx@maxsegment=\count221
-\blx@notetype=\count222
-\blx@parenlevel@text=\count223
-\blx@parenlevel@foot=\count224
+\c@tabx@nest=\count189
+\c@listtotal=\count190
+\c@listcount=\count191
+\c@liststart=\count192
+\c@liststop=\count193
+\c@citecount=\count194
+\c@citetotal=\count195
+\c@multicitecount=\count196
+\c@multicitetotal=\count197
+\c@instcount=\count198
+\c@maxnames=\count199
+\c@minnames=\count200
+\c@maxitems=\count201
+\c@minitems=\count202
+\c@citecounter=\count203
+\c@savedcitecounter=\count204
+\c@uniquelist=\count205
+\c@uniquename=\count206
+\c@refsection=\count207
+\c@refsegment=\count208
+\c@maxextrayear=\count209
+\c@maxextraalpha=\count210
+\c@abbrvpenalty=\count211
+\c@highnamepenalty=\count212
+\c@lownamepenalty=\count213
+\c@maxparens=\count214
+\c@parenlevel=\count215
+\blx@tempcnta=\count216
+\blx@tempcntb=\count217
+\blx@tempcntc=\count218
+\blx@maxsection=\count219
+\blx@maxsegment=\count220
+\blx@notetype=\count221
+\blx@parenlevel@text=\count222
+\blx@parenlevel@foot=\count223
 \labelnumberwidth=\skip52
 \labelalphawidth=\skip53
 \shorthandwidth=\skip54
@@ -1195,76 +1175,76 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \bibhang=\skip60
 \blx@auxin=\read2
 \blx@auxout=\write4
-\c@mincomprange=\count225
-\c@maxcomprange=\count226
-\c@mincompwidth=\count227
-\c@labelname=\count228
-\c@savedlabelname=\count229
-\c@author=\count230
-\c@savedauthor=\count231
-\c@shortauthor=\count232
-\c@savedshortauthor=\count233
+\c@mincomprange=\count224
+\c@maxcomprange=\count225
+\c@mincompwidth=\count226
+\c@labelname=\count227
+\c@savedlabelname=\count228
+\c@author=\count229
+\c@savedauthor=\count230
+\c@shortauthor=\count231
+\c@savedshortauthor=\count232
+\c@editor=\count233
 Normal \count register pool exhausted, switching to extended pool.
-\c@editor=\count277
-\c@savededitor=\count278
-\c@editora=\count279
-\c@savededitora=\count280
-\c@editorb=\count281
-\c@savededitorb=\count282
-\c@editorc=\count283
-\c@savededitorc=\count284
-\c@shorteditor=\count285
-\c@savedshorteditor=\count286
-\c@bookauthor=\count287
-\c@savedbookauthor=\count288
-\c@translator=\count289
-\c@savedtranslator=\count290
-\c@annotator=\count291
-\c@savedannotator=\count292
-\c@commentator=\count293
-\c@savedcommentator=\count294
-\c@introduction=\count295
-\c@savedintroduction=\count296
-\c@foreword=\count297
-\c@savedforeword=\count298
-\c@afterword=\count299
-\c@savedafterword=\count300
-\c@holder=\count301
-\c@savedholder=\count302
-\c@namea=\count303
-\c@savednamea=\count304
-\c@nameb=\count305
-\c@savednameb=\count306
-\c@namec=\count307
-\c@savednamec=\count308
-\c@institution=\count309
-\c@savedinstitution=\count310
-\c@language=\count311
-\c@savedlanguage=\count312
-\c@location=\count313
-\c@savedlocation=\count314
-\c@organization=\count315
-\c@savedorganization=\count316
-\c@origlocation=\count317
-\c@savedoriglocation=\count318
-\c@origpublisher=\count319
-\c@savedorigpublisher=\count320
-\c@pageref=\count321
-\c@savedpageref=\count322
-\c@publisher=\count323
-\c@savedpublisher=\count324
-\c@lista=\count325
-\c@savedlista=\count326
-\c@listb=\count327
-\c@savedlistb=\count328
-\c@listc=\count329
-\c@savedlistc=\count330
-\c@listd=\count331
-\c@savedlistd=\count332
-\c@liste=\count333
-\c@savedliste=\count334
-\c@listf=\count335
-\c@savedlistf=\count336
+\c@savededitor=\count277
+\c@editora=\count278
+\c@savededitora=\count279
+\c@editorb=\count280
+\c@savededitorb=\count281
+\c@editorc=\count282
+\c@savededitorc=\count283
+\c@shorteditor=\count284
+\c@savedshorteditor=\count285
+\c@bookauthor=\count286
+\c@savedbookauthor=\count287
+\c@translator=\count288
+\c@savedtranslator=\count289
+\c@annotator=\count290
+\c@savedannotator=\count291
+\c@commentator=\count292
+\c@savedcommentator=\count293
+\c@introduction=\count294
+\c@savedintroduction=\count295
+\c@foreword=\count296
+\c@savedforeword=\count297
+\c@afterword=\count298
+\c@savedafterword=\count299
+\c@holder=\count300
+\c@savedholder=\count301
+\c@namea=\count302
+\c@savednamea=\count303
+\c@nameb=\count304
+\c@savednameb=\count305
+\c@namec=\count306
+\c@savednamec=\count307
+\c@institution=\count308
+\c@savedinstitution=\count309
+\c@language=\count310
+\c@savedlanguage=\count311
+\c@location=\count312
+\c@savedlocation=\count313
+\c@organization=\count314
+\c@savedorganization=\count315
+\c@origlocation=\count316
+\c@savedoriglocation=\count317
+\c@origpublisher=\count318
+\c@savedorigpublisher=\count319
+\c@pageref=\count320
+\c@savedpageref=\count321
+\c@publisher=\count322
+\c@savedpublisher=\count323
+\c@lista=\count324
+\c@savedlista=\count325
+\c@listb=\count326
+\c@savedlistb=\count327
+\c@listc=\count328
+\c@savedlistc=\count329
+\c@listd=\count330
+\c@savedlistd=\count331
+\c@liste=\count332
+\c@savedliste=\count333
+\c@listf=\count334
+\c@savedlistf=\count335
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -1276,10 +1256,10 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 
-\c@biburlnumpenalty=\count337
-\c@biburlucpenalty=\count338
-\c@biburllcpenalty=\count339
-\c@smartand=\count340
+\c@biburlnumpenalty=\count336
+\c@biburlucpenalty=\count337
+\c@biburllcpenalty=\count338
+\c@smartand=\count339
 )
 Package biblatex Info: Trying to load bibliography style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.bbx' found.
@@ -1291,8 +1271,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2013/05/01 v2.6 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count341
-\c@bbx:relatedtotal=\count342
+\c@bbx:relatedcount=\count340
+\c@bbx:relatedtotal=\count341
 ))
 Package biblatex Info: Trying to load citation style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.cbx' found.
@@ -1371,6 +1351,20 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 46.
  (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count342
+\scratchdimen=\dimen220
+\scratchbox=\box45
+\nofMPsegments=\count343
+\nofMParguments=\count344
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count345
+\MPscratchDim=\dimen221
+\MPnumerator=\count346
+\makeMPintoPDFobject=\count347
+\everyMPtoPDFconversion=\toks45
+)
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             macros/latex/contrib/pageslts/ 
@@ -1378,6 +1372,21 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
 (lastpage)             ! on input line 46.
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 \AtBeginShipoutBox=\box46
 Package hyperref Info: Link coloring OFF on input line 46.
 
@@ -1387,7 +1396,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count343
+\c@section@level=\count348
 LaTeX Info: Redefining \Ref on input line 513.
 )
 LaTeX Info: Redefining \ref on input line 46.
@@ -1399,12 +1408,8 @@ LaTeX Info: Redefining \nameref on input line 46.
 \openout5 = `19_del3.out'.
 
 LaTeX Info: Redefining \Ref on input line 46.
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
-\c@lstlisting=\count344
-ABD: EveryShipout initializing macros
+\c@lstlisting=\count349
+ ABD: EveryShipout initializing macros
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1425,51 +1430,24 @@ Overfull \hbox (5.27654pt too wide) in paragraph at lines 48--48
 [][]\T1/lmr/bx/n/14.4 02312-14 Ind-le-den-de pro-gram-me-ring og 02313 Ud-
  []
 
+<ThomasM.jpg, id=288, 105.39375pt x 140.02313pt>
+File: ThomasM.jpg Graphic file (type jpg)
+ <use ThomasM.jpg>
+Package pdftex.def Info: ThomasM.jpg used on input line 63.
+(pdftex.def)             Requested size: 52.69673pt x 70.01138pt.
 
-! LaTeX Error: Cannot determine size of graphic in ThomasM.jpg (no BoundingBox)
-.
+<ChrisJ.jpg, id=289, 105.39375pt x 140.77594pt>
+File: ChrisJ.jpg Graphic file (type jpg)
+ <use ChrisJ.jpg>
+Package pdftex.def Info: ChrisJ.jpg used on input line 67.
+(pdftex.def)             Requested size: 52.69673pt x 70.38779pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.63 \includegraphics[scale=0.5]{ThomasM.jpg}
-                                             
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<ThomasA.jpg, id=290, 105.39375pt x 140.77594pt>
+File: ThomasA.jpg Graphic file (type jpg)
+ <use ThomasA.jpg>
+Package pdftex.def Info: ThomasA.jpg used on input line 71.
+(pdftex.def)             Requested size: 52.69673pt x 70.38779pt.
 
-File: ThomasM.jpg Graphic file (type eps)
-<ThomasM.jpg>
-
-! LaTeX Error: Cannot determine size of graphic in ChrisJ.jpg (no BoundingBox).
-
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.67 \includegraphics[scale=0.5]{ChrisJ.jpg}
-                                            
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ChrisJ.jpg Graphic file (type eps)
-<ChrisJ.jpg>
-
-! LaTeX Error: Cannot determine size of graphic in ThomasA.jpg (no BoundingBox)
-.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \includegraphics[scale=0.5]{ThomasA.jpg}
-                                             
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ThomasA.jpg Graphic file (type eps)
-<ThomasA.jpg>
 Underfull \hbox (badness 10000) in paragraph at lines 49--72
 
  []
@@ -1523,10 +1501,23 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 72.
 [1
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
 
-]
+
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/upd
+map/pdftex.map} <./ThomasM.jpg> <./ChrisJ.jpg> <./ThomasA.jpg>]
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 74.
- (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/ot1lmr.fd
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 74.
@@ -1584,8 +1575,9 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 83.
  [3]
-Overfull \hbox (8.94167pt too wide) in paragraph at lines 91--91
- [] [] []  
+Overfull \hbox (2.55154pt too wide) in paragraph at lines 91--91
+ [] [][]\T1/lmr/bx/n/10 GRASP (Ge-ne-ral Re-spon-si-bilty As-sign-ment Softwa-r
+e Pat-terns)[] []  
  []
 
 )
@@ -1605,7 +1597,12 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 101.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 101.
- (./Kravspecificering.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--111
+
+ []
+
+(./Kravspecificering.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -1633,22 +1630,12 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 19.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 19.
+ <UseCase.pdf, id=400, 642.4pt x 341.275pt>
+File: UseCase.pdf Graphic file (type pdf)
 
-
-! LaTeX Error: Cannot determine size of graphic in UseCaseDiagram.jpg (no Bound
-ingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 ...udegraphics[scale=0.5]{UseCaseDiagram.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: UseCaseDiagram.jpg Graphic file (type eps)
-<UseCaseDiagram.jpg>
+<use UseCase.pdf>
+Package pdftex.def Info: UseCase.pdf used on input line 22.
+(pdftex.def)             Requested size: 321.19922pt x 170.63707pt.
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 26.
 Package babel Info: Redefining danish shorthand "~
@@ -1657,7 +1644,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 26.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 26.
- [6]
+ [6 <./UseCase.pdf>]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 27.
 Package babel Info: Redefining danish shorthand "~
@@ -1778,21 +1765,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-! LaTeX Error: Cannot determine size of graphic in Domainmodel.pdf (no Bounding
-Box).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 ...raphics[width=1\textwidth]{Domainmodel.pdf}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Domainmodel.pdf Graphic file (type eps)
-<Domainmodel.pdf>) (./BCEmodel.tex
+<Domainmodel.pdf, id=461, 668.4975pt x 371.3875pt>
+File: Domainmodel.pdf Graphic file (type pdf)
+ <use Domainmodel.pdf>
+Package pdftex.def Info: Domainmodel.pdf used on input line 9.
+(pdftex.def)             Requested size: 345.0pt x 191.67188pt.
+)
+(./BCEmodel.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -1807,41 +1786,34 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 7.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 7.
+[11 <./Domainmodel.pdf>] <BCEModel.pdf, id=472, 531.9875pt x 351.3125pt>
+File: BCEModel.pdf Graphic file (type pdf)
 
-! LaTeX Error: Cannot determine size of graphic in BCEModel.pdf (no BoundingBox
-).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 ...egraphics[width=1\textwidth]{BCEModel.pdf}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: BCEModel.pdf Graphic file (type eps)
-<BCEModel.pdf>) (./SystemsekvensDiagram.tex
+<use BCEModel.pdf>
+Package pdftex.def Info: BCEModel.pdf used on input line 15.
+(pdftex.def)             Requested size: 345.0pt x 227.83578pt.
+) (./SystemsekvensDiagram.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 
+<SystemSequenceDiagramDieGame.jpg, id=473, 542.025pt x 823.075pt>
+File: SystemSequenceDiagramDieGame.jpg Graphic file (type jpg)
 
-! LaTeX Error: Cannot determine size of graphic in SystemSequenceDiagramDieGame
-.jpg (no BoundingBox).
+<use SystemSequenceDiagramDieGame.jpg>
+Package pdftex.def Info: SystemSequenceDiagramDieGame.jpg used on input line 5.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 ...cale=0.4]{SystemSequenceDiagramDieGame.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: SystemSequenceDiagramDieGame.jpg Graphic file (type eps)
-<SystemSequenceDiagramDieGame.jpg>) (./Kode.tex
+(pdftex.def)             Requested size: 216.80615pt x 329.22417pt.
+) (./Kode.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -1850,20 +1822,21 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
- [11]
+ [12 <./BCEModel.pdf>]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 3.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 1.
- [12]
+(babel)             in language  on input line 3.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 3.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 3.
+
+[13 <./SystemSequenceDiagramDieGame.jpg>]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining danish shorthand "~
@@ -1873,15 +1846,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 6.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 6.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 6.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 6.
-[13]
+
 Underfull \hbox (badness 10000) in paragraph at lines 7--9
 
  []
@@ -1905,13 +1870,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--23
  []
 
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 23.
 [14]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 28.
@@ -1997,21 +1962,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--64
 
  []
 
+<Game-illustration1.jpg, id=502, 355.3275pt x 66.2475pt>
+File: Game-illustration1.jpg Graphic file (type jpg)
 
-! LaTeX Error: Cannot determine size of graphic in Game-illustration1.jpg (no B
-oundingBox).
+<use Game-illustration1.jpg>
+Package pdftex.def Info: Game-illustration1.jpg used on input line 69.
+(pdftex.def)             Requested size: 142.12846pt x 26.49852pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.69 ...raphics[scale=0.4]{Game-illustration1.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Game-illustration1.jpg Graphic file (type eps)
-<Game-illustration1.jpg>
 Underfull \hbox (badness 10000) in paragraph at lines 66--75
 
  []
@@ -2021,39 +1978,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--78
 
  []
 
+<Game-illustration2.jpg, id=503, 488.82625pt x 124.465pt>
+File: Game-illustration2.jpg Graphic file (type jpg)
 
-! LaTeX Error: Cannot determine size of graphic in Game-illustration2.jpg (no B
-oundingBox).
+<use Game-illustration2.jpg>
+Package pdftex.def Info: Game-illustration2.jpg used on input line 83.
+(pdftex.def)             Requested size: 195.52702pt x 49.78511pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.83 ...raphics[scale=0.4]{Game-illustration2.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Game-illustration2.jpg Graphic file (type eps)
-<Game-illustration2.jpg>
 Underfull \hbox (badness 10000) in paragraph at lines 79--90
 
  []
 
-
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 90.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 90.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 90.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 90.
+[17 <./Game-illustration1.jpg> <./Game-illustration2.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
  []
 
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 93.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 93.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 93.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 93.
-[17]
+
 Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
@@ -2063,87 +2012,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--99
 
  []
 
+<Game-illustration3.jpg, id=510, 171.64125pt x 74.2775pt>
+File: Game-illustration3.jpg Graphic file (type jpg)
 
-! LaTeX Error: Cannot determine size of graphic in Game-illustration3.jpg (no B
-oundingBox).
+<use Game-illustration3.jpg>
+Package pdftex.def Info: Game-illustration3.jpg used on input line 103.
+(pdftex.def)             Requested size: 68.65527pt x 29.71046pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 ...aphics[scale=0.4]{Game-illustration3.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Game-illustration3.jpg Graphic file (type eps)
-<Game-illustration3.jpg>
 Underfull \hbox (badness 10000) in paragraph at lines 100--109
 
  []
 
+<Game-illustration4.jpg, id=511, 515.9275pt x 90.3375pt>
+File: Game-illustration4.jpg Graphic file (type jpg)
 
-! LaTeX Error: Cannot determine size of graphic in Game-illustration4.jpg (no B
-oundingBox).
+<use Game-illustration4.jpg>
+Package pdftex.def Info: Game-illustration4.jpg used on input line 113.
+(pdftex.def)             Requested size: 206.36734pt x 36.13435pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.113 ...aphics[scale=0.4]{Game-illustration4.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Game-illustration4.jpg Graphic file (type eps)
-<Game-illustration4.jpg>
 Underfull \hbox (badness 10000) in paragraph at lines 110--119
 
  []
 
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 119.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 119.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 119.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 119.
+[18 <./Game-illustration3.jpg>]
+<Game-illustration5.jpg, id=517, 495.8525pt x 92.345pt>
+File: Game-illustration5.jpg Graphic file (type jpg)
 
-! LaTeX Error: Cannot determine size of graphic in Game-illustration5.jpg (no B
-oundingBox).
+<use Game-illustration5.jpg>
+Package pdftex.def Info: Game-illustration5.jpg used on input line 123.
+(pdftex.def)             Requested size: 198.33748pt x 36.93733pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.123 ...aphics[scale=0.4]{Game-illustration5.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Game-illustration5.jpg Graphic file (type eps)
-<Game-illustration5.jpg>
 Underfull \hbox (badness 10000) in paragraph at lines 120--129
 
  []
 
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 129.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 129.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 129.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 129.
-[18]
+<Game-illustration6.jpg, id=518, 294.09875pt x 108.405pt>
+File: Game-illustration6.jpg Graphic file (type jpg)
 
-! LaTeX Error: Cannot determine size of graphic in Game-illustration6.jpg (no B
-oundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.133 ...aphics[scale=0.4]{Game-illustration6.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: Game-illustration6.jpg Graphic file (type eps)
-<Game-illustration6.jpg>) (./Test.tex
+<use Game-illustration6.jpg>
+Package pdftex.def Info: Game-illustration6.jpg used on input line 133.
+(pdftex.def)             Requested size: 117.6374pt x 43.36122pt.
+) (./Test.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -2152,31 +2069,22 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 4.
-
-
-! LaTeX Error: Cannot determine size of graphic in test-illustrationer1.jpg (no
- BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 ...phics[scale=0.4]{test-illustrationer1.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: test-illustrationer1.jpg Graphic file (type eps)
-<test-illustrationer1.jpg>
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 15.
- [19]
+(babel)             in language  on input line 8.
+ [19 <./Game-illustration4.jpg> <./Game-illustration5.jpg> <./Game-illustration
+6.jpg>]
+<test-illustrationer1.jpg, id=528, 216.81pt x 195.73125pt>
+File: test-illustrationer1.jpg Graphic file (type jpg)
+
+<use test-illustrationer1.jpg>
+Package pdftex.def Info: test-illustrationer1.jpg used on input line 11.
+(pdftex.def)             Requested size: 86.72246pt x 78.2911pt.
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 15.
 Package babel Info: Redefining danish shorthand "~
@@ -2207,21 +2115,21 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 
+<DesignSequenceDiagram.jpg, id=529, 1314.9125pt x 3322.4125pt>
+File: DesignSequenceDiagram.jpg Graphic file (type jpg)
 
-! LaTeX Error: Cannot determine size of graphic in DesignSequenceDiagram.jpg (n
-o BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 ...hics[scale=0.14]{DesignSequenceDiagram.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: DesignSequenceDiagram.jpg Graphic file (type eps)
-<DesignSequenceDiagram.jpg>
+<use DesignSequenceDiagram.jpg>
+Package pdftex.def Info: DesignSequenceDiagram.jpg used on input line 5.
+(pdftex.def)             Requested size: 184.08649pt x 465.13458pt.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 8.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 8.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 8.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 8.
+ [20 <./test-illustrationer1.jpg>]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 9.
 Package babel Info: Redefining danish shorthand "~
@@ -2230,7 +2138,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 9.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 9.
- [20]
+ [21 <./DesignSequenceDiagram.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
@@ -2240,126 +2148,121 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
+ <DesignClass.jpg, id=541, 987.69pt x 602.25pt>
+File: DesignClass.jpg Graphic file (type jpg)
 
+<use DesignClass.jpg>
+Package pdftex.def Info: DesignClass.jpg used on input line 5.
+(pdftex.def)             Requested size: 395.069pt x 240.89572pt.
 
-! LaTeX Error: Cannot determine size of graphic in DesignClass.jpg (no Bounding
-Box).
+Overfull \hbox (50.069pt too wide) in paragraph at lines 5--6
+ [][] 
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \includegraphics[scale=0.4]{DesignClass.jpg}
-                                                
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: DesignClass.jpg Graphic file (type eps)
-<DesignClass.jpg>) (./GRASP.tex
+) (./GRASP.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 3.
+ [22 <./DesignClass.jpg>]
+Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 4.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 13.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 13.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 13.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 13.
- [21]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 23.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 23.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 25.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 25.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 25.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 34.
- [22]
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 40.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 40.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 48.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 48.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 60.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 60.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 60.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 60.
+(babel)             in language  on input line 25.
  [23]
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 48.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 48.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 48.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 80.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 80.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 48.
  [24]
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 95.
+(babel)             in language  on input line 48.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 95.
+(babel)             in language  on input line 48.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 66.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 66.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 76.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 76.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 76.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 76.
  [25]
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 112.
+(babel)             in language  on input line 95.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 112.
-)
+(babel)             in language  on input line 95.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 97.
  [26]
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 104.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 112.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 112.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 116.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 116.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 116.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 116.
+ [27])
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 123.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 123.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.128 \section
+l.127 \section
               {Anvendte værktøjer}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2367,7 +2270,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.128 \section
+l.127 \section
               {Anvendte værktøjer}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2378,7 +2281,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.128 \section
+l.127 \section
               {Anvendte værktøjer}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2386,7 +2289,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.128 \section
+l.127 \section
               {Anvendte værktøjer}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2395,47 +2298,50 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (4.64307pt too wide) in paragraph at lines 128--128
+Overfull \hbox (4.64307pt too wide) in paragraph at lines 127--127
 []\T1/lmr/m/n/10 Craig Lar-man. \T1/lmr/m/it/10 Ap-plying UML and Pat-terns: An
  In-tro-duction to Object-
  []
 
-
-Overfull \hbox (77.16785pt too wide) in paragraph at lines 128--128
-\T1/lmr/m/n/10 ces-sed 16-November-2013]. 2013. \T1/lmr/m/sc/10 url\T1/lmr/m/n/
-10 : [][][][]. 
- []
-
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 127.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 127.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 131.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 131.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 131.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 131.
+[28]
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 134.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 134.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 134.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 134.
+ [29]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 135.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 135.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 135.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 135.
-[27]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 136.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 136.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 137.
+(babel)             in language  on input line 138.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 137.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 139.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 139.
+(babel)             in language  on input line 138.
  (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 140.
+nput line 139.
 
 (./TUI.java
 Overfull \hbox (95.00427pt too wide) in paragraph at lines 20--21
@@ -2455,7 +2361,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 32.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 32.
-[28]
+[30]
 Overfull \hbox (95.00427pt too wide) in paragraph at lines 34--35
 [][][][] 
  []
@@ -2468,7 +2374,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 71.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 71.
-[29]
+[31]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 101.
 Package babel Info: Redefining danish shorthand "~
@@ -2477,7 +2383,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 101.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 101.
- [30]
+ [32]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 135.
 Package babel Info: Redefining danish shorthand "~
@@ -2486,7 +2392,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 135.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 135.
- [31]
+ [33]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 171.
 Package babel Info: Redefining danish shorthand "~
@@ -2495,11 +2401,11 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 171.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 171.
- [32])
+ [34])
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 140.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 140.
  (./Graphic.java
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 31.
@@ -2509,7 +2415,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 31.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 31.
- [33]
+ [35]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 73.
 Package babel Info: Redefining danish shorthand "~
@@ -2518,11 +2424,11 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 73.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 73.
- [34])
+ [36])
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 143.
+(babel)             in language  on input line 142.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 143.
+(babel)             in language  on input line 142.
  (./Main.java
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 8.
@@ -2532,11 +2438,11 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 8.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 8.
- [35])
+ [37])
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 145.
+(babel)             in language  on input line 144.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 145.
+(babel)             in language  on input line 144.
  (./Game.java
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 38.
@@ -2546,7 +2452,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 38.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 38.
-[36]
+[38]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 80.
 Package babel Info: Redefining danish shorthand "~
@@ -2555,7 +2461,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 80.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 80.
- [37]
+ [39]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 119.
 Package babel Info: Redefining danish shorthand "~
@@ -2564,7 +2470,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 119.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 119.
- [38]
+ [40]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 154.
 Package babel Info: Redefining danish shorthand "~
@@ -2573,11 +2479,11 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 154.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 154.
- [39])
+ [41])
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 147.
+(babel)             in language  on input line 146.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 147.
+(babel)             in language  on input line 146.
  (./Player.java
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 27.
@@ -2587,11 +2493,11 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 27.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 27.
- [40])
+ [42])
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 148.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 148.
  (./Account.java
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 10.
@@ -2601,7 +2507,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 10.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 10.
- [41]
+ [43]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 50.
 Package babel Info: Redefining danish shorthand "~
@@ -2610,11 +2516,11 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 50.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 50.
- [42])
+ [44])
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 151.
+(babel)             in language  on input line 150.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 151.
+(babel)             in language  on input line 150.
 
 (./Gameboard.java
 Package babel Info: Redefining danish shorthand "|
@@ -2625,7 +2531,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 9.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 9.
- [43]
+ [45]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 51.
 Package babel Info: Redefining danish shorthand "~
@@ -2634,11 +2540,11 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 51.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 51.
- [44])
+ [46])
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 153.
+(babel)             in language  on input line 152.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 153.
+(babel)             in language  on input line 152.
  (./Field.java
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 29.
@@ -2648,11 +2554,11 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 29.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 29.
- [45])
+ [47])
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 155.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 155.
+(babel)             in language  on input line 154.
  (./DieCup.java
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 4.
@@ -2662,7 +2568,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 4.
- [46]
+ [48]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 49.
 Package babel Info: Redefining danish shorthand "~
@@ -2671,11 +2577,11 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 49.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 49.
- [47])
+ [49])
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 157.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 157.
+(babel)             in language  on input line 156.
 
 (./Die.java
 Package babel Info: Redefining danish shorthand "|
@@ -2686,11 +2592,11 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 11.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 11.
- [48])
+ [50])
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 158.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 158.
  (./AccountTesterController.java
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 3.
@@ -2700,7 +2606,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 3.
- [49]
+ [51]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 39.
 Package babel Info: Redefining danish shorthand "~
@@ -2709,11 +2615,11 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 39.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 39.
- [50])
+ [52])
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 161.
+(babel)             in language  on input line 160.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 161.
+(babel)             in language  on input line 160.
 
 (./DieCupTestEntity.java
 Package babel Info: Redefining danish shorthand "|
@@ -2724,7 +2630,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 24.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 24.
- [51]
+ [53]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 68.
 Package babel Info: Redefining danish shorthand "~
@@ -2733,11 +2639,11 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 68.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 68.
- [52])
+ [54])
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 162.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 162.
  (./GameBoardTestEntity.java
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 28.
@@ -2747,27 +2653,27 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 28.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 28.
- [53])
+ [55])
 
 AED: lastpage setting LastPage
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 164.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 164.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 164.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 165.
-[54]
+(babel)             in language  on input line 164.
+[56]
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 164.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 165.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
+(babel)             in language  on input line 164.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 164.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 164.
  (./19_del3.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 165.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 164.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 164.
 Package rerunfilecheck Info: File `19_del3.out' has not changed.
 (rerunfilecheck)             Checksum: 3F9F1FE74A09398BB9E790771690CC63;4526.
 
@@ -2779,12 +2685,29 @@ Package logreq Info: Writing requests to '19_del3.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26227 strings out of 493316
- 444813 string characters out of 6137930
- 878239 words of memory out of 5000000
- 29110 multiletter control sequences out of 15000+600000
+ 28026 strings out of 493315
+ 471568 string characters out of 6137904
+ 877710 words of memory out of 5000000
+ 29634 multiletter control sequences out of 15000+600000
  42014 words of font info for 40 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 55i,7n,80p,3865b,2044s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,8n,80p,1343b,2066s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
+texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2013/t
+exmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2013/texmf-dist/
+fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2013/texmf-dist/fonts/type
+1/public/lm/lmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/l
+m/lmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmcsc10.
+pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/
+local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2013/texmf-dist/fo
+nts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
+public/lm/lmtt10.pfb>
+Output written on 19_del3.pdf (56 pages, 1323568 bytes).
+PDF statistics:
+ 2078 PDF objects out of 2487 (max. 8388607)
+ 1975 compressed objects within 20 object streams
+ 1258 named destinations out of 1440 (max. 500000)
+ 653 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on 19_del3.dvi (54 pages, 654808 bytes).
