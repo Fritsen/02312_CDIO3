@@ -13,14 +13,12 @@ public class RefugeTest {
 	private Player player;
 	private Field refuge200;
 	private Field refuge0;
-	private Field refugeNeg200;
 
 	@Before
 	public void setUp() throws Exception {
 		this.player = new Player(1000, "Anders And");
 		this.refuge200 = new Refuge("Helle +200", 200);
 		this.refuge0 = new Refuge("Helle 0", 0);
-		this.refugeNeg200 = new Refuge("Helle -200", -200);
 	}
 
 	@After
@@ -34,10 +32,8 @@ public class RefugeTest {
 		Assert.assertNotNull(this.player);
 		Assert.assertNotNull(this.refuge200);
 		Assert.assertNotNull(this.refuge0);
-		Assert.assertNotNull(this.refugeNeg200);
 		Assert.assertTrue(this.refuge200 instanceof Refuge);
 		Assert.assertTrue(this.refuge0 instanceof Refuge);
-		Assert.assertTrue(this.refugeNeg200 instanceof Refuge);
 	}
 
 	@Test
@@ -94,19 +90,4 @@ public class RefugeTest {
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 	}
-
-	// @Test
-	// public void testLandOnFieldNeg200() {
-	// int expected = 1000;
-	// int actual = this.player.getAccountValue();
-	// Assert.assertEquals(expected, actual);
-	//
-	// // Perform the action to be tested
-	// this.refugeNeg200.landOnField(this.player);
-	//
-	// // It is not possible to deposit a negative amount
-	// expected = 1000;
-	// actual = this.player.getAccountValue();
-	// Assert.assertEquals(expected, actual);
-	// }
 }

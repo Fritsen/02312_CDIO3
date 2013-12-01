@@ -13,14 +13,12 @@ public class TaxTest {
 	private Player player;
 	private Field tax200;
 	private Field tax0;
-	private Field taxNeg200;
 
 	@Before
 	public void setUp() throws Exception {
 		this.player = new Player(1000, "Anders And");
 		this.tax200 = new Tax("Helle +200", 200);
 		this.tax0 = new Tax("Helle 0", 0);
-		this.taxNeg200 = new Tax("Helle -200", -200);
 	}
 
 	@After
@@ -34,10 +32,8 @@ public class TaxTest {
 		Assert.assertNotNull(this.player);
 		Assert.assertNotNull(this.tax200);
 		Assert.assertNotNull(this.tax0);
-		Assert.assertNotNull(this.taxNeg200);
 		Assert.assertTrue(this.tax200 instanceof Tax);
 		Assert.assertTrue(this.tax0 instanceof Tax);
-		Assert.assertTrue(this.taxNeg200 instanceof Tax);
 	}
 
 	@Test
@@ -48,7 +44,7 @@ public class TaxTest {
 
 		// Perform the action to be tested
 		this.tax200.landOnField(this.player);
-		expected = 1000 + 200;
+		expected = 1000 - 200;
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 	}
@@ -63,7 +59,7 @@ public class TaxTest {
 		// Perform the action to be tested
 		this.tax200.landOnField(this.player);
 		this.tax200.landOnField(this.player);
-		expected = 1000 + 200 + 200;
+		expected = 1000 - 200 - 200;
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 	}
@@ -94,19 +90,4 @@ public class TaxTest {
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 	}
-
-	// @Test
-	// public void testLandOnFieldNeg200() {
-	// int expected = 1000;
-	// int actual = this.player.getAccountValue();
-	// Assert.assertEquals(expected, actual);
-	//
-	// // Perform the action to be tested
-	// this.refugeNeg200.landOnField(this.player);
-	//
-	// // It is not possible to deposit a negative amount
-	// expected = 1000;
-	// actual = this.player.getAccountValue();
-	// Assert.assertEquals(expected, actual);
-	// }
 }

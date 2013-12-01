@@ -14,15 +14,14 @@ public class FleetTest {
 	private Player player;
 	private Field fleet200;
 	private Field fleet0;
-	private Field fleetNeg200;
 	private GameBoard gameboard;
 
 	@Before
 	public void setUp() throws Exception {
+		this.gameboard.setOwner(player);
 		this.player = new Player(1000, "Anders And");
 		this.fleet200 = new Fleet("Helle +200", 200, gameboard);
 		this.fleet0 = new Fleet("Helle 0", 0, gameboard);
-		this.fleetNeg200 = new Fleet("Helle -200", -200, gameboard);
 	}
 
 	@After
@@ -36,21 +35,19 @@ public class FleetTest {
 		Assert.assertNotNull(this.player);
 		Assert.assertNotNull(this.fleet200);
 		Assert.assertNotNull(this.fleet0);
-		Assert.assertNotNull(this.fleetNeg200);
 		Assert.assertTrue(this.fleet200 instanceof Fleet);
 		Assert.assertTrue(this.fleet0 instanceof Fleet);
-		Assert.assertTrue(this.fleetNeg200 instanceof Fleet);
 	}
 
 	@Test
 	public void testLandOnField200() {
-		int expected = 1000 + 200;
+		int expected = 1000;
 		int actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 
 		// Perform the action to be tested
 		this.fleet200.landOnField(this.player);
-		expected = 1000 + 200;
+		expected = 1000;
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 	}
@@ -65,7 +62,7 @@ public class FleetTest {
 		// Perform the action to be tested
 		this.fleet200.landOnField(this.player);
 		this.fleet200.landOnField(this.player);
-		expected = 1000 + 200 + 200;
+		expected = 1000;
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 	}
@@ -96,19 +93,4 @@ public class FleetTest {
 		actual = this.player.getAccountValue();
 		Assert.assertEquals(expected, actual);
 	}
-
-	// @Test
-	// public void testLandOnFieldNeg200() {
-	// int expected = 1000;
-	// int actual = this.player.getAccountValue();
-	// Assert.assertEquals(expected, actual);
-	//
-	// // Perform the action to be tested
-	// this.refugeNeg200.landOnField(this.player);
-	//
-	// // It is not possible to deposit a negative amount
-	// expected = 1000;
-	// actual = this.player.getAccountValue();
-	// Assert.assertEquals(expected, actual);
-	// }
 }
