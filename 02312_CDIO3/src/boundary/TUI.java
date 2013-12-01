@@ -176,7 +176,7 @@ public class TUI {
 	 * @param score The score for the losing player.
 	 */
 	public static void printLoser(String name, int score) {
-		System.out.println("Sorry! " + name + " you are bankrupt.");
+		System.out.println("\nSorry! " + name + " you are bankrupt.");
 	}
 
 	/**

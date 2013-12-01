@@ -151,6 +151,16 @@ public class GameBoard {
 	public int getDieValue2() {
 		return dieCup.getValueDie2();
 	}
+	
+	/**
+	 * Method to set a field.
+	 * 
+	 * @param field Field object to insert.
+	 * @param number Place number to instert field on.
+	 */
+	public void setField(Field field, int number) {
+		fields[number] = field;
+	}
 
 	/**
 	 * A method to generate a nice string containing the value of all the
