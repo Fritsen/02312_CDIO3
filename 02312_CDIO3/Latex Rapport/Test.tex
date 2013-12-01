@@ -1,38 +1,24 @@
 \section{Test}
-Vi blev bedt om at lave en J-unit test af vores felttypers \texttt{landOnField} metoder. Disse vil være beskrevet i dette afsnit.
+Vi blev bedt om at lave en \textbf{J-unit} test af vores felttypers \texttt{landOnField} metoder. Disse vil være beskrevet i dette afsnit.
 \todo[inline]{j-unit test, snydeterninger og bruger test Thomas M}
 \subsection{Test af Refuge}
 Sammen med opgaven fik vi et bilag, der beskrev hvordan testen af \texttt{Refuge} skulle laves.
-\\
 
-Til formålet oprettes en testklasse \texttt{RefugeTest}. I denne klasse tog vi indholdet fra bilagene, og modificerede det lidt. For at få koden til at passe til vores program ændrede vi nogle småting. Da vi har benyttet os af \textbf{BCE} notationen til vores pakker, måtte vi importere vores \texttt{Player} til at oprette objekter igennem \texttt{intity} pakken.
+
+Til formålet oprettes en testklasse \texttt{RefugeTest}. I denne klasse tog vi indholdet fra bilagene, og modificerede det lidt. For at få koden til at passe til vores program ændrede vi nogle småting. Da vi har benyttet os af \textbf{BCE} notationen til vores pakker, måtte vi importere vores \texttt{Player} til at oprette objekter igennem \texttt{intity} pakken. Samtidig har vi kun en metode til både at trække penge og give penge på en spillers konto. Derfor har vi slettet \texttt{Neg200} funktionerne i  alle tests. Derfor bestemmer konsekvensen af feltypen i stedet, om der skal trækkes eller indsættes penge.
 \begin{figure}[!ht]
 \centering
 \includegraphics[scale=0.4]{test-illustrationer1.jpg}
-\caption[<Text for the list of figures>]{Resultatet af testkørsel}
-\label{fig:figure 2} 
+\caption[<Text for the list of figures>]{Resultatet af testkørsel Refuge}
+\label{fig:testrefuge} 
 \end{figure}
-Dvs. hvis kontoen sættes til 1, bliver transaktionen gennemført (metoden returnerer ”true”). Hvis kontoen sættes til 0, bliver transaktionen ligeledes gennemført osv.
-\\
-
-Det interessante her er især grænseværdierne, dvs. netop 1, 0 og -1. Testen viser, at klassen opfører sig som vi ville forvente – en positiv værdi giver selvfølgelig true, men mere interessant, 0 giver også true. Ligeledes som forventet, returneres false, hvis balancen sættes til -1.
-\\
-
-Når grænseværdierne virker som forventet, vil alle værdier typisk gøre det, men for en sikkerheds skyld testes også lige med nogle meget store værdier, og med nogle helt almindelige værdier. Disse test giver også det forventede resultat.
-\\
-
-Herefter udføres en test hvor balancen først sættes til noget kendt, og derefter opdateres med ”addToAccount”. Ved den første test sættes balancen til 1000, hvorefter tilføjes -1000 – således må det forventes at den resulterende balance bliver 0. Dermed vil vi forvente at tranaktionen bliver fuldført, idet 0 ikke er negativt, og dermed er en godkendt værdi. Vi ser, at også denne test giver det forventede resultat.
-\\
-
-Sæt til 1000 og tilføj -1001 må give -1, og dermed false – OK.
-Sæt til 1001 og tilføj -1000 må give 1, og dermed true – OK.
-\\
-
-De mere almindelige værdier giver ligeledes det forventede resultat. Således må det være fair at sige, at det er sandsynligt at en transaktion kun bliver gennemført, hvis ikke den resulterer i en negativ balance.
-\\
-
+\subsection{Test af Laborcamp}
+\texttt{LaborCampTest} er stort set magen til. Her har vi bare trukket beløbet fra på \texttt{expected}, da vores felttype nu giver en negativ konsekvens for spilleren. Samtidig har vi omdøbt pointerne til \textit{Field}, så de hedder noget med \texttt{labor}
+\subsection{Test af Tax}
+Den første testklasse til \texttt{TaxTest}, er præcis magen til \texttt{LaborCampTest}. Bortset fra vi har skiftet navnene, så de passer til denne testklasse.
+\subsection{Test af Tax2}
+\subsection{Test af Territory}
+\subsection{Test af Fleet}
 \subsection{Test og fejlfinding generelt}
-Foruden klassen til blackbox-test af Account-klassen, er der udviklet to test-klasser, som kan bruges til fejlfinding og test i programmet. Tanken er, at en eller begge test-klasser kan erstatte de ”rigtige” klasser, og på den måde give en udvikler mulighed for at teste scenarier, som er svære og/eller tidskrævende at opnå ved almindeligt spil.
-\\
-
-Der er dels tale om en GameBoard test-klasse, hvor værdierne for felterne alle er negative, således at sikringen af Account-klassen hurtigt kan testes i praksis. Derudover er der tale om en DieCup test-klasse, hvor en udvikler selv har mulighed for at sætte en fast værdi for hvad terningerne skal slå. Således kan der opnås at lande på f.eks. felt nr. 3 (som giver -200) mange gange i træk, og derved teste sikringen af Account-klassen, eller der kan landes på felt 12 (som giver +650) flere gange i træk, og derved teste de handlinger som udføres når en spiller vinder
+Vi har genbrugt vores "snydeterning" fra sidste projekt, som vi har brugt til lettere at lande på bestemte felter, når vi skulle teste en bestemt felttype.
+Ellers har vi benyttet os de \textbf{White Box} tests, der var lavet en \textbf{Junit} skabelon til.
