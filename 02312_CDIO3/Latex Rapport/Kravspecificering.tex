@@ -27,28 +27,28 @@ Vi vil i dette afsnit beskæftige os med 2 use cases, som er beskrevet i nedenst
 \subsubsection{Fully Dressed Use Case}
 Vi har i dette afsnit beskrevet vores use case med en fully dressed use case for spil.
 \subsubsection*{Use Case}
-Spil
+Land on Field
 \subsubsection*{Scope}
-Terningspil
+Spil
 \subsubsection*{Level}
-User Goal
+Bruger Konsekvens
 \subsubsection*{Primary actor}
 Spiller
 \subsubsection*{Stakeholders and Interests}
-Spiller: vil vinde spillet
+Spiller: vil tjene penge og undgå falit
 \subsubsection*{Preconditions}
 Eclipse er installeret på maskinen.
 \\
-Programmet er startet.
+Programmet er kørende.
 \subsubsection*{Main Success Scenarie:}
 \begin{enumerate}
 \item Spiller starter spillet
 \item Spiller indtaster Navn
 \item Spiller Ruller med terningerne
 \item Spiller lander på et felt med positiv konsekvens
-\item Spiller modtager point
--- Spiller gentager punkt 3-5 indtil 3000 eller mere er opnået
-\item System checker vinder
+\item Spiller modtager penge
+-- Spiller gentager punkt 3-5 indtil en spiller går falit
+\item System checker for tabere
 \item System viser vinder
 \item System lukker ned
 \end{enumerate}
@@ -59,26 +59,26 @@ Programmet er startet.
 \end{enumerate}
 4a. Spiller lander på et felt med negativ konsvens
 \begin{enumerate}
-\item Spiller får trukket point
-\item Spiller ryger under 0 point
--- punkt 6-8 i main success aktiveres
+\item Spiller betaler regning
+\item Spiller kan betale regning --> punkt 6-8 i main success aktiveres
 \end{enumerate}
 4b. Spiller lander på et felt uden konsekvens
 \begin{enumerate}
-\item Spiller for trukket point
-\item a Spiller ryger under 0 point
--- punkt 6-8 i main success aktiveres
-\item b Spiller rammer felt 10. uden at komme under 0, hviket giver ekstra tur. 
--- punkt 3 i main success aktiveres
+\item Spiller står uberørt af felt mht. pengebeholdning
+\item Spiller bliver givet ekstra tur
+\\
+5a. Spiller skal betale penge
+\item  Spiller betaler regning
+\item  Spiller kan ikke betale  --> punkt 6-8 køres
 \end{enumerate}
 \subsubsection*{Specielle Krav:}
 \begin{itemize}
 \item Skal kunne køre på en Windows maskine med Java EE på DTU's computere
 \item Skal kunne spilles af en almindelig bruger
 \end{itemize}
-\subsubsection{Brief Use Case Account test}
-Vi har valgt at lave en brief use case over vores test.
+\subsubsection{Brief Use Case af Tax}
+Vi har valgt at lave en brief use case over vores tax.
 \\
 
 \textbf{Account Test}
-En udvikler tester klassen med forskellige grænse og middelværdier, der er foruddefineret i klassen. Resultaterne printes ud i konsollen, og udvikleren ser om resultaterne fra testen, stemmer overens med de forventede resultater.
+Når en spiller lander på et tax felt, skal spilleren bestemme om han vil betale 4.000 eller om vedkommende vil betale 10 procent af deres formue. Valget afgør så hvor meget der skal betales. 
