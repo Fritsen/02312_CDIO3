@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.7)  1 DEC 2013 17:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.7)  1 DEC 2013 17:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1635,7 +1635,7 @@ File: UseCase.pdf Graphic file (type pdf)
 
 <use UseCase.pdf>
 Package pdftex.def Info: UseCase.pdf used on input line 22.
-(pdftex.def)             Requested size: 321.19922pt x 170.63707pt.
+(pdftex.def)             Requested size: 345.0pt x 183.28592pt.
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 26.
 Package babel Info: Redefining danish shorthand "~
@@ -2704,7 +2704,7 @@ ve/2013/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2013/tex
 mf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2013/texmf-dist/fo
 nts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
 public/lm/lmtt10.pfb>
-Output written on 19_del3.pdf (56 pages, 1323568 bytes).
+Output written on 19_del3.pdf (56 pages, 1323565 bytes).
 PDF statistics:
  2078 PDF objects out of 2487 (max. 8388607)
  1975 compressed objects within 20 object streams
