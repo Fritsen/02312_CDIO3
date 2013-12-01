@@ -95,7 +95,7 @@ public class GameBoard {
 	 * @param player
 	 */
 	public void setOwner(Player player) {
-		getOwnableField(player.getLocation()).owner = player;
+		getOwnableField(player.getLocation()).setOwner(player);
 	}
 
 	/**

@@ -42,6 +42,15 @@ public abstract class Ownable extends Field {
 	 * @return
 	 */
 	public abstract int getRent();
+	
+	/**
+	 * Method to set owner of the field.
+	 * 
+	 * @param owner The player to set as owner.
+	 */
+	public void setOwner(Player owner) {
+		this.owner = owner;
+	}
 
 	private void buyFieldOption(Player player) {
 		player.setIsOnBuyableField(true);
