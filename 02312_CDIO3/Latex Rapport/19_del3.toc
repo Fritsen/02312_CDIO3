@@ -8,105 +8,105 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}Kravspecificering}{5}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Use Cases}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Fully Dressed Use Case}{6}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.1}Use Case Diagram}{6}{subsubsection.2.2.1}
+\contentsline {subsection}{\numberline {2.3}Refuge Brief}{7}{subsection.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.2}Fully Dressed Use Case}{7}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.4}Fleet Test Brief}{7}{subsection.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.3}Brief Use Case af Tax}{8}{subsubsection.2.2.3}
+\contentsline {subsection}{\numberline {2.5}Refuge Test Brief}{7}{subsection.2.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}FURPS+}{8}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Functional}{9}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Functional}{8}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Usability}{9}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}Usability}{8}{subsection.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3}Reliability}{9}{subsection.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Performance}{10}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.4}Performance}{9}{subsection.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Supportability}{10}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.5}Supportability}{9}{subsection.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6}Implementation}{10}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.6}Implementation}{9}{subsection.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7}Interface}{10}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.7}Interface}{9}{subsection.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.8}Operations}{10}{subsection.3.8}
+\contentsline {subsection}{\numberline {3.8}Operations}{9}{subsection.3.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.9}Packaging}{10}{subsection.3.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.10}Legal}{11}{subsection.3.10}
+\contentsline {subsection}{\numberline {3.10}Legal}{10}{subsection.3.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Dom\IeC {\ae }nemodel}{11}{section.4}
+\contentsline {section}{\numberline {4}Dom\IeC {\ae }nemodel}{10}{section.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}BCE model}{11}{section.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Systemsekvens Diagram}{12}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Kode}{14}{section.7}
+\contentsline {section}{\numberline {7}Kode}{13}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Struktur og pakker}{14}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.1}Struktur og pakker}{13}{subsection.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}TUI}{14}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.2}Genanvendelse af kode og opbygning}{13}{subsection.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}Graphic}{14}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.3}Bem\IeC {\ae }rkelsesv\IeC {\ae }rdige l\IeC {\o }sninger}{14}{subsection.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4}Account}{15}{subsection.7.4}
+\contentsline {subsubsection}{\numberline {7.3.1}TUI}{14}{subsubsection.7.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5}Die}{15}{subsection.7.5}
+\contentsline {subsubsection}{\numberline {7.3.2}GameBoard}{15}{subsubsection.7.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6}DieCup:}{15}{subsection.7.6}
+\contentsline {subsubsection}{\numberline {7.3.3}Field}{15}{subsubsection.7.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.7}Field}{16}{subsection.7.7}
+\contentsline {subsubsection}{\numberline {7.3.4}Fleet}{16}{subsubsection.7.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.8}GameBoard}{16}{subsection.7.8}
+\contentsline {subsubsection}{\numberline {7.3.5}LaborCamp}{16}{subsubsection.7.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.9}Player}{16}{subsection.7.9}
+\contentsline {subsubsection}{\numberline {7.3.6}Ownable}{16}{subsubsection.7.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.10}Main}{16}{subsection.7.10}
+\contentsline {subsubsection}{\numberline {7.3.7}Tax}{17}{subsubsection.7.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.11}Game}{17}{subsection.7.11}
+\contentsline {subsubsection}{\numberline {7.3.8}Game}{18}{subsubsection.7.3.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8}Test}{19}{section.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.1}Test af Refuge}{19}{subsection.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2}Test af Laborcamp}{20}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.2}Test af Laborcamp}{19}{subsection.8.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.3}Test af Tax}{20}{subsection.8.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.4}Test af Fleet}{20}{subsection.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5}Test af Territory}{21}{subsection.8.5}
+\contentsline {subsection}{\numberline {8.5}Test af Territory}{20}{subsection.8.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.6}Test og fejlfinding generelt}{22}{subsection.8.6}
+\contentsline {subsection}{\numberline {8.6}Test og fejlfinding generelt}{21}{subsection.8.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Design sekvens-diagram}{22}{section.9}
+\contentsline {section}{\numberline {9}GRASP (General Responsibilty Assignment Software Patterns)}{22}{section.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Design-klassediagram}{23}{section.10}
+\contentsline {subsection}{\numberline {9.1}Controller}{22}{subsection.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11}GRASP (General Responsibilty Assignment Software Patterns)}{24}{section.11}
+\contentsline {subsection}{\numberline {9.2}Creater}{22}{subsection.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1}Controller}{24}{subsection.11.1}
+\contentsline {subsection}{\numberline {9.3}Expert}{22}{subsection.9.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.2}Creater}{24}{subsection.11.2}
+\contentsline {subsection}{\numberline {9.4}High Cohesion (H\IeC {\o }j binding)}{22}{subsection.9.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.3}Expert}{25}{subsection.11.3}
+\contentsline {subsection}{\numberline {9.5}Indirection}{22}{subsection.9.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.4}High Cohesion (H\IeC {\o }j binding)}{25}{subsection.11.4}
+\contentsline {subsection}{\numberline {9.6}Low Coupling (Lav kobling)}{23}{subsection.9.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.5}Indirection}{26}{subsection.11.5}
+\contentsline {subsection}{\numberline {9.7}Polymorphism}{23}{subsection.9.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.6}Low Coupling (Lav kobling)}{26}{subsection.11.6}
+\contentsline {subsection}{\numberline {9.8}Protected Variations}{23}{subsection.9.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.7}Polymorphism}{26}{subsection.11.7}
+\contentsline {subsection}{\numberline {9.9}Pure Fabrication}{23}{subsection.9.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.8}Protected Variations}{26}{subsection.11.8}
+\contentsline {section}{\numberline {10}Design Sekvens Diagram}{24}{section.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.9}Pure Fabrication}{26}{subsection.11.9}
+\contentsline {section}{\numberline {11}Design-klassediagram}{26}{section.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12}Kildeliste}{26}{section.12}
+\contentsline {section}{\numberline {12}Kildeliste}{27}{section.12}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {13}Anvendte v\IeC {\ae }rkt\IeC {\o }jer}{27}{section.13}
 \defcounter {refsection}{0}\relax 
@@ -118,24 +118,42 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {14.1.2}Graphic - Boundary}{33}{subsubsection.14.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.1.3}Main - Controller}{35}{subsubsection.14.1.3}
+\contentsline {subsubsection}{\numberline {14.1.3}Main - Controller}{36}{subsubsection.14.1.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {14.1.4}Game - Controller}{36}{subsubsection.14.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.1.5}Player - Entity}{40}{subsubsection.14.1.5}
+\contentsline {subsubsection}{\numberline {14.1.5}Player - Entity}{41}{subsubsection.14.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.1.6}Account - Entity}{41}{subsubsection.14.1.6}
+\contentsline {subsubsection}{\numberline {14.1.6}Account - Entity}{45}{subsubsection.14.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.1.7}Gameboard - Entity}{43}{subsubsection.14.1.7}
+\contentsline {subsubsection}{\numberline {14.1.7}Gameboard - Entity}{47}{subsubsection.14.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.1.8}Field - Entity}{45}{subsubsection.14.1.8}
+\contentsline {subsubsection}{\numberline {14.1.8}Field - Entity}{52}{subsubsection.14.1.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.1.9}DieCup - Entity}{46}{subsubsection.14.1.9}
+\contentsline {subsubsection}{\numberline {14.1.9}Ownable - Entity}{53}{subsubsection.14.1.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.1.10}Die - Entity}{48}{subsubsection.14.1.10}
+\contentsline {subsubsection}{\numberline {14.1.10}Fleet - Entity}{54}{subsubsection.14.1.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.1.11}AccountTesterController - TestTools}{49}{subsubsection.14.1.11}
+\contentsline {subsubsection}{\numberline {14.1.11}LaborCamp - Entity}{56}{subsubsection.14.1.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.1.12}DieCupTestEntity - TestTools}{51}{subsubsection.14.1.12}
+\contentsline {subsubsection}{\numberline {14.1.12}Refuge - Entity}{57}{subsubsection.14.1.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.1.13}GameBoardTestEntity - TestTools}{53}{subsubsection.14.1.13}
+\contentsline {subsubsection}{\numberline {14.1.13}Tax - Entity}{58}{subsubsection.14.1.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {14.1.14}Territory - Entity}{60}{subsubsection.14.1.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {14.1.15}DieCup - Entity}{61}{subsubsection.14.1.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {14.1.16}Die - Entity}{63}{subsubsection.14.1.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {14.1.17}DieCupTestEntity - TestTools}{64}{subsubsection.14.1.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {14.1.18}FleetTest - TestTools}{66}{subsubsection.14.1.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {14.1.19}LaborCampTest - TestTools}{69}{subsubsection.14.1.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {14.1.20}RefugeTest - TestTools}{71}{subsubsection.14.1.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {14.1.21}TaxTest - TestTools}{73}{subsubsection.14.1.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {14.1.22}TerritoryTest - TestTools}{75}{subsubsection.14.1.22}

@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 /**
  * Class to create a diecup. This class will take in 2 dice.
@@ -7,7 +7,6 @@ package Entity;
  *
  */
 public class DieCup {
-
     private Die die1, die2;
 
     /**
@@ -34,7 +33,7 @@ public class DieCup {
     public int getSum() {
         return die1.getValue() + die2.getValue();
     }
-    
+
     /**
      * Get faceValue from die1
      *
@@ -43,7 +42,7 @@ public class DieCup {
     public int getValueDie1() {
         return die1.getValue();
     }
-    
+
     /**
      * Get faceValue from die2
      *
@@ -64,13 +63,13 @@ public class DieCup {
         }
         return false;
     }
-    
+
     /**
      * Method that makes a text with the most important values in the class, and some description.
      *
      * @return A coherent string with values of Die1 and Die2
      */
     public String toString() {
-        return "Die1 = " + die1.getValue() + ", Die2 = " + die2.getValue();
+        return "Die1 = " + die1 + ", Die2 = " + die2;
     }
 }

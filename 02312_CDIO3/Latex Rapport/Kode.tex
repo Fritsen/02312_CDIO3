@@ -1,137 +1,71 @@
 \section{Kode}
-\todo[inline]{Chris: skriv implementering af kode.}
+Her vil vi forklare hvordan vi har grebet selve koden an.
 \subsection{Struktur og pakker}
-Ligesom i CDIO del1 projektet, er programmet skrevet med fokus på at overholde BCE-modellen så meget som overhovedet muligt. Derfor er programmet også i dette projekt opdelt i pakker med navne svarende til BCE modellen, dvs. TUI og Graphic i ”Boundary”, Game og Main i ”Controller” og Account, Die, DieCup, Field, GameBoard og Player i ”Entity”. Med andre ord er klasserne opdelt i pakker efter hvilken type de er.
-\\
+Ligesom i de to foregående projekter, er programmet skrevet med fokus på at overholde \textbf{BCE}-modellen. Kort fortalt betyder det for opdelingen i pakker, at alle klasser er inddelt i pakker efter deres type ift. \textbf{BCE}. For en mere uddybende beskrivelse henvises til det tilsvarende afsnit i \cite{19del1} og \cite{19del2} rapporterne.
+\subsection{Genanvendelse af kode og opbygning}
+På baggrund af hensigtsmæssigt og godt design i \cite{19del1} og \cite{19del2} projekterne, har det været muligt at genbruge store dele af koden. Således er klasserne \texttt{Die} og \texttt{DieCup} i praksis identiske med de tilsvarende klasser fra de tidligere projekter, ligesom den generelle opbygning af systemet også ligner meget.
 
-Undtagelsen her er de forskellige test-klasser, som er lagt ned i en pakke, ”TestTools”, for sig selv. Dette er gjort ud fra en ide om at det vil være udviklere der benytter dem, og at de typisk nemmest vil kunne benyttes ved at omdøbe og indsætte dem direkte på andre klassers pladser. Således er der ikke nogen direkte henvisninger til dem i koden til det egentlige program, som almindelige brugere vil opleve.
-\\
+På samme måde er det grundlæggende princip bag \texttt{TUI} og \texttt{Graphic} klasserne også identisk med 19del2 – klasserne har ikke behov for at bære data, og de forskellige metoder i klasserne interagerer ikke med hinanden gennem felter eller lign, og kan derfor med fordel være statiske. For en mere dybdegående forklaring henvises til kodeafsnittet i 19del2.
 
-
-Herunder en gennemgang af de forskellige klasser og deres funktion.
-\\
-\subsection{TUI}
-Denne klasse håndterer alt hvad der kommer ind og ud af konsollen. For en grundigere beskrivelse af denne klasses funktionalitet henvises til det tilsvarende afsnit i CDIO del1 rapporten (7.0.4, side 12).
-Nogle metoder har andre navne og udskriver selvfølelig noget andet tekst, men den overordnede virkemåde er fuldstændigt identisk.
-\subsection{Graphic}
-Denne klasse styrer alt hvad der skal ændres på den grafiske brugerflade. Der kan argumenteres for, at denne klasse burde navngives ”GUI” for at overholde mønsteret fra tekst brugerfladen, men dette ville besværliggøre udviklingen, fordi det bibliotek der bliver stillet til rådighed til brugerfladen også bruger denne navngivning. Således vælger vi blot at kalde klassen ”Graphic”, med henvisning til at den styrer den grafiske del af programmet.
-\\
-Nogle metoder kalder blot de tilsvarende metoder i biblioteket direkte (setDice, addPlayer, close), men vi vælger at kalde dem gennem Graphic for at have henvisningerne til GUI-biblioteket samlet det samme sted. Denne fremgangsmåde gør det langt nemmere at vedligeholde programmet i tilfælde af ændringer/opdateringer af det bibliotek der benyttes.
-\\
-Graphic indeholder desuden en ”moveCar”-metode, som blot kalder to metoder i GUI-biblioteket – en til at fjerne brugerens bil(er) fra spillepladen, og en til at sætte bilen på et nyt felt.
-\\
-
-
-Den interessante del af Graphic-klassen er imidlertid ”setupFields”-metoden. Her udføres en række kald til hjælpemetoden ”createField”, der igen kalder metoder i GUI-biblioteket til at ændre titel, undertitel og beskrivelse af et felt.
-De felter, som benyttes til dette spil (2 til 12) opsættes med en liste af kald, som indeholder informationer om navn og score for hvert felt. Der kan argumenteres for, at opsætningen af felter på GUI’en kunne genbruge navne fra TUI’en og felt scoreværdier fra GameBoard, men vi vælger undlade at gøre dette, simpelthen for at holde koblingen så lav som muligt, og for at gøre programmet mere fleksibelt ift. ændringer.
-F.eks. kunne man måske forestille sig at en kunde kun ville betale for at få oversat enten TUI eller GUI i programmet, hvilket ikke ville være muligt hvis de hænger sammen, eller måske mere sandsynligt, at kunden var interesseret i at modificere programmet til kun at have en GUI, og derved fjerne TUI-klasse. Uanset hvad vil det i sådanne tilfælde være en fordel, at de forskellige klasser ikke er koblet for meget sammen, og det vurderer vi er vigtigere, end at spare et par linjers kode ved at kunne nøjes med at skrive felternes navne et enkelt sted.
-\subsection{Account}
-Denne klasse repræsenterer en konto, med en mængde penge/score. Klassen er ganske simpel, i den forstand at den kun indeholder en enkelt attribut med tilhørende get og set metoder, samt en metode der kan tilføje til den eksisterende score.
-\\
-
-Det specielle ved Account-klassen er, at den sikrer at en Account-balance ikke kan blive negativ, og giver en tilbagemelding på om en transaktion er gennemført eller ej.
-\\
-Klassen indeholder både en konstruktør som tager en ”oprettelses-balance” (initialAccountValue), samt en konstruktør som ikke tager nogen argumenter, og så blot opretter kontoen med en værdi på 0.
-\\
-\subsection{Die}
-Denne klasse er identisk med den Die-klasse der blev benyttet i CDIO del1. For en beskrivelse af klassen henvises til det tilsvarende afsnit i CDIO del1 rapporten (7.0.6, side 13).
-\subsection{DieCup:}
-Denne klasse læner sig kraftigt op ad den DieCup-klasse der blev benyttet i CDIO del1, der er blot fjernet noget overflødig funktionalitet i den udgave der er benyttet i dette projekt. For en beskrivelse af funktionaliteten i denne klasse henvises derfor til det tilsvarende afsnit i CDIO del1 rapporten (7.0.7, side 13).
-\subsection{Field}
-Denne klasse er skrevet til at bære de relevante informationer om et felt på spillepladen. Navn og beskrivelse er lagt i brugerfladeklasserne, for at gøre det nemmere at oversætte, så det eneste Field-klassen skal indeholde, er den effekt feltet skal have på en spiller – dvs. hvilken score feltet giver, og om feltet skal give en ekstra tur.
-\\
-
-Hvad et felt skal gøre, kan ikke ændre sig i løbet af et spil, så der er ingen set-metoder til attributterne – de sættes med konstruktøren, og ændrer sig ikke efterfølgende. Dvs. klassen har en konstruktør som tager et heltal for hvilken score feltet giver, samt en boolsk værdi for om feltet giver en ekstra tur.
-De fleste felter giver ikke en ekstra tur, så klassen indeholder også en konstruktør som kun tager et heltal for score, og så blot sætter værdien for ekstra tur til falsk. På den måde kan der spares lidt kode ved oprettelsen af alle felterne.
-\subsection{GameBoard}
-Denne klasse repræsenterer en spilleplade i spillet. Den indeholder blot et array med alle de felter som skal bruges, samt en get-metode til at få fat i et felt på listen. Felterne oprettes og tildeles deres værdier i konstruktøren, og ændres ikke efterfølgende.
-\\
-
-Der kan argumenteres for, at listen med felter fint kunne ligge i Game-controlleren, men for at få højst mulig sporbarhed ift. et ”rigtigt” spil, hvor der naturligvis vil være en spilleplade, vælger vi at lave en klasse til at indeholde felterne. Som en bonus fjerner denne løsning også noget kompleksitet fra controlleren i forhold til oprettelse af felterne.
-\subsection{Player}
-Denne klasse indeholder data om en spiller. I dette spil er der kun behov for at lagre en score og et navn, men ved at benytte en struktur med en decideret klasse til at indeholde spillerdata, er programmet forberedt til at gemme andre informationer om en spiller – f.eks. spillerens position på spillepladen, eller hvad der blev slået sidst osv..
-\\
-
-Scoren for en spiller gemmes i dette program i en klasse til formålet – Account. Når et nyt objekt af Player-klassen oprettes, laves der således også blot en ny Account, som så holder styr på spillerens score. Se evt. beskrivelse af Account-klassen tidligere i denne rapport.
-\subsection{Main}
-Main-klassen benyttes kun til at oprette og starte Game-kontrolleren, og indeholder således hverken logik, metoder eller data.
-\subsection{Game}
-Dette er klassen som indeholder selve logikken i spillet, og her vil derfor være en del ting der er interessante at nævne omkring beslutninger ift. implementeringen.
-\\
-
-Først og fremmest er det værd at bemærke, at spillerne i programmet lagres i et array af spillere. Det betyder dels at det bliver nemmere at lave en generisk løsning på logikken for en spillers tur, men dels også at det er nemt at udvide spillet til flere spillere. Faktisk er antallet af spillere angivet som en konstant i begyndelsen af klassen, og hele programmet er skrevet med tanke på, at det skal kunne virke med mere end 2 spillere – på den måde er programmet godt forberedt til udvidelse.
-\\
-
-
-Et eksempel på dette er oprettelsen af nye player-objekter, som bliver kørt i Game-konstruktøren.
+\subsection{Bemærkelsesværdige løsninger}
+Systemet er på nuværende tidspunkt så omfattende, at det ikke giver mening at gennemgå alle overvejelser bag implementeringen af alle klasser. I stedet uddrages specielt bemærkelsesværdige dele af koden, og forklares herunder, for at give en bedre forståelse af systemets virkemåde, uden at gennemgå alt. Beskrivelserne er opdelt efter hvilke klasser de er implementeret i.
+\subsubsection{TUI}
+Noget af det første der sker, når dette spil startes, er at brugeren anmodes om at indtaste antallet af spillere. Antallet af spillere må ifølge opgavebeskrivelsen ikke være større end 6, og spillet giver ikke meget mening, hvis det er mindre end 2. Med andre ord skal der specifikt indtastes et tal mellem 2 og 6. Dette er en ny udfordring ift. de tidligere opgaver, hvor der blot blev gemt en hel streng. Foruden at teste, at det indtastede tal er i det krævede interval, ønskede vi også at lave systemet robust, og sikre at f.eks. bogstaver eller specialtegn indtastet på dette tidspunkt, ikke kunne få systemet til at gå ned. Dette ses i figur \vref{fig:kode1}.
 \begin{figure}[!ht]
 \centering
-\includegraphics[scale=0.4]{Game-illustration1.jpg}
-\caption[<Text for the list of figures>]{Spillere oprettes i en løkke}
-\label{fig:figure 2} 
+\includegraphics[width=0.8\textwidth]{kode1.jpg}
+\caption[<Text for the list of figures>]{Antal spillere}
+\label{fig:kode1} 
 \end{figure}
-Objekterne oprettes i en løkke, som stoppes når antallet af oprettede spillere nå op på det antal, som er angivet i konstanten i starten af programmet.
-\\
+Tjekket og sikringen mod karakterer som ikke er tal, sker i \texttt{TUI}, inden det sendes videre til controlleren. Antallet af spillere sættes indledningsvist til 0, og forespørgslen kører så i en løkke, som kun brydes når antallet af spillere bliver sat til noget der er forskelligt fra 0. Det input der hentes fra konsollen er som udgangspunkt en streng, og skal derfor konverteres før det kan bruges som en talværdi. Denne konvertering vil kaste en Exception, hvis der gives et input, der ikke umiddelbart giver mening som tal-værdi – f.eks. et bogstav. Det smarte er så, at denne Exception kan fanges, og kode kan udføres til at ”reparere” den fejl, som har forårsaget den. I vores tilfælde sætter vi bare værdien for antal af spillere tilbage til 0, fordi det betyder at løkken kører igen, så brugeren bliver spurgt efter et nyt input.
+Ligeledes hvis der gives et input, som succesfuldt kan konverteres til en talværdi, tjekkes der om tallet er mellem 2 og 6 – hvis ikke det er det, sættes værdien tilbage til 0, og løkken kører igen. Så snart løkken brydes, returnerer metoden.
 
-Foruden player-objekterne oprettes i konstruktøren også diverse andre objekter af klasser, som bruges i kontrolleren – dieCup, GameBoard samt en scanner. Desuden åbnes GUI’en fra konstruktøren, og felterne på GUI’en indstilles til noget der er passende for spillet.
-\\
-
-Den øvrige logik ligger i ”startGame”-metoden, som også kaldes direkte fra main.
-TUI’en kaldes for at udskrive spillets regler, og herefter bedes alle spillere indtaste deres navn. Igen er der tale om en fleksibel løsning, som vil virke med flere end 2 spillere.
+\subsubsection{GameBoard}
+Ligesom ved et fysisk spil, indeholder dette system en spilleplade \texttt{GameBoard}, som er bygget op af felter af forskellig type. Disse felter er bygget i et system med arv, som beskrevet senere i dette afsnit, og dette giver en stor fordel for datastrukturen i \texttt{GameBoard}. Fordi alle de forskellige felttyper \texttt{Territory, LaborCamp, Fleet, Tax og Refuge} nedarver fra Field, kan der laves en enkelt liste (array) af felter, af typen \texttt{Field}, som kan indeholde alle de forskellige felter, selvom der er tale om forskellige typer objekter, med forskellige implementeringer af metoder mm. Koden ses i figur \vref{fig:kode2}.
 \begin{figure}[!ht]
 \centering
-\includegraphics[scale=0.4]{Game-illustration2.jpg}
-\caption[<Text for the list of figures>]{Indlæs navne i en løkke}
-\label{fig:figure 2} 
+\includegraphics[width=0.8\textwidth]{kode1.jpg}
+\caption[<Text for the list of figures>]{Antal spillere}
+\label{fig:kode2} 
 \end{figure}
-Igen foregår det selvfølgelig i en løkke, og igen kører løkken bare indtil der er kørt lige så mange gange som der er angivet, at der skulle være spillere.
-Inde i løkken udskrives så først en lille tekst, som beder brugens indtaste et navn, derefter indsamles det indtastede fra konsollen, hvorefter det gemmes i det player-objekt som passer til spilleren, og til sidste opdateres GUI’en med den nye information.
-\\
+\subsubsection{Field} 
+Som nævnt tidligere, er felterne bygget op med at system af arv. Alle felterne nedarver fra \texttt{Field}, som indeholder de ting der er fælles for alle felter. I realiteten er det ikke ret meget der er det samme for alle felter – der er forskellige muligheder ift. køb, der er forskellige konsekvenser (få penge, miste penge), og selv de felter der har den samme konsekvens – at man skal betale til andre – har forskellige måde at beregne beløbet på.
 
-Herefter starter selve logikken for spillernes ”ture” i spillet. Turene køres i en endeløs løkke (”while(true)”), som så kan afbrydes ved forskellige scenarier. Denne løsning er valgt, dels fordi der er mange forskellige ting der kan afbryde spillet (en spiller trykker ”q”, en spiller vinder, en spiller taber), dels fordi vi er interesseret i at kunne afbryde spillet midt i en tur. F.eks. giver det ikke meget mening at der køres en hel tur færdig med score osv., hvis en spiller har trykket ”q” for at afslutte spillet, og det giver heller ikke meget mening at udskrive endnu en status i spillet, og tjekke for om en af spillerne har vundet, hvis der allerede er en spiller som har tabt osv..
-\\
+Alle felter har dog et navn, og alle felter har mulighed for at man kan lande på dem. Derfor indeholder \texttt{Field} et felt til navn, og en abstrakt metode – \texttt{landOnField} – der betyder at alle klasser som arver fra \texttt{Field}, skal ”love” at de implementerer \texttt{landOnField}. De forskellige underklasser kan så have forskellige implementeringer af \texttt{landOnField}, så længe typen af parametre og returværdi er de samme.
 
-Selve tur-logikken starter med at udskrive navnet på den spiller, som skal slå. Herefter ventes på input fra konsollen. Når der er givet et input, tjekkes om inputtet er ”q” – er det det, afsluttes spillet. Ellers fortsættes, og der slås med terningerne. Ud fra værdien af terningerne, findes så det felt som spilleren er landet på, og scoren for det pågældende felt hentes. Denne score tilføjes så spillerens player-objekt, og der tjekkes om transaktionen er gennemført. Er den ikke det, må det skyldes at balancen på spillerens konto er blevet negativ, så spillet afsluttes og den aktuelle spiller erklæres som taber af spillet. Bliver transaktionen gennemført fortættes spillet, og der udskrives en status. Herefter tjekkes om spilleren har opnået det ønskede antal point for at vinde – har han det, afsluttes spillet og spilleren erklæres som vinder. Har han ikke det, fortsættes spillet, og der tjekkes om det felt, spilleren er landet på, giver en ekstra tur. Gør det det, køres en ny tur med den samme spiller, gør det ikke det, skiftes til den næste spiller i rækkefølgen, før der køres en ny tur.
-\\
 
-For hver af alle disse handlinger (afslut spillet, erklær en spiller som taber, erklær en spiller som vinder, udskriv status, skift til næste spiller i rækkefølgen), findes en hjælpemetode, som udfører de relevante operationer for en handling.
-\\
+To typer felter – \texttt{Tax} og \texttt{Refuge} – nedarver direkte fra \texttt{Field}, men de resterende 3 felttyper nedarver i stedet fra \texttt{Ownable}, som så igen nedarver fra \texttt{Field}. Dette skyldes, at disse 3 felter – \texttt{Territory, LaborCamp} og \texttt{Fleet} – kan købes. Dette er en funktionalitet, som grundlæggende vil virke ens for alle tre typer felter – der skal være et pegepind til en ejer, der skal være en måde at købe feltet osv.
+Desuden vil den grundlæggende procedure, når der landes på feltet, også være ens – der skal tjekkes om der er nogen der ejer feltet, og hvis der er, skal der betales leje til ejeren. Hvordan lejen udregnes, er forskellige for de forskellige typer at felter, men den overordnede procedure er ens. Derfor er \texttt{landOnField}-metoden, der som bekendt skal implementeres, når klasserne arver fra \texttt{Field}, implementeret i \texttt{Ownable}. Metoden i \texttt{Ownable} kalder så \texttt{getRent-metoden}, der har forskellig implementering i hver af underklasserne.
+\subsubsection{Fleet}
+Af de underklasser, hvor der skal udregnes leje, er \texttt{Fleet} en af de mere interessante. Lejen for \texttt{Fleet} afhænger nemlig af hvor mange andre \texttt{Fleet}-felter ejeren af det felt der landes på, har. Det betyder, at det \texttt{Fleet}-felt der er landet på, er nødt til at kende ejeren af de øvrige \texttt{Fleet}-felter, for at kunne udregne lejen.
+I praksis implementeres det ved, at et \texttt{Fleet} felt-objekt tager den spilleplade \texttt{GameBoard} det oprettes i, med som parameter, når det oprettes. Således har \texttt{Fleet}-feltet mulighed for at gå ud og se på andre felter på den samme spilleplade.
 
-Når spillet afsluttes udføres en oprydning af de benyttede komponenter.
-\begin{figure}[!ht]
-\centering
-\includegraphics[scale=0.4]{Game-illustration3.jpg}
-\caption[<Text for the list of figures>]{Metode til oprydning}
-\label{fig:figure 2} 
-\end{figure}
-GUI’en lukkes, scanneren, som benyttes til at hente input fra konsollen, lukkes, og til sidst afsluttes programmet.
-\\
+Dernæst er problematikken blot, at de objekter på spillepladen, som dette objekt nu har adgang til, er af typen \texttt{Field}. Overklassen \texttt{Field} indeholder ikke en ejer, så før ejeren af feltet kan findes, må det konverteres til \texttt{Ownable}. Herefter er det blot en simpel løkke, som tjekker ejeren på hvert \texttt{Fleet}-felt, og summerer op. Når antallet af \texttt{Fleet}s er fundet, kan lejen simpelt findes med en switch-sætning.
+\subsubsection{LaborCamp}
+På samme måde som \texttt{Fleet}, bruges antallet af ejede felter af samme type også til beregningen af lejen ved \texttt{LaborCamp}. Fremgangsmåden til at finde antallet af ejede felter, er helt den samme som ved \texttt{Fleet}.
+Foruden antallet af ejede \texttt{LaborCamps}, indgår også et terningslag i beregningen af lejen – det betyder at \texttt{LaborCamp} er nødt til at have kendskab til \texttt{DieCup}, for at kunne få værdien af et terningslag. Imidlertid befinder\texttt{DieCup} sig på spillepladen \texttt{GameBoard}, så i kraft af at \texttt{LaborCamp} allerede har \texttt{GameBoard} med som argument, for at kunne kigge på andre felter, har den også let adgang til \texttt{DieCup}.
+\subsubsection{Ownable}
+Som nævnt tidligere i afsnittet, er der 3 felttyper som kan købes. Nå en spiller køber et felt, skal der trækkes nogle penge fra spillerens konto, og \texttt{owner}-pegepinden i feltet skal sættes til at pege på spillerens objekt. Før dette sker, skal der imidlertid have været præsenteret et valg for spilleren, om hvorvidt denne ønsker at købe feltet eller ej, og lige netop dette viser sig at være den mest krævende del at implementere af denne funktionalitet.
 
-Når en spiller erklæres som taber, udskrives navnet og scoren for taberen, og der ventes på konsolinput, for at sikre at spillerne når at se beskeden, inden spillet lukker. Når der gives et input, lukkes spillet med cleanUp metoden ovenfor.
-\begin{figure}[!ht]
-\centering
-\includegraphics[scale=0.4]{Game-illustration4.jpg}
-\caption[<Text for the list of figures>]{Metode for tabt spil}
-\label{fig:figure 2} 
-\end{figure}
-Præcist det samme gør sig gældende når en spiller vinder, bortset selvfølgelig fra at teksten som udskrives er anderledes.
-\\
 
-Når der udskrives status, foregår det ligeledes med en hjælpemetode. Herfra opdateres både GUI og TUI.
-\begin{figure}[!ht]
-\centering
-\includegraphics[scale=0.4]{Game-illustration5.jpg}
-\caption[<Text for the list of figures>]{Metode til opdatering af TUI og GUI}
-\label{fig:figure 2} 
-\end{figure}
-Der udskrives en status til TUI’en terningernes værdi, samt score for alle spillere. Derudover indstilles terningerne på GUI’en, ligesom spillerens score opdateres og den aktuelle spillers placering på spillepladen ændres.
-\\
+Ideen med hele opbygningen af systemet efter \textbf{BCE}-modellen er nemlig, at elementer fra entitets-laget aldrig har direkte adgang til elementer fra brugergrænseflade-laget. Men for at kunne præsentere valget om køb for spilleren, er feltet nødt til at kalde \texttt{TUI}’en, for at printe på skærmen og tage input fra konsollen – og vil netop give det føromtalte uønskede kendskab fra brugergrænsefladen til en entitet. Alternativt kunne man måske forstille sig, at feltet så havde kendskab til controlleren, og så kunne kalde TUI’en den vej igennem, men det vil også bryde mønsteret – ideen er jo at det er controlleren der skal kontrollere programmet, og kalde metoder i entiteter og brugergrænsefladen.
 
-På samme måde er der også en metode til at skifte til den næste bruger i rækkefølgen.
-\begin{figure}[!ht]
-\centering
-\includegraphics[scale=0.4]{Game-illustration6.jpg}
-\caption[<Text for the list of figures>]{Metode til næste spiller}
-\label{fig:figure 2} 
-\end{figure}
-Igen er det her værd at bemærke, at metoden også vil virke med mere end 2 spillere. Metoden tager nummeret på den nuværende spiller som input, og lægger en til – med mindre den spiller der i så fald skulle returneres ville have et højere nummer, end den konstant der er angivet for antallet af spillere – i så fald returneres blot 0 (dvs. der startes forfra i rækkefølgen).
+
+Uanset hvordan det drejes, er der ikke rigtigt en perfekt løsning på denne problemstilling – i hvert fald ikke uden at der skal ændres på de metoder, som er givet i opgavebeskrivelsen, der som udgangspunkt ikke må ændres. Med andre ord handler det nok om at finde den mindst dårlige løsning.
+
+
+I vores projekt vælger vi at udnytte, at både felterne og controlleren har kendskab til spillerens objekt. I stedet for at kalde en metode, når en bruger lande på et felt der kan købes, sættes således et ”flag” i spillerens objekt \texttt{isOnBuyableField = true}. Når der så returneres til controlleren, kan der tjekkes på om spilleren står på et felt der kan købes, og selve købet foretages i controlleren, som jo har kendskab til både \texttt{TUI} og felterne.
+\subsubsection{Tax}
+Der er to typer af \texttt{Tax} – den simple, hvor der blot betales et fast beløb, og den mere avancerede, hvor der kan vælges mellem et fast beløb og en procentdel af spillerens formue. Sidstnævnte er interessant, dels fordi den er nødt til at kende ejeren af alle andre felter, for at kunne beregne spillerens formue, dels fordi den skal spørge spilleren hvilken mulighed der foretrækkes.
+
+At beregne formuen er i store træk implementeret på samme måde som \texttt{Fleet} og \texttt{LaborCamp} – feltet tager \texttt{GameBoard} med som parameter, og kan så få fat i ejeren af de andre felter. Her summers så ikke op på antal, men på pris.
+
+
+At spørge brugeren, giver til gengæld samme problematik som omtalt ved køb af felter i \texttt{Ownable} – en entitet er nødt til at ”snakke” med brugergrænsefladen. Det kunne løses på samme måde som ved køb af felter, ved at bruge spillerens objekt til at gemme et ”flag”, men forskellen er, at både det faste \texttt{Tax}-beløb og det udregnede procentvise \texttt{Tax}-beløb er nødt til at med ud til controlleren, for at der kan opkræves korrekt. Det betyder dels, at der, foruden ”flaget”, også skal gemmes to talværdier i spillerens objekt, og dels at man effektivt vil have flyttet hele logikken fra Tax ud i controlleren.
+I praksis vil den løsning ganske vist løse opgaven og give pæne diagrammer, hvor der ikke er nogen synlig kobling mellem \texttt{Tax} og \texttt{TUI} – men reelt giver det en skjult kobling, som måske i virkeligheden er højere end den ville være, hvis \texttt{Tax} bare havde kendskab direkte til \texttt{TUI}, og som under alle omstændigheder er langt sværere at gennemskue.
+
+
+Derfor vælger vi at lade \texttt{Tax} have kendskab til \texttt{TUI}, men knytter hertil samtidigt en klar bemærkning om, at dette er et af de steder hvor systemet kan forbedres.
+\subsubsection{Game}
+Strukturen og ideen i \texttt{Game}-controlleren er stadig helt den samme som i de tidligere projekter. En af de største forskelle i controlleren, er muligheden for mere end 2 spillere, og måske endnu vigtigere, det faktum at der ikke bare er en spiller som vinder – der er spillere som taber løbende, og som så skal udgå af spillet. Det betyder nemlig, at der ikke blot kan laves en simpel valgsætning, som afgør om en spiller har vundet – i stedet må der tælles hvor mange spillere der er tilbage, hver gang en spiller er udgået.
+\newpage

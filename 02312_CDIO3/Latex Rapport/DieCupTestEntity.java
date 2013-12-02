@@ -1,4 +1,4 @@
-package TestTools;
+package testTools;
 
 /**
  * Class to create a "cheating" diecup. This class will not actually use dice, but just give a hardcoded number every time.

@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 import java.util.Random;
 
@@ -41,7 +41,7 @@ public class Die {
 
     /**
      * Method that makes a string of facevalue to print.
-     * 
+     *
      * @return The current facevalue of the die as a string.
      */
     public String toString() {

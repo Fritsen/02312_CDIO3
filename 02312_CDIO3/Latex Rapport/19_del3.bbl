@@ -78,27 +78,6 @@
   \field{year}{2013}
 \endentry
 
-\entry{Larman}{book}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Larman}{L.}%
-     {Craig}{C.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Prentice Hall}%
-  }
-  \strng{namehash}{LC1}
-  \strng{fullhash}{LC1}
-  \field{labelalpha}{Lar04}
-  \field{sortinit}{L}
-  \field{isbn}{0131489062}
-  \field{title}{Applying UML and Patterns: An Introduction to Object-Oriented
-  Analysis and Design and Iterative Development (3rd Edition)}
-  \field{year}{2004}
-\endentry
-
 \entry{WikiFURPS}{online}{}
   \name{author}{1}{}{%
     {{}%

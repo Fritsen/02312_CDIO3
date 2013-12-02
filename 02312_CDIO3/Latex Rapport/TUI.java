@@ -1,14 +1,12 @@
-package Boundary;
+package boundary;
 
 import java.util.Scanner;
 
-import Entity.Player;
-
 /**
  * Class to handle input/output to/from the console.
- * 
+ *
  * @author DTU 02312 Gruppe 19
- * 
+ *
  */
 public class TUI {
 	/**
@@ -27,7 +25,7 @@ public class TUI {
 		System.out
 				.println("| You get points on some, and loses points on others.        |");
 		System.out
-				.println("| The first player to hit 3000 points win.                   |");
+				.println("| A player wins when the others go bankrupt.                  |");
 		System.out
 				.println("| Press \"Enter\" to roll, press \"q\" to exit.                  |");
 		System.out
@@ -36,80 +34,59 @@ public class TUI {
 	}
 
 	/**
-	 * Method to get the name of a field from the field number.
-	 * The names are given according to the game rules, but could be translated.
-	 * 
-	 * @param fieldNumber The number of the field to get a name for. 
-	 * @return The name of the field with the given number. Null if the field doesn't exist.
+	 * Gets an integer from 1-6. Keeps asking until valid input is given.
+	 *
+	 * @param scanner An open scanner to read from.
+	 * @return An integer from 1-6.
 	 */
-	public static String getFieldName(int fieldNumber) {
-		switch (fieldNumber) {
-		case 2:
-			return "Tower";
-		case 3:
-			return "Crater";
-		case 4:
-			return "Palace gates";
-		case 5:
-			return "Cold Desert";
-		case 6:
-			return "Walled city";
-		case 7:
-			return "Monastery";
-		case 8:
-			return "Black cave";
-		case 9:
-			return "Huts in the mountain";
-		case 10:
-			return "The Wearwall";
-		case 11:
-			return "The pit";
-		case 12:
-			return "Goldmine";
+	public static int getNumberOfPlayers(Scanner scanner) {
+		int numberOfPlayers = 0;
+
+		// Get the number of players from console. Keep trying until input is
+		// valid
+		while (numberOfPlayers == 0) {
+			printNumberRequest();
+			try {
+				numberOfPlayers = new Integer(getUserInput(scanner));
+				if (numberOfPlayers < 0 || numberOfPlayers > 6) {
+					numberOfPlayers = 0;
+				}
+			} catch (Exception e) {
+				numberOfPlayers = 0;
+			}
 		}
 
-		return null;
+		return numberOfPlayers;
 	}
 
 	/**
-	 * Method to get the description of a field from the field number.
-	 * The descriptions are given according to the game rules, but could be translated.
-	 * 
-	 * @param fieldNumber The number of the field to get a description for. 
-	 * @return The description for the field with the given number. Null if the field doesn't exist.
+	 * Method that takes input from console and translates it to boolean yes/no.
+	 * Supports both upper and lower case.
+	 * Keeps asking until valid input is given (Y/y or N/n).
+	 *
+	 * @param scanner A scanner to use for reading from console.
+	 * @return True if Y/y is written, False if N/n.
 	 */
-	public static String getFieldDescription(int fieldNumber) {
-		switch (fieldNumber) {
-		case 2:
-			return "You entered the tower. Gain 250 credits for climbing it.";
-		case 3:
-			return "You crashed into the road creating a crater. Pay 200 credits towards repair costs.";
-		case 4:
-			return "You went sightseeing at the palace gates but got robbed. Pay 100 credits.";
-		case 5:
-			return "You ran out of gas exploring the Cold Desert. Pay 20 credits for more gas to get home.";
-		case 6:
-			return "You bet on a race in the Walled City and won. Gain 180 credits.";
-		case 7:
-			return "You climbed the mountain and gained wisdom. Do nothing.";
-		case 8:
-			return "You got lost in the black cave. Pay a park ranger 70 credits for helping you out.";
-		case 9:
-			return "You accidentally set fire to a hut on the mountain. Pay 60 credits for materials to rebuild.";
-		case 10:
-			return "You got caught naked and drunk strolling around in Wearwall. Pay the police a fine of 80 credits.\nThey felt sorry for you. Recieve another turn.";
-		case 11:
-			return "You tried to steal a police car. Pay 90 credits as bail.";
-		case 12:
-			return "You travelled to Alaska and struck it big in gold. Recieve 650 credits.";
-		}
+	public static boolean getYesNo(Scanner scanner) {
+		String input;
 
-		return null;
+		while(true) {
+			input = getUserInput(scanner);
+			if ("Y".equals(input) || "y".equals(input)) {
+				return true;
+			}
+
+			if("N".equals(input) || "n".equals(input)) {
+				return false;
+			}
+
+			System.out.print("Not valid. Must be \"Y\" og \"N\"");
+		}
 	}
 
 	/**
 	 * Prints a short text, asking the specified player to type his name.
-	 * 
+	 *
 	 * @param playerNo The player number to print as part of the message.
 	 */
 	public static void printNameRequest(int playerNumber) {
@@ -118,39 +95,72 @@ public class TUI {
 	}
 
 	/**
-	 * Prints a short text, telling the player who's turn it is, and asking him to
-	 * roll.
-	 * 
-	 * @param name The name to print as part of the message.
+	 * Prints a short text, asking the user to type the number of players.
 	 */
-	public static void printTurn(String name) {
-		System.out.print("\nIt's " + name + "'s turn. Press enter to roll.");
+	public static void printNumberRequest() {
+		System.out.println("Select the number of players 1-6:");
 	}
 
 	/**
-	 * Prints the current status of the game. Thats all players score and the
-	 * sum of the dice.
-	 * 
-	 * @param players An array of players to get the information from.
-	 * @param sum The value that was hit with the dice.
+	 * Prints a question asking if the user would like to pay x% in Tax instead of a fixed amount.
+	 *
+	 * @param pct The Tax percent to pay.
+	 * @param taxFromPct The calculated amount of tax from percent.
+	 * @param taxAmount The fixed amount of tax.
 	 */
-	public static void printStatus(Player[] players, int sum) {
-		System.out.println("You hit field number " + sum + ", "
-				+ getFieldName(sum) + "\n" + getFieldDescription(sum));
+	public static void printTaxPctChoice(int pct, int taxFromPct, int taxAmount) {
+		System.out.println("Would you like to pay " + pct + "% of your assets (" + taxFromPct + ") in Tax, instead of " + taxAmount + "?");
+	}
+
+	/**
+	 * Prints a short text, telling the player who's turn it is, and asking him
+	 * to roll.
+	 *
+	 * @param name The name to print as part of the message.
+	 */
+	public static void printTurn(String name) {
+		System.out.print("\n\nIt's " + name + "'s turn. Press enter to roll.");
+	}
+
+	/**
+	 * Print info about a field.
+	 *
+	 * @param fieldNumber The field number used as part of the printed text
+	 * @param fieldName The field name used as part of the printed text
+	 */
+	public static void printFieldName(int fieldNumber, String fieldName) {
+		System.out.println("You hit field number " + fieldNumber + ", " + fieldName);
+	}
+
+	/**
+	 * Prints a title for the status
+	 */
+	public static void printScoreIntro() {
 		System.out.println("The score is now:");
+	}
 
-		int i;
-		for (i = 0; i < players.length; i++) {
-			System.out.print(players[i].getName() + " = "
-					+ players[i].getAccount().getAccountValue() + "\t");
-		}
+	/**
+	 * Prints the current status of the game. Thats all players name and score.
+	 *
+	 * @param players An array of players to get the information from.
+	 */
+	public static void printStatus(String name, int score) {
+		System.out.print(name + " = " + score + "\t");
+	}
 
-		System.out.println();
+	/**
+	 * Prints a message in the console, giving the player an option to buy af field.
+	 *
+	 * @param name The name of the field.
+	 * @param price The price of the field.
+	 */
+	public static void printBuyOption(String name, int price) {
+		System.out.println("Would you like to buy " + name + " for " + price + "? (Y/N)");
 	}
 
 	/**
 	 * Prints the name and score of the winning player.
-	 * 
+	 *
 	 * @param name The name of the player who should be declared the winner.
 	 * @param score The score for the winning player.
 	 */
@@ -160,19 +170,18 @@ public class TUI {
 	}
 
 	/**
-	 * Prints the name and score of the losing player.
-	 * 
-	 * @param name The name of the player who should be declared the loser.
+	 * Prints the name and score of a player that is bankrupt.
+	 *
+	 * @param name The name of the player who should be declared bankrupt.
 	 * @param score The score for the losing player.
 	 */
 	public static void printLoser(String name, int score) {
-		System.out.println("Sorry! " + name + " you have lost with " + score
-				+ " points!\nPress Enter to exit.");
+		System.out.println("\nSorry! " + name + " you are bankrupt.");
 	}
 
 	/**
 	 * Reads a line from the console.
-	 * 
+	 *
 	 * @param scanner The scanner to read from
 	 * @return Whatever the user inputs.
 	 */
