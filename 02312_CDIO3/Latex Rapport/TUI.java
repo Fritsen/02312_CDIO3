@@ -34,10 +34,10 @@ public class TUI {
 	}
 
 	/**
-	 * Gets an integer from 1-6. Keeps asking until valid input is given.
+	 * Gets an integer from 2-6. Keeps asking until valid input is given.
 	 *
 	 * @param scanner An open scanner to read from.
-	 * @return An integer from 1-6.
+	 * @return An integer from 2-6.
 	 */
 	public static int getNumberOfPlayers(Scanner scanner) {
 		int numberOfPlayers = 0;
@@ -48,7 +48,7 @@ public class TUI {
 			printNumberRequest();
 			try {
 				numberOfPlayers = new Integer(getUserInput(scanner));
-				if (numberOfPlayers < 0 || numberOfPlayers > 6) {
+				if (numberOfPlayers < 2 || numberOfPlayers > 6) {
 					numberOfPlayers = 0;
 				}
 			} catch (Exception e) {
@@ -98,7 +98,7 @@ public class TUI {
 	 * Prints a short text, asking the user to type the number of players.
 	 */
 	public static void printNumberRequest() {
-		System.out.println("Select the number of players 1-6:");
+		System.out.println("Select the number of players 2-6:");
 	}
 
 	/**
